@@ -1,0 +1,2 @@
+# Government-Scheme-Financial-Inclusion-Navigator-
+User describes their situation in plain language ("I'm a farmer, own 2 acres, annual income 1.5 lakh, from Karnataka"). The agent asks clarifying follow-up questions where rules are ambiguous, checks eligibility against multiple schemes using structured data and explains why they qualify or don't  with next steps (documents needed, where to apply).
