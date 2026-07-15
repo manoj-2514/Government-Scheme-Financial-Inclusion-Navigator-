@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Government Scheme Navigator</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="app">
+        <aside id="profile-panel" class="profile-panel">
+            <h2>Your Profile</h2>
+            <div id="profile-fields"></div>
+        </aside>
+
+        <main class="chat-panel">
+            <div id="chat-window" class="chat-window"></div>
+
+            <<div id="language-selector" class="language-selector">
+                <button type="button" class="lang-btn" data-lang="hi">हिन्दी</button>
+                <button type="button" class="lang-btn" data-lang="te">తెలుగు</button>
+                <button type="button" class="lang-btn" data-lang="ta">தமிழ்</button>
+                <button type="button" class="lang-btn" data-lang="kn">ಕನ್ನಡ</button>
+                <button type="button" class="lang-btn" data-lang="ml">മലയാളം</button>
+                <button type="button" class="lang-btn" data-lang="mr">मराठी</button>
+                <button type="button" class="lang-btn" data-lang="en">English</button>
+                <button type="button" class="lang-btn active" data-lang="">🌐 Auto</button>
+    </div>
+
+    <form id="chat-form" class="chat-form">
+        <input id="chat-input" type="text" placeholder="Type your message..." autocomplete="off" />
+        <button type="button" id="mic-btn" title="Record voice message">🎙️</button>
+        <button type="submit">Send</button>
+    </form>
+    </main>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

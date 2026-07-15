@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #f4f6f8;
+}
+
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+.profile-panel {
+    width: 260px;
+    background: #1e293b;
+    color: white;
+    padding: 20px;
+}
+
+.profile-panel h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+#profile-fields div {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.chat-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-window {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.message {
+    max-width: 70%;
+    margin-bottom: 12px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    line-height: 1.4;
+}
+
+.message.user {
+    margin-left: auto;
+    background: #2563eb;
+    color: white;
+}
+
+.message.agent {
+    background: white;
+    border: 1px solid #ddd;
+}
+
+.chat-form {
+    display: flex;
+    padding: 16px;
+    border-top: 1px solid #ddd;
+    background: white;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.chat-form button {
+    padding: 10px 20px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.scheme-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 4px 0 18px 0;
+    max-width: 65%;
+}
+
+.scheme-card {
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 18px 20px;
+}
+
+.scheme-card__stamp {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    border: 2px dashed var(--stamp);
+    color: var(--stamp);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    transform: rotate(-8deg);
+    line-height: 1;
+}
+
+.scheme-card__name {
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+    padding-right: 70px;
+}
+
+.scheme-card__benefit {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--stamp);
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.scheme-card__reason {
+    font-size: 14px;
+    color: #444;
+    margin: 0 0 12px 0;
+}
+
+.scheme-card__docs-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+}
+
+.scheme-card__docs ul {
+    margin: 6px 0 14px 0;
+    padding-left: 18px;
+    font-size: 13px;
+}
+
+.scheme-card__apply {
+    display: inline-block;
+    background: var(--saffron);
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+.scheme-card__apply:hover {
+    filter: brightness(0.95);
+}
+
+.language-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 24px 0 24px;
+    background: var(--paper);
+}
+
+.lang-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    padding: 6px 12px;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--ink);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.lang-btn:hover {
+    border-color: var(--saffron);
+}
+
+.lang-btn.active {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+}
+
+#mic-btn {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 0 14px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#mic-btn.recording {
+    background: var(--error);
+    border-color: var(--error);
+    color: #fff;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
