@@ -1,0 +1,147 @@
+PROCEDURE FOR APPLYING  
+TERM 2 LOAN BY STREET VENDORS ON  
+PM SVANidhi PORTAL 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+
+ 
+ 
+ 
+ 
+ 
+STEP BY STEP PROCEDURE FOR APPLYING TERM 2 LOAN BY STREET VENDORS 
+ON PM SVANidhi PORTAL 
+SECOND TERM LOAN AUTOMATIC GENERATION 
+ 
+Step-1: After login on PMS portal, the Street Vendor will be able to see the term 1 loan 
+application details. 
+ 
+Step-2: Once the term 1 loan PMS Application is marked ‘Fully Repaid’ on the PMS portal by 
+lender, Term 2 loan applications will get Auto Generated. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Step-3: Now Street Vendor will be able to see the term 2 loan application details. 
+ 
+ 
+ 
+PROCEDURE FOR SECOND TERM LOAN APPLICATION WITH CLOSURE STATEMENT 
+ 
+Step-1: Open http://pmsvanidhi.mohua.gov.in and click on the ‘Apply for 20k’. 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+Step-2: Select State. 
+Step-2(i): After Other States selection, enter the AADHAAR Number, Mobile Number and 
+request for OTP. 
+ 
+ 
+Step-2(ii): For Assam/ Meghalaya, enter only Mobile Number and request for OTP. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Step-3: Only those applica nts whose Aadhaar is linked to Mobile Number, can apply for 
+Term 2 Loan. if Street Vendor Mobile Number and Aadhaar is not linked then it will show 
+error message as ‘Your Aadhaar is not linked with Mobile Number. Kindly link your Aadhaar 
+with Mobile Number to proceed further’. 
+ 
+Note – Post Linking of Aadhaar, Street Vendors needs to complete re-KYC on PMS portal. 
+ 
+ 
+Step-4: If Street Vendor Mobile Number and Aadhaar is linked then enter OTP input field will 
+be available. 
+Enter the OTP received on registered Mobile Number and click on ‘VERIFY OTP’ button. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Step-5:  Post Verification of OTP, the PMS Application Number Verification window will be 
+open. 
+ 
+Step-6:  Enter the Term 1 Loan PMS Application Number and click on the ‘Verify’ button. 
+After verification, the user will be successfully moved to Loan Application form. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Step-7:  Bank details will be shown where loan application will be processed. 
+ 
+ 
+ 
+Step-8: Enter the Loan Amount required, upload the Closure Statement document, tick the 
+declarations and submit the application.   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Step-9: After that message will be displayed as ‘Application Submitted’. Please note the PMS 
+Application Number for future reference. 
+ 
+ 
+ 
+Step-10: You can view and download the PMS application. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+THANK YOU

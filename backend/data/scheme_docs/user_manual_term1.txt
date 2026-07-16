@@ -1,0 +1,357 @@
+PROCEDURE FOR APPLYING OF WORKING CAPITAL 
+1st TERM LOAN FOR STREET VENDORS ON PM 
+SVANidhi PORTAL 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+
+ 
+ 
+ 
+ 
+ 
+STEP BY STEP PROCEDURE FOR APPLYING OF WORKING CAPITAL LOAN FOR 
+STREET VENDORS ON PM SVANidhi PORTAL 
+STEP’S FOR REGISTRATION FOR FIRST TERM LOAN 
+ 
+Step-1: Open https://pmsvanidhi.mohua.gov.in/. 
+ 
+ 
+ 
+Step-2: Enter ‘Mobile Number’ of Street Vendor. Select the check box of ‘I am not a robot’  
+and click on the ‘Request OTP’ button.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Step-3: Enter 6 digits OTP received on Street Vendor  Mobile Number  and click on ‘ Verify 
+OTP’ button. Upon verification of OTP, the user will be successfully login. 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+CATEGORY SELECTION FOR THE TERM 1 LAON 
+ 
+Step-4: Do you have Aadhaar Card, select option as ‘Yes or No’. 
+ 
+ 
+ 
+Step-5: Select the Category of the Street Vendor. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+STEPS FOR CATEGORY ‘A’ APPLICANTS 
+ 
+ 
+Step-6: If the Street Vendor selects category as A, then SRN no. will be asked. If SRN is not 
+known, click on the link of ‘ Don’t have SRN? Find here’. A link for searching SRN will open in 
+a new tab.  
+ 
+ 
+  
+Step-7: To find SRN, choose State, enter the Mobile Number of the Street Vendor and click 
+on the ‘ Search’ button. ( Mobile Number  should be the as per the data sent to GoI i.e., 
+updated in tmepma portal) 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Step-8: SRN number with green color will be displayed. Copy the ‘SRN Number’. 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+Step-9:  In the previous tab enter the ‘SRN’ number and click on the ‘Search’ button. 
+ 
+ 
+ 
+ 
+Step-10: SRN number along with Street Vendor details will be displayed. Confirm the SRN 
+number by selecting the check box.  
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+Step-11: Upload either ‘ID card or Certificate of Vending or both ’. After clicking on the ‘Next’ 
+button, the user will proceed to the Loan Application Form. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+STEPS FOR CATEGORY C AND D 
+ 
+ 
+Step-12: If the Street Vendor  selects categories as C or D, then the Street Vendor  will be 
+asked if they have been issued a ‘Letter of Recommendation’ (LoR).   
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+Step-13A (i): If the Street Vendor has LoR, then select the option ‘I have been issued Letter of 
+Recommendation (LoR) by ULB/ TVC.’ 
+ 
+ 
+ 
+ 
+Step-14A ( i): Upload the Letter of Recommendation and click on the ‘Next’ button. After 
+clicking on the ‘Next’ button the user will proceed to the Loan Application Form. 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+14-B (ii):  If the Street Vendor has does not have an LoR, and then select the option ‘ I have 
+NOT been issued Letter of Recommendation (LoR) by ULB/ TVC.’ 
+ 
+ The message box will show message as ‘You are requested to obtain LoR from concerned 
+ULB/ Municipality and then apply for loan’. 
+ 
+ 
+ 
+STEPS FOR APPLICATION FORM FILLING OF FIRST TERM LOAN 
+ 
+Step-15: Enter the Aadhaar Number of Street Vendor and click on ‘I am not Robot’ and then 
+click on the ‘Verify with OTP’ button. 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+Step-16: Street Vendor can verify Aadhaar with OTP. 
+ 
+ 
+ 
+ 
+ 
+Step-17: Fill the Personal Information and click on the save button.  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+Step-18: Fill the family details only when your marital status is ‘Married’, also entered 
+‘Vendor ID Card No.’ and ‘Certificate of Vending No.’ issued by ULBs. 
+ 
+ 
+ 
+ 
+ 
+ 
+Step-19: Enter the address details and vending details. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+Step-20: Enter the Bank Account details and also enter the Digital Payment details if the 
+vendor is having, if not, then click ‘No’. After filling application form click ‘SAVE’ button to 
+save details. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Step-21: Enter 1st Term Loan Amount Required, loan amount must be between (₹) 5,000 to 
+10,000 and select the check box for Loan Purpose and click on the ‘SAVE’ to save details and 
+click on the ‘SUBMIT’ button to submit the application form. 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+Step-22: The Street Vendor will proceed to documentation section. Click on the ‘SAVE’ to save 
+details and click on the ‘SUBMIT’ button to submit the application form. 
+ 
+ 
+ 
+ 
+ 
+STEPS FOR SUBMISSION OF APPLICATION 
+ 
+Step-23: Select ‘Bank and Branch’ you want to process the application for releasing loan OR 
+submit your application to ‘Marketplace’ and tick the ‘PM SVANidhi Declarations and 
+Authorization’. Save and submit the application. 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+Step-24: You will receive the message as Application Submitted. Please note the Application 
+Number in records for future reference.   
+ 
+ 
+Step-25: Once click on ‘Done’, the application status window will open. Street Vendor will 
+able to see the PMS details. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+THANK YOU

@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+groq
+python-dotenv
+pydantic
+pypdf
+sentence-transformers
+faiss-cpu
+openai-whisper
+deep-translator
+gTTS
+python-multipart

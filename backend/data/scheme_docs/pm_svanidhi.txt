@@ -1,0 +1,585 @@
+1 
+ 
+PM SVANidhi Scheme Guidelines  
+ 
+Table of Contents 
+ 
+1. Background ....................................................................................................................... 2 
+2. Objective ............................................................................................................................ 3 
+3. Scheme Coverage .............................................................................................................. 3 
+4. Eligibility Criteria of Beneficiaries ................................................................................. 3 
+5. Scheme Components......................................................................................................... 4 
+5.1. Working Capital Term Loans................................................................................. 4 
+5.1.1. Rate of Interest ................................................................................................. 4 
+5.1.2. Interest Subsidy ................................................................................................ 4 
+5.1.3. Credit Guarantee ............................................................................................. 5 
+5.2. Credit card ................................................................................................................ 5 
+5.2.1. Credit Guarantee for credit card ................................................................... 5 
+5.3 Digital Adoption ....................................................................................................... 6 
+5.4 'SVANidhi se Samriddhi' (SSS) .............................................................................. 6 
+5.5 Support to Urban Street Vendors (SUSV)............................................................. 6 
+5.6 Parichay Boards ....................................................................................................... 7 
+5.7 Capacity Building & Research ............................................................................... 7 
+6. Stakeholders ...................................................................................................................... 7 
+7. Handholding Support ....................................................................................................... 8 
+8. Information, Education and Communication (IEC) ..................................................... 8 
+9. Beneficiary Engagement and Stakeholder Recognition Mechanism ........................... 8 
+10. Integrated IT application ................................................................................................. 9 
+11. Implementation Mechanism ............................................................................................ 9 
+12. Implementing Agency(ies) ............................................................................................. 10 
+13. Committees for Steering & Monitoring of the Scheme ............................................... 10 
+Annexure A ............................................................................................................................. 11 
+Annexure B ............................................................................................................................. 12 
+Annexure C ............................................................................................................................. 13 
+Annexure D ............................................................................................................................. 14 
+Annexure E ............................................................................................................................. 15 
+ 
+ 
+ 
+ 
+ 2 
+1. Background 
+ 
+ 
+Street vendors are an integral part of the urban informal economy, playing a key role in 
+providing goods and services at affordable prices right at the doorsteps of city residents. As per 
+Section 2(1)(l) of the Street Vendors (Protection of Livelihood and Regulation of Street 
+Vending) Act, 2014, a ‘Street Vendor’ means a person engaged in vending of articles, good s, 
+wares, food items or merchandise of everyday use or offering services to the general public, in 
+a street, lane, side walk, footpath, pavement, public park or any other public place or private 
+area, from a temporary built -up structure or by moving from place to place and includes 
+hawker, peddler, squatter, and all other synonyms terms which may be local or region specific. 
+ 
+To safeguard their livelihood and ensure access to social security, the Government of India,  
+enacted the Street Vendors Act, 2014. The COVID-19 pandemic and consequent  lockdowns 
+adversely impacted the livelihoods of street vendors. Given their limited capital, many vendors 
+had exhausted their savings during the lockdown, creating an urgent need for financial 
+assistance to help them restart their businesses. 
+ 
+In response, the Government of India introduced the Pradhan Mantri Street Vendor’s 
+AtmaNirbhar Nidhi (PM SVANidhi) Scheme in June 2020 —the first micro -credit program 
+designed specifically for urban street vendors. The scheme was originally launched for a period 
+up to March 31,2022 and then the scheme was further extended with the approval of Cabinet 
+Committee on Economic Affairs for a lending period of loans till December 31,2024.  This 
+Central Sector Scheme, has successfully empowered lakhs of street vendors by providing loans 
+and promoting digital adoption through incentives for digital payments.  
+ 
+Recognising the positive impact and widespread adoption of the scheme, the Government of 
+India has approved the extension of the lending period till March 31, 2030. Liabilities under 
+the components like credit guarantee, interest subsidy for loans and incentives for digital 
+transactions etc. will be serviced until March 31, 2033 while credit guarantee claims for credit 
+card will be serviced until March 31, 2035. The extended phase aims to consolidate the gains 
+made and expand scheme outreach.  
+ 
+Implementation and monitoring of the scheme would be the joint responsibility of Ministry of 
+Housing & Urban Affairs (MoHUA) and Department of Financial Services (DFS), with DFS 
+being responsible for facilitating access to loans/ credit cards through banks/ financial 
+institutions and their ground level functionaries. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 3 
+2. Objective 
+ 
+The objective of the scheme is to address the vulnerabilities of the street vendors through a 
+multi-pronged approach. This includes:  
+ 
+a) Recognition of Street Vendors; 
+ 
+b) Financial Inclusion via working capital term loan in three tranches; 
+ 
+c) Access to UPI linked credit card;  
+ 
+d) Promote digital adoption; 
+ 
+e) Capacity Building; 
+ 
+f) Linkages to social security schemes; 
+ 
+3. Scheme Coverage 
+ 
+The scheme extends to all the States/UTs which have notified rules and schemes under Street 
+Vendors (Protection of Livelihood and Regulation of Street Vending) Act,2014 . Further, the 
+scheme is extended to City-Region i.e., census towns, peri urban areas , etc in graded manner 
+for providing scheme benefits seamlessly, so as to establish cities as “growth hubs”.  
+ 
+4. Eligibility Criteria of Beneficiaries 
+ 
+The target beneficiaries of the scheme are street vendors vending in various city-regions. The 
+State/ UTs may adopt suitable methodology for identifying eligible vendors to ensure 
+comprehensive coverage. 
+ 
+a) In statutory towns , the Certificate of Vending (CoV)/Identity Card/Letter of 
+Recommendation (LoR) to the street vendors will be issued by TVC/ ULBs.  
+ 
+b) For census towns and peri urban areas , the Letter of Recommendation (LoR) to the 
+street vendors will be issued by Block Development Offices after due verification  as 
+per Annexure A. 
+ 
+c) The verification and issuance of LoR shall be completed within 15 days of the 
+submission of application. 
+ 
+ 
+ 
+ 
+ 4 
+5. Scheme Components  
+ 
+5.1. Working Capital Term Loans 
+ 
+SVs will be eligible for collateral free working capital term loan in three tranches: 
+ 
+1. 1st tranche loan of up to ₹15,000 to be repaid in 12 months,  
+2. 2nd tranche loan of up to ₹25,000 to be repaid in 18 months and  
+3. 3rd tranche loan of up to ₹50,000 to be repaid in 36 months  
+ 
+Upon timely or early repayment of a tranche, vendors will be eligible for the next tranche of 
+working capital term loans, with the enhanced limit. For repayment before the scheduled date, 
+no prepayment penalty will be charged from the vendor.  
+ 
+The operational guidelines for availing the loans will be issued separately. 
+ 
+5.1.1. Rate of Interest 
+ 
+a) In case of Scheduled Commercial Banks, Cooperative Banks & SHG Banks, the rates 
+will be as per their prevailing rates of interest.  
+ 
+b) In case of NBFC, NBFC -MFIs etc., interest rates will be as per RBI guidelines for 
+respective lender category.  
+ 
+c) In respect of MFIs (non NBFC) & other lender categories not covered under the RBI 
+guidelines, interest rates under the scheme would be applicable as per the extant RBI 
+guidelines for NBFC-MFIs. 
+ 
+5.1.2. Interest Subsidy 
+ 
+The vendors, availing loan under the scheme, are eligible to get an interest subsidy at 7% per 
+annum. The interest subsidy amount will be credited into the borrower’s account quarterly. 
+Lending Institutes will submit quarterly claims for interest subsidy for quarters ending as on 
+June 30, September 30, December 31 and March 31 during each financial year.  
+ 
+Subsidy will only be considered in respect of accounts of borrowers, which are standard (non-
+NPA as per extant RBI guidelines) on respective claim dates and only for those months during 
+which the account has remained standard in the concerned quarter.  The interest subsidy is 
+available up to March 31, 2033.  
+ 
+ 
+ 
+ 
+ 5 
+5.1.3. Credit Guarantee 
+ 
+The Scheme has a provision of Graded Guarantee Cover provided to Lending Institutions for 
+the loans sanctioned, as indicated below, to be administered by Credit Guarantee Fund Trust 
+for Micro and Small Enterprises (CGTMSE), which will be operated on portfolio basis: 
+ 
+• 31.87% for 1st tranche loan,  
+• 8.25% for the 2nd tranche loan, and  
+• 6% for the 3rd tranche loan 
+ 
+All loans given by each lending institution under the scheme will be considered for coverage 
+under the guarantee, thereby encouraging them to extend collateral-free loans to street vendors 
+with greater confidence and financial security. 
+The periodicity of filing of claims by lending institutions will be quarterly. All the participating 
+lending institutions shall be eligible to avail this guarantee cover without any charges.  
+ 
+5.2.  Credit card 
+ 
+A UPI linked RuPay Credit Card will be available as an additional facility for PM SVANidhi 
+beneficiaries who have successfully repaid their 2nd tranche loan and are eligible for 3rd 
+tranche loan under the PM SVANidhi Scheme.  
+This card will be a domestic card  and initially the credit limit will be ₹10,000 which will be 
+gradually increased to ₹30,000, the card will be valid for a period of 5 years. 
+ 
+The operational guidelines for the component will be issued separately. 
+ 
+ 
+5.2.1. Credit Guarantee for credit card 
+ 
+Guarantee against default on the credit card is provided through CGTMSE. Guarantee on the 
+Card will be available for five years from the date of the issuance of the card or card validity 
+period whichever is earlier.   
+ 
+The guarantee will be extended up to an NPA level of 20%, i.e., NPAs up to 20% of the 
+approved limit on all cards issued by the card issuer at the time of claim submission during the 
+scheme period. The risk coverage will be restricted to 75% of the outstanding amount, subject 
+to a maximum outstanding of ₹30,000 or the approved limit, whichever is lower, per card. 
+ 
+At the time of renewal of the card (after the initial validity period of the card), the issuer can 
+take an independent business call based on the credit history of the beneficiary. 
+ 
+ 
+ 
+ 
+ 
+ 6 
+5.3  Digital Adoption 
+ 
+The scheme will incentivize digital transactions done by the beneficiaries through cashback 
+facility. The scheme envisions enhancing the digital onboarding of street vendors with the 
+support of “Digi Saathi/  Sakhi”, network of Lending Institutions  and Digital Payment 
+Aggregators (DPAs) like, BHIM, India Post Payment Bank, Paytm, PhonePe, BharatPe etc. 
+They will support with the on-boarding of the beneficiaries for digital transactions by issuing 
+UPI IDs, QR codes, providing digital training to the beneficiary and resolving issues related to 
+digital payment. ULBs in collaboration with DPAs and Banks shall engage “Digi Saathi/Sakhi” 
+to provide these services to street vendors. 
+ 
+To enhance digital adoption, beneficiaries would be incentivized on following:  
+ 
+a. Any inward and outward digital transaction - up to ₹100 per month (₹1 per transaction) 
+with maximum cashback of ₹1,200 per year in each tranche  
+ 
+b. Wholesale digital purchases – up to ₹100 per quarter (@ ₹20 per transaction for 5 such 
+transactions) for 4 quarters for conducting digital transactions on wholesale purchases 
+of at least ₹2,000, with a maximum cashback of ₹400 per year 
+ 
+The operational guidelines for the component will be issued separately.  
+ 
+5.4  'SVANidhi se Samriddhi' (SSS) 
+ 
+The 'SVANidhi se Samriddhi' component of the scheme aims to strengthen the safety net for 
+beneficiaries' families, enhancing their living conditions.  
+ 
+This component facilitates linkages of beneficiary families via socio -economic profiling to 
+various existing Government of India welfare schemes, promoting their holistic development 
+and socio-economic upliftment.  
+ 
+The detailed guidelines for the implementation of SSS is at  
+https://pmsvanidhi.qcin.org/account/landing-page.  
+ 
+5.5  Support to Urban Street Vendors (SUSV) 
+ 
+This component of the scheme aims to provide comprehensive assistance to street vendors as 
+mentioned in the SV Act’2014 enhancing their livelihood opportunities and ensuring their 
+socio-economic inclusion.  
+ 
+This component will provide support to the street vendors through a multi -pronged approach 
+including:  
+ 
+ 
+ 
+ 7 
+• Identification of street vendors through survey, issuance of certificate of vending (CoV) 
+& identity cards etc; 
+• Reform incentives for notifying city street vending plans; 
+• Innovative projects  
+ 
+The operation guidelines for the component will be issued separately. 
+ 
+5.6  Parichay Boards 
+In order to improve visibility and provide a sense of identity, 'SVANidhi Beneficiary Parichay 
+Board' (SBPB) will be provided to PM SVANidhi beneficiaries, which can be displayed at their 
+vending place.  
+ 
+5.7  Capacity Building & Research 
+ 
+Capacity building and training is a critical component in technical upgradation and 
+formalization of street vendors. By enhancing their skills and knowledge, vendors will be better 
+equipped to financially manage their businesses effectively, adopt e-commerce, and ensure 
+long-term sustainability and success.  
+ 
+The scheme envisages capacity building for street vendors with focus on entrepreneurship, 
+financial literacy, digital literacy, packaging etc in convergence with capacity building 
+programs implemented by various Ministries/  Departments in GOI. Special training to the 
+street food vendor beneficiaries on hygiene and food safety will be provided in convergence 
+with FSSAI. The component will also focus on the capacity building/  orientation sessions of 
+ULBs and other stakeholders, soft interventions including handholding for new market access, 
+backward-forward linkages, national/ regional workshops/ seminars etc. 
+ 
+Research studies and impact assessments through  research/ academic institutes would be 
+conducted to study the scheme's effectiveness and sustainability for street vendors.  
+ 
+6. Stakeholders  
+ 
+The stakeholders of the scheme include, but are not limited to, Street Vendors (SVs) and their 
+families, States/Union Territories (UTs), Urban Local Bodies, Lending Institutions such as 
+Scheduled Commercial Banks (SCBs), Regional Rural Banks (RRBs), Small Finance Banks 
+(SFBs), Cooperative Banks, Non -Banking Financial Companies (NBFCs), Microfinance 
+Institutions (MFIs) etc. 
+ 
+The lending institutions will be encouraged to use their network of field functionaries i.e. 
+Business Correspondents (BCs)/ Constituents/ Agents extensively to ensure maximum 
+coverage of the scheme. 
+ 
+ 
+ 8 
+Additionally, central ministries/ departments, digital payment aggregators, credit card issuing 
+companies, the Quality Council of India (QCI), the National Payments Corporation of India 
+(NPCI), Indian Bank (PAiSA Portal), CSC e -Services Limited, the Credit Guarantee Fund 
+Trust for Micro and Small Enterprises (CGTMSE), and other pa rtners will contribute for the 
+effective implementation of the scheme. 
+ 
+7. Handholding Support  
+ 
+Resources Persons (RPs) such as Community Resource Persons, Interns etc  may be engaged 
+by the ULBs for providing hand-holding support to the street vendors.  
+These RPs would carry out the following functions:  
+ 
+a) Handholding street vendors in application submission  and availing loan, ensuring 
+repayment etc.;  
+ 
+b) Handholding street vendors in application and approval of pan card, credit card, 
+activation of credit card etc; and 
+ 
+c) Digital adoption by the street vendors etc 
+ 
+An incentive will be provided for handholding support to street vendors. Permanent staff of the 
+ULB or  temporary staff working for PM SVANidhi at the State/ULB level, would not be  
+eligible for this incentive. 
+ 
+8. Information, Education and Communication (IEC) 
+ 
+Branding is an important aspect of communicating the scheme accurately to different 
+stakeholders, especially to the target beneficiaries.  
+Innovative use of various platforms including the local and social media will be encouraged      
+to reach the targeted beneficiaries in an effective and engaging manner.  
+ 
+A detailed advisory for IEC will be issued separately.  
+ 
+9.  Beneficiary Engagement and Stakeholder Recognition 
+Mechanism 
+Adopting a whole-of-government approach to ensure saturation, the scheme lays emphasis on 
+structured beneficiary engagement and stakeholder recognition through the following targeted 
+interventions: 
+ 
+ 
+ 9 
+a) Monthly ‘Lok Kalyan Melas’ : These will be organized to facilitate socio -economic 
+profiling of street vendors and link them with relevant schemes. The events will also 
+serve as platforms for loan applications mobilization and disbursements, digital 
+onboarding, financial awareness drives, and other beneficiary-oriented activities. 
+ 
+b) Annual ‘SVANidhi Mahotsav’ : This will be conducted at the Urban Local Body 
+(ULB)/ District level to celebrate the achievements of street vendors and their families, 
+particularly their children. The Mahotsav will provide opportunities for informal 
+interactions among vendors, their families, and other stakeholders, thereby fostering a 
+sense of community and recognition. 
+ 
+c) Annual ‘SVANidhi Swabhiman’ Awards : These awards will be instituted to 
+encourage healthy competition among Banks, States, Urban Local Bodies, Districts and 
+other institutions. The awards will recognize and honour outstanding contributions and 
+best practices demonstrated by stakeholders in the implementation of the scheme. 
+ 
+ 
+10. Integrated IT application   
+ 
+The Scheme would  be monitored and the entire flow of data and approval of proposals, etc. 
+would take place on an online system. An integrated IT Platform along with Mobile App 
+developed by the ministry will be utilized for administration of the scheme. This portal provides 
+one stop solution for administration of the scheme. The IT Platform will integrate the vendors’ 
+data across the States/ UTs, Lending Institutions, Digital Payment Aggregators, PAiSA portal 
+of MoHUA etc and Udyami  Mitra portal managed by Small Industries                              Development Bank of 
+India (SIDBI). 
+ 
+11. Implementation Mechanism  
+ 
+The Ministry/State/District/ULBs will organize a kick-off meeting to introduce the components 
+of the restructured scheme, involving state officials, TVC members, representatives from 
+lending institutions, vendor associations, resource persons and other stakeholders. During this 
+meeting, the implementation procedures for the scheme rollout will be communicated.  The 
+operational guidelines for each component will be issued separately.  
+ 
+The implementation and performance of the loan and credit card component under the scheme 
+will be periodically reviewed jointly by Ministry of Housing & Urban Affairs (MoHUA) and 
+Department of Financial Services (DFS).  
+ 
+ 
+ 
+ 
+ 10 
+12. Implementing Agency(ies) 
+ 
+a) Small Industries Development Bank of India (SIDBI)  will be the implementation 
+agency for the Ministry of Housing and Urban Affairs for scheme administration . 
+SIDBI will leverage the network of lending Institutions including the SCBs, RRBs, 
+SFBs, Cooperative Banks, NBFCs & MFIs, Digital payment Aggregators (DPAs), 
+Credit Card issuers, for scheme implementation. 
+ 
+b) Indian Bank, through its PAiSA portal, will support LIs in submitting interest subsidy 
+claims and facilitate the direct transfer of subsidy amounts to beneficiaries’ accounts. 
+ 
+13. Committees for Steering & Monitoring of the Scheme 
+ 
+The Ministry will regularly review the implementation and progress of the various component 
+as per the overall scheme management structure for effective implementation and monitoring. 
+ 
+The Scheme will have the following management structure at the Central, State/ UT , District 
+and ULB level: 
+ 
+a) At National level - a Steering Committee under the chairmanship of Secretary, HUA 
+(composition of the committee is at Annexure-B).  
+ 
+b) At State/ UT level - a Monitoring Committee under the chairmanship of Principal 
+Secretary/ Secretary of Urban Development/ Municipal Administration , which shall 
+meet at least every three months (composition of the committee is at Annexure-C).  
+ 
+c) At District level- a Monitoring Committee headed by District Collector/CEOs Zila 
+Parishad (as decided by the State/UT), which shall meet every month  (composition of 
+the committee is at Annexure-D). 
+ 
+d) At ULB level- a Monitoring C ommittee headed by the Municipal Commissioner/ 
+Executive Officer (EO)/ CEO Cantonment Boards and supported by the Town Vending 
+Committee, which shall meet every month  (composition of the committee is at 
+Annexure-E). 
+ 
+In addition to the above scheme monitoring mechanism, the scheme will also be reviewed 
+under the ambit of DISHA. 
+  
+ 
+ 
+ 11 
+Annexure A  
+ 
+Identification & Onboarding of Street Vendors for census towns and peri urban areas 
+ 
+The PM SVANidhi Scheme aiming to establish cities as “growth hubs”  introduces City-Region 
+approach. The scheme will extend its benefits seamlessly to census towns, peri-urban areas etc. 
+in graded manner. This initiative is expected to enhance the economic development of city 
+regions by generating greater livelihood opportunities. 
+ 
+1. Criteria for Identifying Eligible Street Vendors: 
+ 
+i. ‘Street Vendor’  shall be engaged in vending activity aligning to the definition 1  
+mentioned in Street Vendors  (Protection of Livelihood and Regulation of Street 
+Vending) Act, 2014. 
+ii. The vendor may be engaged in either seasonal or year-round vending activities. 
+iii. The vendor may operate as a mobile or stationary vendor. 
+iv. The vendor should be vending in the respective census town or peri-urban areas. 
+ 
+2. Process for Approval of Letter of Recommendation (LoR): 
+ 
+i. For census towns and peri urban areas , LoRs would be approved and issued by the 
+Block Development Officer (BDO). 
+ii. Applications at the block level will be processed in two stages:   
+(a) Verification: The field level verification   shall be conducted by the Block Level 
+verification committee consisting of Block Level Nodal Officer (Chairperson), GP 
+EO/Secy, Representative from the Block -Level Federation or Gram Panchayat -
+Level Federation and any other member as nominated by the State or District 
+Authority.  
+(b) Approval: Based on the recommendation of the Block Level Verification 
+Committee, the  approval shall be undertaken by Approver (BDO) 
+ 
+iii. The entire process shall be carried out through the PMS portal (Udyami mitra platform). 
+ 
+3. Process for Availing Loan  
+ 
+Upon the issuance of the LOR by the BDO, the street vendor application will be automatically 
+sent to the bank for further processing aligning to the operational guidelines of availing loans. 
+ 
+1 A ‘Street Vendor’ means a person engaged in vending of articles, good, wares, food items or merchandise of everyday use 
+or offering services to the general public in a street lane, side walk, footpath, pavement, park or any other public place or  
+private area from a temporary built-up structure or by moving from place to place and includes hawkers, peddler, squatter, and 
+all other synonyms terms which may be local or region specific 
+ 
+ 
+ 12 
+Annexure B 
+ 
+ 
+At National level a Steering Committee will be constituted as indicated: 
+ 
+Sl. No. Designation Role 
+1.  Secretary, HUA  Co-Chairperson 
+2.  Secretary, DFS Co-Chairperson  
+3.  Secretary, MSME or his nominee Member  
+4.  ED, Deptt of Non-Banking Regulations, RBI Member 
+5.  CMD, SIDBI Member 
+6.  
+Principal Secretaries (UD/ LSG) from three states to be                               
+nominated by Minister, HUA 
+Member 
+7.  CEO, Indian Banks’ Association (IBA) Member 
+8.  CEO, MFIN Member 
+9.  ED, Sa-Dhan Member 
+10.  Joint Secretary and Mission Director (PM SVANidhi) Member Convenor 
+ 
+ 
+Note: Ministry may co-opt any other member as per need. 
+  
+ 
+ 
+  
+ 
+ 
+ 13 
+Annexure C 
+ 
+ 
+At the State/ UT level a monitoring committee will be constituted as indicated: 
+ 
+Sl. No. Designation Role 
+1.  Principal Secretary/ Secretary, Urban Development / 
+Municipal Administration 
+Chairperson 
+2.  Principal Secretary/ Secretary, Finance Member 
+3.  State representative of RBI Member 
+4.  State representative of SIDBI Member 
+5.  Convenor of the State Level Bankers Committee (SLBC) Member 
+6.  Up to 05 Municipal Commissioner(s)/ EO(s), to be invited                                                    
+on rotation basis 
+Member (s) 
+7.  Up to 02 special invitees from Bank/ NBFC/ MFI 
+(nominated by Chairperson) 
+Special Invitee 
+8. Project Director/ State Mission Director (PM SVANidhi) Member Convenor 
+ 
+Note: State/ UT may co-opt any other member as per need. 
+ 
+ 
+  
+ 
+ 
+ 14 
+Annexure D 
+ 
+ 
+At District level a monitoring committee will be constituted as indicated: 
+ 
+Sl. No. Designation Role 
+1.  District Collector (DC)/ District Magistrate (DM) Chairperson 
+2.  Superintendent  of Police Member 
+3.  Municipal Commissioner or his/ her representative Member 
+4.  2 members as nominated by Central Govt.  Member 
+5.  Additional District Collector or equivalent officer  Convenor 
+6.  Lead District Manager (LDM) Member 
+7.  Representative from any 2 Banks 
+[To be nominated by DC] 
+Member 
+8.  Executive Officers (EO)ULBs Member 
+9.  Block Development Officers  Member 
+ 
+Note: District may co-opt any other member as per need. 
+ 
+The District Magistrate will be responsible for  facilitating the identification of beneficiaries , 
+overall supervision of loan disbursements, addressing and resolving any issues with respect to 
+implementation,  to ensure smooth execution of the entire process. 
+ 
+ 
+  
+ 
+ 
+ 15 
+Annexure E 
+ 
+ 
+At ULB level a monitoring committee will be constituted as indicated: 
+ 
+Sl. No. Designation Role 
+1.  Municipal Commissioner (MC)/ Executive Officer (EO) Chairperson 
+2.  2 members as nominated by Central Govt.  Member 
+3.  Lead District Manager (LDM) Member 
+4.  Up to 03 non -official representatives of TVC/ provisional 
+TVC, as nominated by the Municipal Commission/ EO 
+[Where even provisional TVC is not available, up to 3 
+members from street vendors association (s) in the town to be 
+nominated by the MC/ EO] 
+Member (s) 
+5.  Representative from any 2 banks Member (s) 
+6.  Representative from City or Area Level Federation Member 
+7.  Project Officer from Urban Development Authority Convenor 
+ 
+Note: ULB may co-opt any other member as per need.

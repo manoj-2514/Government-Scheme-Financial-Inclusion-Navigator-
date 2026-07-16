@@ -1,0 +1,542 @@
+2024 
+ 
+Version 1.4 
+Frequently Asked Questions (FAQ) 
+on One-Time Registration 
+      
+ 
+National Scholarship Portal 
+1 | P a g e 
+National Scholarship Portal 
+Frequently Asked Questions (FAQ) on One -
+Time Registration 
+  
+1. What is One-Time Registration (OTR)? 
+ 
+One-Time Registration (OTR) is a unique number provided to streamline the registration 
+process. Users register with their mobile number and complete e-KYC (electronic Know 
+Your Customer). Once this process is complete, an OTR number is generated and sent 
+to the use r's phone. This unique number allows users to log in and access various 
+services without needing to re-register. The OTR number is generated once and remains 
+valid throughout the student's academic career. 
+ 
+2. What are the benefits of One-Time Registration? 
+ 
+One-Time Registration (OTR) offers several advantages: 
+• It helps in streamlining the registration process as OTR simplifies the registration 
+process by providing users with a unique number after completing e -KYC. This 
+eliminates the need for repetitive registration steps across different services. 
+• It is convenient for the users as they only need to register once with their mobile 
+number and complete e-KYC to receive their OTR number. This reduces the hassle 
+of filling out multiple registration forms for various services.  
+• The OTR number is generated once and remains valid throughout the student's 
+academic career, providing a consistent and stable identifier for all related 
+services. 
+• By eliminating the need for repetitive registrations, OTR enhances the overall user 
+experience, making it more convenient for traceability and tracking to access 
+multiple services. 
+ 
+3. Which portals typically use One-Time Registration? 
+ 
+The NSP portal and other state portals may implement One-Time Registration (OTR) to 
+simplify the registration process and ensure de-duplication. 
+ 
+4. Is One-Time Registration mandatory for all services on NSP? 
+ 
+Yes, One -Time Registration is mandatory for all services on NSP. It serves as the 
+username for logging in and is also required to complete the face authentication process. 
+ 
+5. What documents/information do I need to have ready to create my OTR? 
+ 
+To create your OTR, student shall have: 
+Required Documents/Information: 
+I. Active mobile number 
+II. Aadhaar number 
+III. Mobile number linked with Aadhaar 
+2 | P a g e 
+National Scholarship Portal 
+IV. NPCI Seeding status (desired) 
+ 
+If you don't have an Aadhaar: 
+I. Active mobile number 
+II. Aadhaar enrolment slip or Parent's/Legal Guardian’s Aadhaar (in case student is 
+minor) 
+III. Mobile number linked with EID or Parent's Aadhaar 
+IV. NPCI Seeding status (desired) 
+ 
+6. Can I update my information after completing the One -Time Registration (OTR) 
+process? 
+ 
+Yes, you can update most of your information, including Aadhaar -related details and 
+other personal information. This ensures that your profile remains accurate and up to 
+date. If your Aadhaar information changes, you will need to perform e -KYC and face 
+authentication again to update your details. 
+ 
+7. How frequently should I update my One-Time Registration information? 
+ 
+It's advisable to review and update your OTR information periodically, especially if there 
+are changes to your personal details or contact information. Keeping your profile up to 
+date ensures accuracy and enhances the effectiveness of the OTR system. 
+ 
+8. Do I need to remember multiple application IDs with One-Time Registration? 
+ 
+No, it is not required nor needed. Using the OTR number, you can retrieve all application 
+IDs linked to it. Each candidate has a unique OTR, and all applications are linked to 
+this single number. Additionally, all the application statuses will be visible, simplifying 
+the process further. 
+ 
+9. Can I use One-Time Registration across different devices? 
+ 
+Yes, OTR is designed to be accessible from various devices such as computers, 
+smartphones, and tablets. As long as you have an internet connection, you can access 
+your registered account from anywhere using the OTR No. 
+ 
+10. Is there a fee associated with One-Time Registration? 
+ 
+No, One-Time Registration is free on NSP and its processes. It is a unique number based 
+on your e -KYC details and registration mobile number. It is used to log into the 
+application and does not require any payment. 
+ 
+11. What is a Reference no? 
+ 
+A Reference no is assigned when users provide their own Aadhaar or their guardian's 
+Aadhaar. It is sent to the registered mobile number to complete face authentication and 
+to generate OTR number. 
+ 
+ 
+ 
+3 | P a g e 
+National Scholarship Portal 
+12. What are the next steps after obtaining a Reference no?  
+ 
+Once you have a Reference no, log in to the Face Auth app and complete the face 
+authentication process. After successfully completing face authentication, you will 
+receive your OTR number. 
+ 
+13. How long will my Reference no be valid? 
+ 
+Your Reference no will be valid until you complete the face authentication and KYC 
+process. After this, your OTR will remain valid. 
+ 
+14. What should I do if I forget my Reference no? 
+ 
+If you forget your Reference no, you can retrieve it using the "Forgot Reference no" option. 
+You will need to provide the Aadhaar number used during your e -KYC to recover the 
+Reference no. 
+ 
+15. What happens if I forget my One-Time Registration credentials? 
+ 
+If you forget your OTR number, you can retrieve it by selecting the "Forgot OTR Number" 
+option. To recover your OTR number, you will need to provide the Aadhaar number used 
+during your e-KYC process. 
+ 
+16. I have generated my reference no. How to complete my face-      authentication and 
+generate OTR? 
+Face-authentication is mandatory for generation of OTR. NSP has launched the Mobile 
+App for android devices. Student is required to follow below steps for face-authentication 
+and generation of OTR: 
+1) Download and install the Face RD App from Google Play Store. 
+(link: https://play.google.com/store/apps/details?id=in.gov.uidai.facerd) 
+2) Download and install NSP OTR App  from Google Play Store. 
+(link: https://play.google.com/store/apps/details?id=in.gov.scholarships.nspotr&pli=1) 
+ 
+3) Complete the face-authentication using option “eKYC with FaceAuth” on NSP OTR 
+Mobile App. 
+ 
+17. I am facing difficulty while performing face-authentication 
+ 
+Successful face capturing requires proper positioning and good lighting condition. To 
+know more about the Aadhaar Face Authentication please visit  FAQ no. 21 . (Link: 
+
+4 | P a g e 
+National Scholarship Portal 
+https://uidai.gov.in/en/contact-support/have-any-question/303-
+faqs/authentication.html) 
+ 
+18. What should I do if I want to change mobile number registered in my    
+OTR/Reference no? 
+Mobile number registered with OTR /Reference no can be changed after successful 
+Aadhar based OTP authentication. Once the student completes Aadhar based OTP 
+Authentication successfully, the system will prompt them to enter new mobile number. 
+After OTP verification of the new mobile no, the same will get registered in OTR/Reference 
+no. 
+ 
+19. What should I do if I haven’t received the password after completing my OTR 
+registration?  
+ 
+The student should visit student corner on NSP and exercise “Forget Password” option 
+available under OTR login. The same option can also be used to reset the existing 
+password. 
+ 
+20. What should I do if my Aadhar is already seeded with the bank account but on OTR 
+it is showing “Not seeded”? 
+ 
+The student is advised to click on “Aadhar Seeding -> Check it now” option available in 
+the “Profile Details” section under OTR login. 
+ 
+21. How can I update my profile details? 
+ 
+Student can update the profile details by log in to the OTR using her credentials. Once 
+logged in, navigate to the “ Update Profile” section where you can update the required 
+details and save the changes. 
+ 
+22. I have registered OTR using my Parent’s/Legal guardian’s Aadhaar. However, there 
+is a typographical mistake in my name. How can I correct it? 
+ 
+Student can login into the OTR using her credentials. Once logged in, navigate to the 
+“Update Profile” section and update the Applicant Name. 
+ 
+23. How can I change my email ID in my OTR? 
+ 
+Student shall login into the OTR using her credentials. Please click on the update email 
+option. You can add email id through this option. 
+ 
+24. What are the benefits of verified email in OTR? How can I verify my email ID? 
+ 
+The verified email in OTR  ensure Student’s to receive important notifications and 
+updates, and it enhances the security of the student’s account. Student can verify her 
+email by log in to the NSP portal  and navigate to “Update Email” section and can add 
+email id and verify the same through received OTP. 
+ 
+25. I have corrected my date of birth on NSP portal. During correction, portal has given 
+me warning, “Kind Attn!! On attaining the age of 18 years, updating Self Aadhaar 
+5 | P a g e 
+National Scholarship Portal 
+in OTR is required”. Also, after successful updation of my profile, my e-KYC status 
+is displayed as “pending”. What am I supposed to do now? 
+ 
+The warning shown by portal while correcting the date of birth was to inform the student 
+that she is major as per his entered date of birth  and therefore student is required to 
+update her Aadhaar in her OTR profile and her eKYC status is pending.  
+ 
+26. I have received SMS as “Dear Student, it is mandatory to update self -Aadhaar 
+details on attaining the age of 18 years. Please ensure to update your Aadhaar 
+details if it is not done yet against your OTR No. XXXXXXX. NSP Team" and now 
+in my profile e-KYC status is displayed as pending”. What am I supposed to do now? 
+ 
+Since Student is major now her eKYC is required and that is why Student eKYC status 
+is shown as pending. Now, student needs to perform her eKYC (FaceAuth).  
+ 
+27. I have received SMS as “Dear Student, you have generated your OTR number using 
+your Aadhaar Enrollment (EID) n umber. It is required to update your Aadhaar 
+details on NSP website within one month failing which your application may not be 
+processed. NSP Portal". What am I supposed to do now? 
+ 
+The student has generated her OTR using her EID. Student is required to submit her 
+Aadhaar details within one month of generation of OTR failing which the OTR may be 
+suspended, or application processing may be stopped. Please submit your Aadhaar and 
+perform your eKYC (FaceAuth) so that OTR shall not be suspended, and application 
+processing shall not be stopped. 
+ 
+28. I have updated my details in Aadhaar. How can I update my details in OTR.? 
+ 
+Student can update the Aadhaar details in OTR through “refresh e-KYC” option available 
+in his profile. 
+ 
+29. What is "login with Aadhaar" option in OTR Login window? How can I login in 
+OTR using Aadhaar no? 
+ 
+This option offers alternate method to login into OTR using Aadhaar. Select “Login with 
+Aadhaar” option. Enter your Aadhaar no. and the OTP received on your Aadhaar linked 
+mobile no to login.  
+ 
+30. Are NSP services also available at CSC? 
+ 
+Yes, Student can access NSP services through the CSC. You can perform biometric 
+authentication to generate OTR and fill your scholarship application form at CSC Centre. 
+ 
+31. What are the charges for NSP services at CSC? 
+ 
+The total charges for the entire activity per candidate (including generation of Reference 
+number, biometric -authentication, generation of One-Time Registration (OTR) number, 
+and filing of complete application form of the candidate) is Rs 30.00 (inclusive of all 
+applicable taxes, etc.) 
+ 
+6 | P a g e 
+National Scholarship Portal 
+32. What are the prerequisites for generating OTR at CSC centre 
+Following are the prerequisites required at CSC centre: 
+1) Active mobile number  
+2) Aadhaar number  
+3) Physical presence of Student/Parent/Legal Guardian to perform biometric based 
+Aadhaar authentication  
+4) NPCI Seeding status (desired) 
+ 
+33.  How can I find the nearby CSC? 
+  To find the nearby CSC, visit this link: https://locator.csccloud.in/ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+7 | P a g e 
+National Scholarship Portal 
+ओ.टी.आर  पंजीकरण  पर  अक्सर पूछ े जाने  वाले  
+प्रश्न (एफएक्यू) 
+1. एकल  अवसरीय पंजीकरण (ओ.टी .आर) क्या है? 
+ 
+एकल अवसरीय  पंजीकरण  (ओ.टी.आर ) एक अद्वितीय नंबर  है जो पंजीकरण  प्रद्विया को सुव्यवस्थित करने  के द्वलए 
+प्रदान द्वकया जाता  है। उपयोगकताा  अपने मोबाइल  नंबर  के साि  पंजीकरण  करते  हैं और  ई-क े वाईसी (इलेक्ट् र ॉद्वनक 
+नो योर  कस्टमर) पूरा  करते  हैं। एक बार  जब यह प्रद्विया पूरी  हो जाती  है, तो एक ओ.टी.आर  नंबर  जेनरेट  होता  है 
+और  उपयोगकताा  के फोन पर  भेजा  जाता  है। यह अद्वितीय नंबर  उपयोगकतााओं  को पुन: पंजीकरण  की आवश्यकता 
+के द्वबना लॉग इन करने  और  द्ववद्वभन्न सेवाओं  तक पहंचने की अनुमद्वत देता  है। ओ.टी.आर  नंबर  एक बार  जेनरेट  होता  
+है और  छात्र के शैक्षद्वणक कररयर  के दौरान  वैध रहता  है। 
+ 
+2. ओ.टी .आर पंजीकरण के क्या लाभ  हैं? 
+ 
+ओ.टी.आर  पंजीकरण  (ओ.टी.आर ) कई लाभ  प्रदान करता  है: 
+• यह पंजीकरण  प्रद्विया को सुव्यवस्थित करने  में मदद करता  है क्योंद्वक ओ.टी.आर  ई-क े वाईसी पूरा  करने  के 
+बाद  उपयोगकतााओं  को एक अद्वितीय नंबर  प्रदान करक े  पंजीकरण  प्रद्विया को सरल  बनाता  है। इससे 
+द्ववद्वभन्न सेवाओं  में बार -बार  पंजीकरण  चरणों  की आवश्यकता समाप्त हो जाती  है। 
+• यह उपयोगकतााओं  के द्वलए सुद्ववधाजनक है क्योंद्वक उन्हें अपना  ओ.टी.आर  नंबर  प्राप्त करने  के द्वलए क े वल 
+एक बार  अपने मोबाइल  नंबर  के साि  पंजीकरण  करना  होगा  और  ई-क े वाईसी पूरा  करना  होगा।  इससे 
+द्ववद्वभन्न सेवाओं  के द्वलए एकाद्वधक पंजीकरण  फॉमा भरने  की परेशानी  कम हो जाती  है।  
+• ओ.टी.आर  नंबर  एक बार  जेनरेट  होता  है और  छात्र के शैक्षद्वणक कररयर  के दौरान  वैध रहता  है, जो सभी 
+संबंद्वधत सेवाओं  के द्वलए एक सुसंगत और  स्थिर पहचानकताा  प्रदान करता  है। 
+• दोहराए  जाने  वाले  पंजीकरण  की आवश्यकता को समाप्त करक े , ओ.टी.आर  समग्र उपयोगकताा  अनुभव को 
+बढाता  है, द्वजससे कई सेवाओं  तक पहंचने के द्वलए ट रेसद्वबद्वलटी और  ट रैद्वक ं ग को और  अद्वधक सुद्ववधाजनक 
+बना  द्वदया जाता  है। 
+ 
+3. कौन से पोटटल  आमतौर पर ओ.टी .आर पंजीकरण का उपयोग करते हैं? 
+ 
+एनएसपी पोटाल (NSP) और  अन्य राज्य पोटाल पंजीकरण  प्रद्विया को सरल  बनाने  और  द्वििुप्लीक े शन सुद्वनद्वित करने  
+के द्वलए वन-टाइम  पंजीकरण  (ओ.टी.आर ) लागू  कर  सकते हैं। 
+ 
+4. क्या एनएसपी पर सभी सेवाओं के ललए  ओ.टी .आर पंजीकरण अलनवायट है? 
+हां , एनएसपी पर  सभी सेवाओं  के द्वलए ओ.टी.आर  पंजीकरण  अद्वनवाया है। यह लॉग इन करने  के द्वलए उपयोगकताा  
+नाम  के रूप  में काया  करता  है और  चेहरा  प्रमाणीकरण प्रद्विया को पूरा  करने  के द्वलए भी आवश्यक है। 
+ 
+5. अपना ओ.टी .आर बनाने के ललए  मुझे कौन से दस्तावेज़/जानकारी तैयार रखनी होगी? 
+ 
+अपना  ओ.टी.आर  बनाने  के द्वलए, आपक े पास  द्वनम्नद्वलस्ित होना  चाद्वहए: 
+आवश्यक दस्तावेज़/जानकारी: 
+I. सद्विय मोबाइल  नंबर  
+8 | P a g e 
+National Scholarship Portal 
+II. आधार  नंबर  
+III. आधार  से द्वलंक मोबाइल  नंबर . 
+IV. एनपीसीआई  स्थिद्वत (वांद्वछत) 
+यलद आपक े पास आधार नहीं है/या यलद आप नाबाललग  हैं 
+I. सद्विय मोबाइल  नंबर  
+II. आधार  नामांकन  पची या  माता -द्वपता का  आधार  
+III. ईआईिी या  माता -द्वपता के आधार  से जुडा  मोबाइल  नंबर  
+IV. एनपीसीआई स्थिद्वत (वांद्वछत) 
+ 
+6. क्या मैं एकल  अवसरीय पंजीकरण (ओ.टी .आर) प्रलिया पूरी करने के बाद अपनी जानकारी अपडेट  कर 
+सकता हं? 
+ 
+हां , आप आधार  से संबंद्वधत द्वववरण और  अन्य व्यस्िगत जानकारी  सद्वहत अपनी अद्वधकांश जानकारी  अपिेट कर  
+सकते हैं। यह सुद्वनद्वित करता  है द्वक आपकी प्रोफाइल सटीक और  अद्यतन बनी रहे।  यद्वद आपकी आधार  जानकारी  
+बदल जाती  है, तो आपको अपना  द्वववरण अपिेट करने  के द्वलए ई-क े वाईसी करने  और  द्वफर से प्रमाणीकरण का  
+सामना  करने  की आवश्यकता होगी। 
+ 
+7. मुझे अपनी वन-टाइम  पंजीकरण जानकारी लकतनी बार अपडेट  करनी चालहए?  
+ 
+समय-समय पर  अपनी ओ.टी.आर  जानकारी  की समीक्षा और  अद्यतन करने  की सलाह  दी जाती  है, िासकर  यद्वद 
+आपक े व्यस्िगत द्वववरण या  संपक ा जानकारी  में कोई बदलाव  हो। अपनी प्रोफाइल को अद्यतन रिने  से सटीकता  
+सुद्वनद्वित होती है और  ओ.टी.आर  प्रणाली की प्रभावशीलता बढ जाती  है। 
+ 
+8. क्या मुझे एक बार के पंजीकरण के साथ  एकालधक आवेदन आईडी याद रखने की आवश्यकता है? 
+ 
+नहीं, इसकी न तो जरूरत  है और  न ही जरूरत . ओ.टी.आर  नंबर  का  उपयोग करक े , आप इससे जुडी सभी एस्प्लक े शन 
+आईिी पुनः  प्राप्त कर  सकते हैं। प्रत्येक उम्मीदवार के पास  एक अद्वितीय ओ.टी.आर  होता  है, और  सभी आवेदन इस 
+एकल नंबर  से जुडे होते हैं। इसक े अद्वतररि, सभी आवेदन स्थिद्वतयााँ द्वदिाई देंगी, द्वजससे प्रद्विया और  सरल  हो 
+जाएगी।  
+ 
+9. क्या मैं लवलभन्न उपकरणों पर ओ.टी .आर पंजीकरण का उपयोग कर सकता हूँ? 
+ 
+हां , ओ.टी.आर  को क ं प्यूटर, स्माटाफोन और  टैबलेट जैसे द्ववद्वभन्न उपकरणों  से पहंच योग्य बनाने  के द्वलए द्विजाइन 
+द्वकया गया  है। जब तक आपक े पास  इंटरनेट  कनेक्शन है, आप ओ.टी.आर  नंबर  का  उपयोग करक े  कहीं से भी अपने 
+पंजीक ृ त िाते  तक पहंच सकते हैं। 
+ 
+10. क्या ओ.टी .आर पंजीकरण के साथ  कोई शुल्क जुडा है? 
+ 
+नहीं, एनएसपी और  इसकी प्रद्वियाओं पर  ओ.टी.आर  पंजीकरण  द्वनः शुल्क है। यह आपक े ई-क े वाईसी द्वववरण और  
+पंजीकरण  मोबाइल  नंबर  पर  आधाररत  एक अद्वितीय नंबर  है। इसका  उपयोग एस्प्लक े शन में लॉग इन करने  के द्वलए 
+द्वकया जाता  है और  इसक े द्वलए द्वकसी भुगतान  की आवश्यकता नहीं होती है। 
+ 
+ 
+ 
+9 | P a g e 
+National Scholarship Portal 
+11. संदभट संख्या क्या है? 
+ 
+जब उपयोगकताा  अपना  आधार  या  अपने अद्वभभावक का  आधार  प्रदान करते  हैं तो एक संदभा संख्या द्वनद्वदाष्ट की जाती  
+है। इसे चेहरे  का  प्रमाणीकरण पूरा  करने  और  ओ.टी.आर  नंबर  उत्पन्न करने  के द्वलए पंजीक ृ त मोबाइल  नंबर  पर  भेजा  
+जाता  है। 
+ 
+12.  संदभट संख्या प्राप्त करने के बाद अगले  चरण क्या हैं? 
+ 
+एक बार  जब आपक े पास  संदभा संख्या हो, तो फ े स ऑि ऐप में लॉग इन करें  और  फ े स प्रमाणीकरण प्रद्विया पूरी  
+करें।  फ े स ऑिेंद्वटक े शन सफलतापूवाक  पूरा  करने  के बाद , आपको अपना  ओ.टी.आर  नंबर  प्राप्त होगा।  
+ 
+13. मेरा रेफरेंस नंबर कब तक वैध रहेगा? 
+ 
+आपका  रेफरेंस  नंबर  तब तक मान्य रहेगा  जब तक आप चेहरा  प्रमाणीकरण और  क े वाईसी प्रद्विया पूरी  नहीं कर  
+लेते। इसक े बाद  आपका  OTR वैध रहेगा . 
+ 
+14. यलद मैं अपना संदभट िमांक भूल  जाऊ ं तो मुझे क्या करना चालहए? 
+ 
+यद्वद आप अपना  संदभा संख्या भूल जाते  हैं, तो आप "संदभा संख्या भूल गए" द्ववकल्प का  उपयोग करक े  इसे पुनः  प्राप्त 
+कर  सकते हैं। आपको संदभा संख्या पुनप्रााप्त करने  के द्वलए अपने ई-क े वाईसी के दौरान  उपयोग द्वकया गया  आधार  
+नंबर  प्रदान करना  होगा।  
+ 
+15. यलद मैं अपना ओ.टी .आर पंजीकरण ि े डेंलशयल भूल  जाऊ ं तो क्या होगा? 
+ 
+यद्वद आप अपना  ओ.टी.आर  नंबर  भूल जाते  हैं, तो आप "भूल गए ओ.टी.आर  नंबर " द्ववकल्प का  चयन करक े  इसे पुनः  
+प्राप्त कर  सकते हैं। अपना  ओ.टी.आर  नंबर  पुनप्रााप्त करने  के द्वलए, आपको अपनी ई-क े वाईसी प्रद्विया के दौरान  
+उपयोग द्वकया गया  आधार  नंबर  प्रदान करना  होगा।  
+ 
+16. मैंने अपना संदर्भ संख्या प्राप्त कर ली  है। मैं चेहरा-प्रमाणीकरण क ै से पूरा कर ं और ओटीआर क ै से प्राप्त कर ं? 
+ओटीआर  प्राप्त करने  के द्वलए चेहरा  प्रमाणीकरण अद्वनवाया है। एनएसपी ने एनि र ाइि उपकरणों  के द्वलए मोबाइल  ऐप 
+लॉन्च द्वकया है। छात्र को चेहरा  प्रमाणीकरण और  ओटीआर  बनाने  के द्वलए नीचे द्वदए गए चरणों  का  पालन  करना  
+आवश्यक है: 
+1) गूगल प्ले स्टोर से Face RD App ऐप िाउनलोि  और  इंस्टॉल करें।  
+2) (link: https://play.google.com/store/apps/details?id=in.gov.uidai.facerd) 
+3) गूगल प्ले स्टोर से एनएसपी ओटीआर  ऐप िाउनलोि  और  इंस्टॉल करें।  
+4) (link: https://play.google.com/store/apps/details?id=in.gov.scholarships.nspotr&pli=1) 
+ 
+
+10 | P a g e 
+National Scholarship Portal 
+5) एनएसपी ओटीआर  मोबाइल  ऐप पर  "eKYC with FaceAuth" द्ववकल्प का  उपयोग करक े  फ े स-
+ऑिेंद्वटक े शन पूरा  करें।  
+ 
+17. मुझे चेहरा-प्रमाणीकरण करते समय कलिनाई का सामना करना पड रहा है। 
+ 
+सफल चेहरा -प्रमाणीकरण के द्वलए पयााप्त प्रकाश की आवश्यकता होती है। आधार  फ े स ऑिेंद्वटक े शन के बारे  में 
+अद्वधक जानने  के द्वलए क ृ पया नीचे द्वदए गए द्वलंक में अक्सर पूछ े जाने  वाले  प्रश्न संख्या 21 पर  जाए ं । 
+(Link: https://uidai.gov.in/en/contact-support/have-any-question/303-
+faqs/authentication.html) 
+ 
+18. यलद मैं अपने ओटीआर /संदभट संख्या में पंजीक ृ त मोबाइल  नंबर बदलना  चाहता हं तो मुझे क्या करना चालहए? 
+ 
+ओटीआर /संदभा संख्या के साि  पंजीक ृ त मोबाइल  नंबर  को आधार (Aadhaar) आधाररत  ओटीपी प्रमाणीकरण के 
+बाद  बदला  जा  सकता  है। एक बार  जब छात्र आधार  आधाररत  ओटीपी प्रमाणीकरण सफलतापूवाक  पूरा  कर  लेता  है, 
+तो द्वसस्टम उन्हें नया  मोबाइल  नंबर  दजा करने  के द्वलए आवश्यक द्ववकल्प देगा । मोबाइल  नंबर  के ओटीपी सत्यापन 
+के बाद , वह ओटीआर /संदभा संख्या में पंजीक ृ त हो जाएगा।  
+ 
+19. यलद मुझे अपना ओटीआर  पंजीकरण पूरा करने के बाद पासवडट प्राप्त नहीं हुआ है तो मुझे क्या करना चालहए? 
+ 
+छात्र को एनएसपी पर  छात्र कॉनार  पर  जाना  चाद्वहए और  ओटीआर  लॉद्वगन के तहत उपलब्ध "पासविा  भूल गए?" 
+द्ववकल्प का  प्रयोग करना  चाद्वहए। मौजूदा  पासविा  को रीसेट  करने  के द्वलए भी इसी द्ववकल्प का  उपयोग द्वकया जा  
+सकता  है। 
+ 
+20. यलद मेरा आधार पहले  से ही बैंक खाते से जुडा हुआ है लेलकन  ओटीआर  पर यह "सीडेड नहीं" लदखा रहा है 
+तो मुझे क्या करना चालहए? 
+ 
+ओटीआर  लॉद्वगन के तहत "प्रोफाइल द्वववरण" अनुभाग  में उपलब्ध "आधार  सीद्विंग-> अभी चैक करें " द्ववकल्प पर  
+स्िक करें।  
+ 
+21. मैं अपना प्रोफाइल लववरण क ै से अपडेट  कर सकता हं? 
+ 
+छात्र अपने क्र े डेंशियल का उपयोग करक े  ओटीआर  में लॉगइन करक े  प्रोफाइल शििरण अपडेट कर सकते हैं। 
+लॉगइन करने क े  बाद, “प्रोफाइल अपडेट करें” अनुभाग पर जाए ँ, जहाँ आप आिश्यक शििरण अपडेट कर सकते 
+हैं। 
+ 
+22. मैंने अपने माता-लपता/कानूनी अलभभावक के आधार का उपयोग करक े ओटीआर  पंजीक ृ त लकया है। मेरे 
+नाम में टाइलपंग  की गलती  है। मैं इसे क ै से िीक कर सकता हं? 
+ 
+छात्र अपने क्र े डेंशियल का उपयोग करक े  ओटीआर  में लॉग इन कर सकते हैं। लॉग इन करने क े  बाद, “प्रोफाइल 
+अपडेट करें” अनुभाग पर जाए ँ  और आिेदक का नाम अपडेट करें। 
+ 
+ 
+ 
+ 
+11 | P a g e 
+National Scholarship Portal 
+23. मैं अपने ओटीआर  में अपनी ईमेल  आईडी क ै से बदल  सकता/सकती हं? 
+ 
+छात्र को अपने क्र े डेंशियल का उपयोग करक े  ओटीआर में लॉग इन करना होगा। क ृ पया अपडेट ईमेल शिकल्प पर 
+क्लिक करें। आप इस शिकल्प क े  माध्यम से ईमेल आईडी जोड़ सकते हैं। 
+ 
+24. ओटीआर  में सत्यालपत ईमेल  के क्या लाभ  हैं? मैं अपनी ईमेल  आईडी क ै से सत्यालपत कर सकता हं? 
+ 
+ओटीआर में सत्याशपत ईमेल छात्रोों को महत्वपूणण सूचनाए ों  और अपडेट प्राप्त करने में मदद करता है, और यह छात्र 
+क े  खाते की सुरक्षा को बढाता है। छात्र ओटीआर  पोटणल पर लॉग इन करक े  “अपडेट ईमेल” का पररयोग  और  प्राप्त 
+ओटीपी के माध्यम से ईमेल को सत्याशपत कर  सकते हैं। 
+ 
+25. मैंने एनएसपी पोटटल  पर अपनी जन्मलतलथ सही कर दी है। सुधार के दौरान, पोटटल  ने मुझे चेतावनी दी है, 
+"क ृ पया ध्यान दें !! 18 वर्ट की आयु प्राप्त करने पर, ओटीआर  में अपने आधार को अपडेट  करना आवश्यक 
+है। साथ  ही, मेरी प्रोफाइल के सफल  अपडेशन के बाद, मेरी ई-क े वाईसी स्थथलत "लंलबत " के रूप  में प्रदलशटत 
+हो रही है। अब मुझे क्या करना चालहए? 
+ 
+जन्मशतशि को सही करते समय पोटणल द्वारा शदखाई गई चेतािनी छात्रा को यह सूशचत करने क े  शलए िी शक उसकी 
+दजण जन्मशतशि क े  अनुसार िह ियस्क है और इसशलए छात्रा को अपने OTR प्रोफाइल में अपना आधार अपडेट 
+करना आिश्यक है और उसकी eKYC क्लथिशत लोंशबत है।  
+ 
+26. मुझे एसएमएस प्राप्त हुआ है "लप्रय छात्र, 18 वर्ट की आयु होने पर अपना आधार लववरण दर्भ करना अलनवायट 
+है। यह अभी तक आपक े ओटीआर  नंबर XXXXXXXX के सापेक्ष आपका आधार लववरण अपडेट नहीं हैं तो 
+क ृ पया अपडेट करे। एनएसपी टीम " और अब मेरी प्रोफाइल में ई-क े वाईसी स्थथलत लंलबत  प्रदलशटत हो रही 
+है"। अब मुझे क्या करना चालहए? 
+ 
+छात्रा अब बाशलग है, अतः  उसका eKYC आिश्यक है। इसीशलए छात्र का eKYC स्टेटस लोंशबत शदख रहा   गया है। 
+अब, छात्रा को अपना eKYC (FaceAuth) करने की आिश्यकता है। 
+ 
+27. मुझे एसएमएस प्राप्त हुआ है "लप्रय छात्र, आपने अपने आधार नामांकन (ईआईडी) नंबर का उपयोग करक े 
+अपना ओटीआर  नंबर जनरेट  लकया है। एक महीने के भीतर एनएसपी वेबसाइट  पर अपने आधार लववरण 
+को अपडेट  करना आवश्यक है, लजसमें लवफल  होने पर आपक े आवेदन को संसालधत करने से रोका र्ा 
+सकता हैं। एनएसपी पोटटल ". अब मुझे क्या करना चालहए? 
+ 
+छात्रा/ छात्रा  ने अपनी ईआईडी का उपयोग करक े  अपना ओटीआर जेनरेट शकया है। छात्र को ओटीआर जेनरेट होने 
+क े  एक महीने क े  भीतर अपना आधार शििरण जमा करना होगा , अन्यिा ओटीआर को शनलोंशबत शकया जा सकता है 
+या स्कालरशिप आवेदन को संसाद्वधत करने  से रोका  जा सकता हैं। क ृ पया अपना आधार जमा करें और अपना 
+ईक े िाईसी (फ े सऑि) करें ताशक ओटीआर को शनलोंशबत न शकया जाए और स्कालरशिप आिेदन प्रशक्रया को रोका न 
+जाए। 
+ 
+28. मैंने आधार में अपना वििरण अपडेट कर विया है। मैं ओटीआर  में अपना वििरण क ै से अपडेट कर सकता 
+हूँ?  
+छात्र अपनी प्रोफाइल में उपलब्ध “ररफ्र े ि ई-क े िाईसी” शिकल्प क े  माध्यम से ओटीआर  में आधार शििरण अपडेट कर 
+सकते हैं। 
+ 
+12 | P a g e 
+National Scholarship Portal 
+29. ओटीआर  लॉलगन  लवंडो में "आधार के साथ  लॉलगन " लवकल्प क्या है? मैं आधार नंबर का उपयोग करक े 
+ओटीआर  में क ै से लॉलगन  कर सकता हं? 
+ 
+यह शिकल्प आधार  का उपयोग करक े ओटीआर  में लॉशगन करने  का िैकक्लल्पक प्रदान करता  है। “लॉशगन शिद आधार ” 
+शिकल्प चुनें। लॉशगन करने  के शलए अपना आधार  नोंबर और  अपने आधार  से जुड़े मोबाइल नोंबर पर  प्राप्त ओटीआर  
+को दजण करें। 
+ 
+30. क्या एनएसपी की सेिाए ं  सीएससी पर र्ी उपिब्ध हैं? 
+ 
+हाों, छात्र एनoएसoपीo की सेिाए ों सीoएसoसीo क ें द्र पर  प्राप्त सकते हैं। आप ओoटीoआर o बनाने के शलए 
+बायोमेशट ि क प्रमाणीकरण  कर  सकते हैं और  अपना छात्रिृशि आिेदन पत्र भी भर  सकते हैं। 
+ 
+31. सीएससी पर एनएसपी सेिाओं के विए शुल्क क्या हैं? 
+ 
+प्रत्येक अभ्यिी क े  शलए सम्पूणण कायण (सोंदभण सोंख्या प्राप्त करना , बायोमेशट ि क प्रमाणीकरण, एकमुश्त पोंजीकरण 
+(ओटीआर) सोंख्या प्राप्त करना , तिा अभ्यिी का पूणण छात्रिृशि आिेदन पत्र दाक्लखल करना सशहत) का क ु ल िुल्क 
+30.00 रुपये (सभी लागू करोों आशद सशहत) है। 
+ 
+32. सीएससी क ें द्र पर ओटीआर बनाने के विए क्या पूिाभपेक्षाए ूँ हैं? 
+      सीएससी क ें द्र पर शनम्नशलक्लखत आिश्यक हैं  
+1) सशक्रय मोबाइल नोंबर  
+2) आधार सोंख्या  
+3) बायोमेशट ि क आधाररत आधार प्रमाणीकरण करने क े  शलए छात्र/अशभभािक/कानूनी अशभभािक की भौशतक 
+उपक्लथिशत  
+4) एनपीसीआई सीशडोंग क्लथिशत (िाोंशछत) 
+ 
+33. मैं वनकटतम सीएससी क ै से ढ ूंढ सकता हं? 
+ 
+नजदीकी सीएससी खोजने के शलए, इस शलोंक पर  जाए ों: https://locator.csccloud.in/. 
+ 
+*******

@@ -1,0 +1,622 @@
+1 
+ 
+PM SVANidhi Loan Operational Guidelines 
+ 
+Table of Contents 
+ 
+1. Background and Rationale ............................................................................................................................ 2 
+2. Objectives ........................................................................................................................................................... 2 
+3. Target Beneficiaries ........................................................................................................................................ 2 
+4. Documents/ Information Required ............................................................................................................. 3 
+5. Nature of Support ............................................................................................................................................. 4 
+5.1 Working Capital Term Loan .............................................................................................................. 4 
+5.2 Interest Subsidy ...................................................................................................................................... 4 
+6. Loan Processing ............................................................................................................................................... 5 
+6.1 Application Process .............................................................................................................................. 5 
+6.2 Loan Sanction and Disbursal ............................................................................................................. 6 
+7. CGTMSE Guarantee ....................................................................................................................................... 7 
+8. Role of Lending Institutions ......................................................................................................................... 8 
+9. Role of ULBs/ Blocks..................................................................................................................................... 9 
+10. Implementation & Monitoring ............................................................................................................. 10 
+10.1 Implementing Agency(ies) .............................................................................................................. 10 
+10.2 Monitoring and Evaluation .............................................................................................................. 10 
+Annexure 1 ................................................................................................................................................................ 11 
+Annexure 2 ................................................................................................................................................................ 13 
+Annexure 3 ................................................................................................................................................................ 14 
+Annexure 4 ................................................................................................................................................................ 15 
+ 
+ 
+ 
+ 
+ 
+2 
+ 
+1. Background and Rationale 
+ 
+Street Vendors (SVs) are an integral part of the urban informal economy, playing a crucial 
+role in delivering goods and services directly to city residents at affordable prices —often 
+right at their doorsteps. Known by various regional names they are deeply embedded in the 
+daily economic and social life of cities. Their offerings encompass a wide range of products 
+and services that cater to the everyday needs of the general public. 
+The primary objective of the PM SVANidhi scheme is to provide collateral -free working 
+capital funds by way of term loans to these SVs. The scheme is designed to support SVs to 
+achieve financial self-reliance and enable them to expand their businesses in a sustainable, 
+inclusive & structured manner, thereby facilitating their integration into the formal 
+economy. 
+2. Objectives 
+ 
+The loan component of the PM SVANidhi scheme is designed to: 
+i. Extend working capital term loans to SVs, helping them restart, sustain, and grow 
+their businesses. 
+ii. Offer interest subsidies as an incentive for repayment. 
+iii. Promote financial self -reliance among SVs by strengthening their long -term 
+livelihood security and facilitating their transition to formal credit systems through 
+structured loan access and credit discipline. 
+ 
+3. Target Beneficiaries  
+ 
+Under the restructured PM SVANidhi Scheme, a City-Region approach has been adopted 
+to position cities as “growth hubs.” This approach expands the scheme’s coverage to 
+progressively include census towns, peri-urban areas etc., in a graded manner 
+The scheme is intended for SVs vending in ULBs, census towns and peri-urban areas etc. 
+across all  States and Union Territories. Eligible SVs will be identified based on the 
+following criteria: 
+ 
+3 
+ 
+i. SVs who possess a valid Letter of Recommendation (LoR)  or Certificate of 
+Vending (CoV) or Identity Card (ID Card) issued by the Urban Local Bodies 
+(ULBs)/ Town Vending Committees (TVCs);  
+a. or 
+ii. SVs operating in census towns, peri -urban areas etc., who have received a n LoR 
+approved by their Block Development Officer (BDO). 
+ 
+4. Documents/ Information Required 
+ 
+Lending Institutions (LIs) are advised to sanction and disburse loans under the PM 
+SVANidhi scheme with minimal documentation, adhering to the prescribed checklist 
+provided below.  
+Institutions should not request any additional documents beyond those officially mandated.  
+ 
+Documents/ Information: 
+i. CoV/ ID Card/ LoR issued by ULBs  or TVC, to SVs working within ULB ’s 
+jurisdiction 
+ii. or 
+a. LoR approved by the BDO to SVs operating in census towns, peri -urban 
+areas etc. 
+ 
+iii. Aadhaar Card  
+ 
+iv. Voter Identity Card (for SVs from Assam and Meghalaya only) who do not have 
+Aadhaar Card 
+ 
+v. Savings Bank Account Passbook/ Bank Statement with account details of the SV 
+ 
+vi. Valid and Unique UPI ID linked to the SVs bank account 
+ 
+Note: All LoRs must be applied for and issued through the PM SVANidhi Portal (PMS 
+Portal). Manually issued LoRs will not be valid.  
+ 
+ 
+PMS Portal URL: https://pmsvanidhi.mohua.gov.in/ 
+ 
+ 
+ 
+4 
+ 
+5. Nature of Support 
+ 
+5.1  Working Capital Term Loan 
+ 
+The loan facility will be extended in three tranches, with each subsequent tranche being 
+disbursed only upon full repayment of the preceding one. All loans will be collateral-free, 
+offered for a defined tenure, and repayable through monthly installments. 
+ 
+S. No. Loan Tranche Loan Amount Loan Tenure 
+1. 1st Tranche upto ₹15,000 12 months 
+2. 2nd Tranche upto ₹25,000 18 months 
+3. 3rd Tranche upto ₹50,000   36 months 
+ 
+The tranche wise details of the loans are mentioned in Annexure 1. 
+ 
+Additionally, proactive handholding support should be extended to SVs to help them 
+complete the necessary documentation and formalities, thereby facilitating easier access to 
+credit. 
+ 
+5.2  Interest Subsidy 
+ 
+SVs availing loans under the scheme will be eligible for an interest subsidy at the rate of 
+7% per annum. The subsidy will be credited directly to the borrower’s account on a 
+quarterly basis. 
+ 
+LIs are required to submit quarterly interest subsidy claims  on Paisa Portal  
+(https://www.paisaportal.in/NULM/Login.aspx) for the periods ending on June 30, 
+September 30, December 31, and March 31 of each financial year. 
+Interest subsidy will be admissible only for loan accounts that are classified as ‘Standard’ 
+(non-NPA) as per prevailing RBI guidelines on the respective claim dates. Furthermore, 
+the subsidy will be applicable only for the months within a quarter during which the  
+account was classified as Standard. 
+ 
+All loans disbursed till March 31, 20 30 would be eligible for interest subsidy  and LIs 
+should claim interest subsidy for a quarter in the subsequent quarter itself. However, all 
+claims for interest subsidy benefit to be claimed by the LIs well before March 31, 2033.  
+ 
+Tranche wise maximum eligible subsidy amount is mentioned in Annexure 2. 
+ 
+ 
+5 
+ 
+6. Loan Processing 
+ 
+6.1  Application Process 
+ 
+I. Loan Application by Street Vendors with CoV/ ID Card  
+ 
+SVs holding a valid CoV or I D Card issued by the Urban Local Body (ULB) / Town 
+Vending Committees (TVC) are eligible to directly apply for a loan with their preferred LI 
+through the PMS Portal and LoR is not required by them. If an SV has a digital LoR issued 
+on PMS Portal, he/ she is also eligible to apply for the loan on the PMS Portal.  
+Submission of a valid and unique UPI ID, linked to the SV’s bank account, is mandatory. 
+ 
+II. Letter of Recommendation (LoR) cum loan applications  
+ 
+SVs seeking financial assistance under the PM SVANidhi scheme and not having CoV or 
+ID Card or not having LoR issued on PMS Portal may submit their “LoR cum loan 
+application” on PMS Portal. 
+The “LoR cum loan application” may be applied through any of the following channels, 
+based on their convenience: 
+➢ SV can apply themselves on the PMS Portal or through PM SVANidhi 
+Mobile App 
+➢ At respective Urban Local Body (ULB) offices, Block offices or 
+➢ Authorized Common Service Centres (CSCs) 
+➢ SVs may seek assistance from resource persons  appointed by ULBs or 
+Blocks, to guide them through the loan application process and support their 
+digital onboarding at various stages 
+ 
+To ensure effective identity verification and seamless delivery of services, linkage of the 
+applicant’s mobile number with Aadhaar is advisable. This linkage is  helpful for digital 
+processing, authentication, and receipt of scheme-related communications. 
+ 
+III. Verification and Issuance of LoR  
+ 
+The respective ULBs/Blocks are responsible for verifying the information provided in the 
+LoR-cum-Loan application.  The issuance of the LoR involves a two -step process , 
+verification followed by approval. Once both steps are successfully completed, the 
+ULB/Block will digitally issue the LoR to the applicant through the PMS Portal, certifying 
+their eligibility as an SV under the scheme. 
+ 
+ 
+6 
+ 
+The LoR serves as a key enabling document for SVs who do not possess a CoV or ID card, 
+allowing them to access benefits under the PM SVANidhi scheme.  
+After approval  of LoR , the loan application is digitally forwarded to the applicant’s 
+preferred LI for further loan processing. 
+ 
+The process for identification and onboarding of SVs in Census Towns, peri urban areas 
+etc. is detailed in Annexure 3. 
+ 
+6.2  Loan Sanction and Disbursal 
+ 
+This section details the key aspects of loan sanction and disbursal, along with the 
+procedural safeguards put in place to promote efficiency, inclusiveness, and accountability 
+in credit delivery.  
+i. Loan Sanction and Disbursement: Loans under the Scheme will be sanctioned by 
+the Lending Institutions (LIs)  and disbursement credited directly to the street 
+vendor’s savings bank account. 
+ii. Data Entry and System Updates : LIs are required to regularly update loan 
+sanction and disbursement information on the PMS Portal manually or through API 
+integration, ensuring accurate and up-to-date records on PMS Portal for monitoring 
+and evaluation purposes. 
+iii. Process Transparency: The complete loan application process—from submission 
+to disbursal —is monitored through the PMS Portal. This system -based tracking 
+enhances transparency, supports timely resolution  of issues/difficulties , and 
+reinforces accountability among all stakeholders. 
+iv. Credit Score Consideration: A low credit score shall not be treated as a reason for 
+rejection of a loan application under the scheme. However, LIs may decline 
+applications where the applicant has an existing loan account classified as a Non -
+Performing Asset (NPA) or has been written off by any LI. 
+v. Monitoring Requirements : PM SVANidhi, a Government of India -supported 
+initiative, aims to ensure inclusive and simplified credit access for SVs. Aligned 
+with its trust-based and borrower-centric design, LIs are advised to limit monitoring 
+to the provisions explicitly outlined under the scheme. 
+vi. Process Flow Reference : For a step -by-step understanding of the application 
+submission, loan sanction, and disbursal process, stakeholders should refer to the 
+detailed process flow provided in Annexure 4. 
+ 
+ 
+7 
+ 
+7. CGTMSE Guarantee 
+ 
+CGTMSE guarantee is being provided to Lending Institutions for covering the credit risk 
+under the PM SVANidhi Scheme, thereby encouraging them to extend collateral-free loans 
+to street vendors with greater confidence and financial security. 
+The Scheme provides for a graded credit guarantee cover on loans sanctioned under the 
+scheme. This guarantee is administered by the Credit Guarantee Fund Trust for Micro and 
+Small Enterprises (CGTMSE) and is operated on a portfolio basis. The graded guarantee 
+coverage for each tranche is as follows: 
+Type 
+1st Loan 2nd Loan 3rd Loan 
+Portfolio Coverage Portfolio Coverage Portfolio Coverage 
+First loss 0 to 7.5% 100% 0 to 3% 100% 0 to 8% 75% 
+Second loss Above 7.5% 
+to 20% 75% Above 3% 
+to 10% 75%   
+Third loss Above 20% 
+to 50% 50%     
+Maximum 
+Guarantee Cover 50% 10% 8% 
+Effective 
+Guarantee Cover 31.87% 8.25% 6% 
+ 
+All loans disbursed by a LI under the scheme will be eligible for inclusion under this 
+guarantee mechanism. 
+Participating LIs must submit guarantee claims to CGTMSE on a quarterly basis. The 
+guarantee coverage is provided at no cost, and no guarantee fee will be charged to the 
+participating institutions. 
+LIs may invoke the guarantee for eligible credit facilities within the portfolio for up to two 
+years from the date the loan is classified as a Non-Performing Asset (NPA).  
+However, all final claims must be submitted no later than March 31, 2033. 
+ 
+ 
+ 
+8 
+ 
+8. Role of Lending Institutions 
+ 
+Lending Institutions ( LIs) are critical stakeholders in the implementation of the PM 
+SVANidhi Scheme. Their roles and responsibilities include: 
+i. Loan Pick up: LIs shall proactively track and pick up loan applications assigned 
+to them on the PMS portal, ensuring timely processing and follow-up. 
+ii. Loan Sanction & Disbursement: Evaluate and sanction loans efficiently, ensuring 
+prompt and smooth disbursement to eligible SVs. This is to be done with minimal 
+documentation, adhering to the simplified procedures outlined under the scheme.  
+iii. Returned by Bank : LIs should avoid returning applications under the PM 
+SVANidhi scheme on trivial grounds. Applications should be returned only in cases 
+where there is a valid, clearly stated reason that renders the application ineligible 
+or incomplete as per the scheme’s provisions. 
+iv. Real-Time Updation on PMS Portal: Regularly update the PMS Portal with real-
+time data on loan sanctions and disbursements to facilitate effective monitoring by 
+MoHUA and other stakeholders. 
+v. Review and Reprocessing of Applications  resubmitted by ULBs / Blocks : 
+Promptly review and process applications that were earlier returned but have been 
+corrected and resubmitted by ULBs/ Blocks. 
+vi. Lodging of Interest Subsidy Claims : Timely submission of interest subsidy 
+claims as per the scheme’s provisions to ensure that benefits are passed on to the 
+borrowers without delay. 
+vii. Marking of Loan Closure upon its full repayment by SV : Promptly update the 
+PMS Portal with the full repayment details of an existing loan by the street vendor 
+to enable them to access the next tranche of the loan, if eligible. 
+viii. Lodgment of NPA Claims with CGTMSE : File claims under the Credit 
+Guarantee Scheme with CGTMSE for accounts classified as NPA, in accordance 
+with the guidelines. 
+ix. Resolution of Grievances: Address and resolve grievances raised by SVs or other 
+stakeholders related to loan processing, disbursement, subsidy, or any other aspect 
+of the scheme in a timely and transparent manner. 
+LIs are expected to maintain active coordination with ULBs / blocks and other 
+implementation partners to ensure seamless execution of the scheme and facilitate financial 
+inclusion of SVs. 
+ 
+9 
+ 
+ 
+9. Role of ULBs/ Blocks 
+ 
+Urban Local Bodies (ULBs)/ Blocks play a pivotal role in the successful implementation 
+of the PM SVANidhi Scheme at the grassroots level. Their roles and responsibilities 
+include: 
+i. Application Mobilization : Actively identify and connect with eligible street 
+vendors to encourage and support loan applications under the scheme. Resource 
+persons may be engaged and incentivized to aid mobilization during special camps. 
+ii. Issuance of Letter of Recommendation: Issue LoR to SVs who do not possess a 
+CoV or ULB-issued ID card, enabling them to apply for loans under the scheme. 
+iii. Loan Application Assistance : Support SVs in accurately filling in loan 
+applications on PMS Portal or the PMS Mobile app.  
+iv. Coordination with L ending Institutions: Facilitate coordination between SVs 
+and LIs to ensure smooth processing, sanction, and disbursement of loans. They 
+should also support effective communication with LIs and ensure timely updation 
+of the PMS portal by LIs. 
+v. Application Review : Regularly review applications that are returned by LIs. 
+Contact the street vendor concerned and take appropriate action , either make 
+necessary corrections and resubmit it to the LI or close the loan applications. 
+vi. Information, Education, and Communication (IEC) : Conduct IEC activities to 
+raise awareness about the scheme’s benefits, procedures, and eligibility among the 
+street vendor community, benefits of timely repayment & digital adoption etc. 
+vii. Capacity Building: Facilitate training sessions and support programs to build the 
+capacity of SVs and resource persons. 
+viii. Resolution of Grievances: Resolve grievances raised by SVs or other stakeholders 
+concerning the issuance of LoRs and assist in addressing issues with LIs related to 
+loan processing, disbursement, subsidy, or any other aspect of the scheme in a 
+timely and transparent manner.  
+ 
+ULBs/ blocks are encouraged to work in close coordination with stakeholders including 
+LIs, SV association, Non-Governmental Organizations (NGOs), and community leaders to 
+ensure the scheme’s reach and effectiveness at the local level. 
+ 
+10 
+ 
+ 
+ 
+10.  Implementation & Monitoring 
+ 
+Implementation and monitoring of the scheme would be the joint responsibility of 
+Ministry of Housing & Urban Affairs (MoHUA)  and Department of Financial 
+Services (DFS), with DFS being responsible for facilitating access to loans/ credit cards 
+through banks/ financial institutions and their ground level functionaries. 
+ 
+10.1  Implementing Agency(ies) 
+ 
+i. Small Industries Development Bank of India (SIDBI)  is the Implementing 
+Agency for the Ministry of Housing and Urban Affairs (MoHUA) for the PM 
+SVANidhi scheme. Through Udyamimitra Portal, SIDBI facilitates LoR & Loan 
+application submission and its processing at PMS Portal for the smooth delivery of 
+financial services and monitoring of the performance of the Scheme.  
+ 
+ii. Indian Bank, through its PAiSA portal, supports LIs in submitting interest subsidy 
+claims and facilitates the direct transfer of subsidy amounts to beneficiaries’ 
+accounts. 
+ 
+10.2  Monitoring and Evaluation  
+ 
+The Ministry of Housing and Urban Affairs (MoHUA), along with the Department of 
+Financial Services, Ministry of Finance (DFS), will undertake periodic reviews of the 
+implementation and performance of the loan component under the PM SVANidhi Scheme. 
+These r eviews will be conducted within the framework of the scheme’s established 
+management and governance structure to ensure effective execution, accountability, and 
+continuous improvement in outcomes. 
+A centralized dashboard is maintained to enable real -time monitoring of the scheme’s 
+progress and key performance indicators. 
+ 
+ 
+ 
+11 
+ 
+Annexure 1 
+ 
+Tranche wise loans details 
+ 
+S. 
+No. Parameter Details for Tranches 
+1 Loan Amount 
+• 1st Tranche - ₹15,000 (Min loan amt: ₹5,000) 
+• 2nd Tranche - ₹25,000 (Min loan amt: ₹15,000) 
+• 3rd Tranche - ₹50,000 (Min loan amt: ₹30,000) 
+2 Repayment Period 
+(fixed) 
+• 1st Tranche - 12 months; 
+• 2nd Tranche - 18 months; 
+• 3rd Tranche - 36 months; 
+Pre-payment is allowed without any penalty or cost. 
+3 Moratorium As per LI policy, within the specified repayment period 
+4 Processing/ Upfront Fee 
+• 1st Tranche - Nil 
+• 2nd Tranche - Nil 
+• 3rd Tranche - As per LI’s policy in line with RBI guidelines 
+5 Margin Money Nil 
+6 Age of Street Vendor Must be an adult (minimum 18 years); no upper age limit. 
+7 Security Unsecured; guaranteed by CGTMSE (no guarantee fee). Only 
+Demand Promissory Note (DPN) required. 
+8 Credit Score Not applicable for SVs under this scheme. Loan may be denied only 
+if any existing loan is NPA or an account is written off by any LI. 
+9 Udyam Registration Not required 
+10 Project Proposal Not required 
+11 Monitoring/ End Use 
+Verification 
+As this scheme is a special initiative supported by the Government 
+of India to integrate SVs into the formal banking system, it is 
+advised to limit monitoring to the provisions explicitly outlined 
+under the scheme. 
+ 
+12 
+ 
+12 Insurance 
+• 1st Tranche - Nil 
+• 2nd Tranche – Nil 
+• 3rd Tranche - Not mandatory; LI may offer insurance up to 
+loan amount  and loan repayment period , with borrower’s 
+consent. 
+13 Loan Documentation 
+For all 3 tranches - DPN and Undertaking;  
+(For 3rd Tranche only: optional one-time declaration on stock/ use 
+of funds; no insistence on receipts.) 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+13 
+ 
+Annexure 2 
+ 
+PM SVANidhi Scheme - Interest Subsidy Amount 
+ 
+Previous Loan Amount 
+Loan Term Loan Amount Maximum eligible 
+subsidy amount 
+1st Tranche ₹10,000 ₹402 
+2nd Tranche ₹20,000 ₹1,127 
+3rd Tranche ₹50,000 ₹5,579 
+ 
+Revised Loan Amount 
+Loan Term Loan Amount Maximum eligible 
+subsidy amount 
+Loan Term 1 ₹15,000 ₹603 
+Loan Term 2 ₹25,000 ₹1,408 
+Loan Term 3 ₹50,000 ₹5,579 
+ 
+Note: Represents the maximum eligible subsidy for the full loan amount, disbursed and 
+repaid on time according to the repayment schedule throughout the entire repayment 
+period. The actual subsidy disbursed may be lower. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+14 
+ 
+Annexure 3 
+ 
+Identification & Onboarding of SVs for census towns, peri urban areas etc. 
+The PM SVANidhi Scheme aiming to establish cities as “growth hubs” introduces City -
+Region approach. The scheme will extend its benefits seamlessly to census towns, peri -
+urban areas etc. in graded manner. This initiative is expected to enhance the economic 
+development of city regions by generating greater livelihood opportunities. 
+ 
+1. Criteria for Identifying Eligible Street Vendors: 
+ 
+i. ‘Street Vendor’  shall be engaged in vending activity aligning to the definition 1  
+mentioned in Street Vendors (Protection of Livelihood and Regulation of Street 
+Vending) Act, 2014. 
+ii. The vendor may be engaged in either seasonal or year-round vending activities. 
+iii. The vendor may operate as a mobile or stationary vendor. 
+iv. The vendor should be vending in the respective census town or peri-urban areas. 
+ 
+2. Process for Approval of Letter of Recommendation (LoR): 
+ 
+i. For census towns, peri urban areas etc., LoRs would be approved and issued by the 
+Block Development Officer (BDO). 
+ii. Applications at the block level will be processed in two stages:   
+(a) Verification: The field level verification shall be conducted by the Block Level 
+verification committee consisting of Block Level Nodal Officer (Chairperson), 
+GP EO/  Secy, Representative from the Block -Level Federation or Gram 
+Panchayat-Level Federation and any other member as nominated by the State 
+or District Authority.  
+(b) Approval: Based on the recommendation of the Block Level Verification 
+Committee, the approval shall be undertaken by Approver (BDO) 
+iii. The entire process shall be carried out through the PMS portal (Udyami mitra 
+platform). 
+ 
+3. Process for Availing Loan  
+ 
+Upon the issuance of the LOR by the BDO, the SV’s application will be automatically sent 
+to the bank for further processing aligning to the operational guidelines of availing loans. 
+ 
+1 A ‘Street Vendor’ means a person engaged in vending of articles, good, wares, food items or merchandise of everyday 
+use or offering services to the general public in a street lane, side walk, footpath, pavement, park or any other public 
+place or private area from a temporary built-up structure or by moving from place to place and includes hawkers, peddler, 
+squatter, and all other synonyms terms which may be local or region specific 
+ 
+15 
+ 
+Annexure 4 
+ 
+Process flow on PMS Portal 
+ 
+Category A: Street vendors (SVs) identified in survey and in possession of certificate of 
+vending (CoV)/identity Card (ID Card) issued by Urban Local Bodies (ULBs). 
+ 
+ 
+ 
+ 
+Category B (now discontinued): SVs who have been identified in the survey but have not 
+been issued CoV/ ID Card. 
+ 
+ 
+
+ 
+16 
+ 
+ 
+Category C: SVs left out of the ULB-led identification survey or who have started vending 
+after completion of the survey. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+17 
+ 
+ 
+Category D:  SVs of surrounding development/peri urban/rural areas vending in the 
+geographical limits of the ULBs and have been issued letter of recommendation (LoR) to 
+that effect by the ULB/TVC. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+18 
+ 
+ 
+ 
+Category E: Street Vendors (SVs) vending in census towns and other peri-urban areas etc. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+19 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+
+ 
+20 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+
+ 
+21 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+22 
+ 
+ 
+ 
+ 
+***********

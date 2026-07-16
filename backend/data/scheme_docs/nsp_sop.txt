@@ -1,0 +1,558 @@
+Standard Operating 
+Procedures 
+National Scholarship Portal (NSP) 
+ 
+ 
+ 
+ 
+Version 1.0 
+24th July 2019 
+ 
+  
+
+National Scholarship Portal (NSP)  Standard Operating Procedures 
+ 
+Ministry of Electronics and Information Technology   Page 2 of 17 
+ 
+ 
+Document control 
+Document Title: Standard Operating Procedures 
+ 
+Document Creation: 
+Release 
+No. 
+Date Revision Description Author/Reviewer 
+Ver 1.0 24-July-19 
+First Published Version after 
+review & Incorporation of 
+Comments 
+NSP Team, NIC 
+DBT Mission, 
+Central Ministries of the 
+onboarded schemes 
+ 
+  
+National Scholarship Portal (NSP)  Standard Operating Procedures 
+ 
+Ministry of Electronics and Information Technology   Page 3 of 17 
+ 
+ 
+Table of Contents 
+1. NATIONAL SCHOLARSHIP PORTAL OVERVIEW ......................................................................................... 5 
+2. PURPOSE OF THE DOCUMENT ................................................................................................................. 5 
+3. OVERALL NSP WORKFLOW ...................................................................................................................... 5 
+4. USERS OF NSP AND THEIR ROLES AND RESPONSIBILITIES ........................................................................ 6 
+4.1. USERS OF NSP .......................................................................................................................................... 6 
+4.2. ROLES & RESPONSIBILITIES........................................................................................................................... 6 
+4.2.1. Student/ Applicant ........................................................................................................................ 6 
+4.2.2. Institute Nodal Officer .................................................................................................................. 9 
+4.2.3. District/ State/ Ministry Nodal Officer ........................................................................................ 11 
+4.2.4. Scheme owner Ministries / Departments / Other Govt. bodies .................................................. 13 
+4.2.5. Ministry of Electronics & Information Technology ..................................................................... 15 
+4.2.6. Direct Benefit Transfer (DBT) Mission, Cabinet Secretariat ........................................................ 15 
+4.2.7. National Informatics Center (NIC) .............................................................................................. 15 
+4.2.8. Help Desk .................................................................................................................................... 16 
+5. GENERAL TERMS AND CONDITIONS IN RESPECT OF STAKEHOLDERS: .................................................... 16 
+ 
+  
+National Scholarship Portal (NSP)  Standard Operating Procedures 
+ 
+Ministry of Electronics and Information Technology   Page 4 of 17 
+ 
+ 
+Acronyms and Abbreviations 
+Abbreviation Description 
+AISHE All India Survey on Higher Education 
+DBT Direct Benefit Transfer 
+FAQs Frequently Asked Questions 
+MeitY Ministry of Electronics and Information Technology 
+MMP Mission Mode Project 
+NCVT National Council for Vocational Training 
+SCVT State Council for Vocational Training 
+NIC National Informatics Centre 
+NSP National Scholarship Portal 
+NUEPA National University for Education Planning and Administration 
+OTP One Time Password (delivered on mobile) 
+PFMS Public Financial Management System 
+PMU Project Management Unit 
+SMART Simplified, Mission-oriented, Accountable, Responsive and 
+Transparent 
+U-DISE Unified District Information System for Education 
+  
+ 
+  
+National Scholarship Portal (NSP)  Standard Operating Procedures 
+ 
+Ministry of Electronics and Information Technology   Page 5 of 17 
+ 
+ 
+1. National Scholarship Portal Overview 
+NSP is one -stop solution through which various services starting from student application, 
+application receipt, verification, processing, and disbursal of various scholarships to students 
+are facilitated. National Scholarship Portal is taken as Mission Mode Project (MMP) under 
+Digital India. This initiative aims at providing a Simplified, Mission -oriented, Accountable, 
+Responsive and Transparent 'SMART' System for faster and effective disbursal of Scholarship 
+to eligible applicants directly into their account through Direct Benefit Transfer (DBT) without 
+any leakages. 
+2. Purpose of the Document 
+This document defines Roles and Responsibilities of all users of NSP, and briefly conveys the 
+high-level processes involved while operating NSP.  
+3. Overall NSP Workflow 
+The overall workflow for NSP is as below: 
+Start
+Student 
+Registration 
+and 
+Application 
+Submission
+Level 1 
+Verification 
+of Application 
+at Institute 
+Level
+Level 2/3 
+Verification 
+of Application 
+at District/
+State/
+Ministry Level
+Beneficiary 
+Records 
+Creation and 
+Account 
+Validation by 
+PFMS 
+Applications 
+Deduplication 
+and Merit List 
+Generation 
+Payment File 
+Generation 
+and Financial 
+Approval
+Scholarship 
+Disbursement 
+through DBT
+Stop
+ 
+The steps involved in NSP are as follows: 
+➢ Step-1: Student Registration and Application Submission 
+➢ Step-2: Level 1 Verification of Application at Institute Level 
+➢ Step-3: Level 2/3 Verification of Application at District/State/Ministry Level 
+➢ Step-4: Beneficiary Records Creation and Account Validation by PFMS 
+➢ Step-5: Applications Deduplication and Merit List Generation 
+➢ Step-6: Payment File Generation and Financial Approval 
+➢ Step-7: Scholarship Disbursement through DBT 
+Kindly refer User manual(s) for steps involved at each of the above steps. 
+National Scholarship Portal (NSP)  Standard Operating Procedures 
+ 
+Ministry of Electronics and Information Technology   Page 6 of 17 
+ 
+ 
+4. Users of NSP and their Roles and Responsibilities 
+This section enlists the essential users of NSP, and enumerate s their brief roles and 
+responsibilities. 
+4.1. Users of NSP 
+The primary users of NSP are as under: 
+a) Student / Applicant 
+b) Institute Nodal Officer 
+c) District/ State/ Ministry Nodal Officer 
+d) Scheme owner Ministries / Departments / Other Govt. bodies 
+e) Ministry of Electronics & Information Technology 
+f) Direct Benefit Transfer(DBT) Mission, Cabinet Secretariat 
+g) National Informatics Center (NIC) 
+h) Help Desk 
+4.2. Roles & Responsibilities 
+The user-wise Roles & Responsibilities are as per the subsections below: 
+4.2.1. Student/ Applicant 
+The primary role of the Student/  Applicant is to register and submit the application at NSP. 
+The student/applicant who is applying for the first time on NSP portal,  is referred to as Fresh 
+Students, and the students who have been granted scholarship in any of the scheme on-boarded 
+at NSP in the immediately preceding Academic Year, are referred to as Renewal students. The 
+student/applicant using the NSP must adhere to the following: 
+1. Registration Process for Fresh Students: 
+a) Students applying for scholarship for the first time need to  "Register" on the portal 
+as fresh applicant , using the icon “New Registration” at NSP Portal URL - 
+https://scholarships.gov.in/, by providing accurate and correct information as per their 
+documents. 
+b) Before initiating registration process, students are advised to carefully go through the 
+“Guidelines for Registration on National Scholarship Portal” and keep their 
+National Scholarship Portal (NSP)  Standard Operating Procedures 
+ 
+Ministry of Electronics and Information Technology   Page 7 of 17 
+ 
+ 
+Educational and other documents such as Aadhaar number, Enrolment number, Bank 
+passbook etc. in hand. 
+c) Fields marked as ‘*’ are mandatory. 
+d) Students who have been assigned Aadhaar shall mandatorily provide their Aadhaar 
+number in their application. 
+e) Student(s)/The Student who do not possess Aadhaar shall provide the enrolment ID  
+(if available), and upload scanned copy Bank Passbook with Photograph, in PDF or 
+JPEG format (Maximum size 200 KB) . The student will also be required to upload 
+bonafide student certificate from Institute / School in along with their application 
+form.  
+f) Upon submitting all the details on registration page , s tudent will get a unique 
+application ID and password through SMS on the provided( registered) mobile 
+number.  
+g) The student shall login to NSP using application ID and password received. The 
+student must change the password upon first login. This password has to be kept safely 
+and confidentially. The student can change the mobile number only before the  first 
+login, i.e. before changing the received password. 
+h) The student can apply in any of the scheme on-boarded on NSP by providing accurate 
+and correct information as per their documents, and shall  submit the documents to the 
+Institute after Final submission of the application at NSP portal. 
+i) The detailed procedure for filling the application form has been provided in the User 
+Manual for Applicants. 
+2. Process for Renewal Students: 
+a) Renewal Students are the students who ha ve been granted scholarship in any of the 
+scheme on-boarded at NSP, in the immediately preceding Academic Year. 
+b) Renewal Students can only apply for renewal of scholarship in the same scheme, for 
+which they have been granted scholarship in the previous Academic Year. Student is 
+required to update their marks  obtained in previous year and submit the application  
+on NSP Portal. The student must keep the account in which scholarship was received 
+in previous year as active (i.e. non -dormant) and functional to receive scholarship 
+amount. 
+c) In case the student wish to apply for any other scheme,  he/she must login using their 
+previous year’s application ID and password, select the option for withdrawing the 
+National Scholarship Portal (NSP)  Standard Operating Procedures 
+ 
+Ministry of Electronics and Information Technology   Page 8 of 17 
+ 
+ 
+renewal application, and then register as a Fresh Student in the current Academic 
+Year. Thereafter, they shall follow the process for Fresh Application. 
+3. Precautions to be taken 
+a) The student/applicant must ensure that the Bank Account details (A/c Number, IFSC 
+Code) submitted is correct and keep the  account active (i.e. non -dormant) and 
+functional to receive scholarship amount (i.e. Any condition imposed on accounts by 
+bank, like seeding of AADHAAR, any limit on receiving credit in accounts etc., which 
+may hamper scholarship credit in account should be complied with). 
+b) The student/applicant must ensure that the resolution/quality of documents uploaded 
+is adequate so that they are clear and readable. 
+c) The student/applicant must ensure that the mobile number provided in the application 
+is correct and belongs to the student/ applicant. 
+d) The student/applicant must s elect the desired scheme from list of schemes available 
+as per the eligibility criteria of the scheme(s). 
+e) The student/applicant must take timely action(s) on the SMS received from NSP. 
+f) The student/applicant must follow up with Institutes for application verification before 
+the deadlines. 
+g) The student/applicant must rectify the error(s) and comply with the remarks made in 
+the application in case the application is marked as defective in NSP. 
+h) The student/applicant shall note that applications marked rejected / fake by the nodal 
+officer during the verification / reverification process will not be considered for further 
+processing on NSP. 
+i) The student/applicant must carefully select their institute. If  applicant selects some 
+other institute by mistake, he or she will have to get their application marked defected 
+from the selected institute and then Institute can be corrected. 
+j) The student/applicant shall note that p riority for Scholarship Disbursement wi ll be 
+given to the Aadhaar seeded bank accounts. 
+k) The student/applicant shall note that NSP provides only one chance for updating bank 
+account details (only in case when bank accounts details are not validated by PFMS). 
+Applicants should be cautious to exercise this option, failing which the application 
+will not be considered for scholarship. 
+National Scholarship Portal (NSP)  Standard Operating Procedures 
+ 
+Ministry of Electronics and Information Technology   Page 9 of 17 
+ 
+ 
+4.2.2. Institute Nodal Officer 
+The primary role of the Institute Nodal officer is 1 st Level verification of the applications 
+submitted by applicants at NSP. The application form for student has been simplified with  
+minimal uploading of scanned documents by students on NSP. Hence, the role of the Institute 
+Nodal officer becomes very critical in the entire chain of verification process. The Institute 
+Nodal officer using NSP must adhere to the following:  
+1. Institute Registration Process 
+a) The Institute/School/ITI shall possess a valid AISHE/DISE/NCVT /SCVT code, 
+before registering on NSP.  
+b) The Institute/School/ITI with valid AISHE/DISE/NCVT/SCVT codes can register on 
+NSP. To know whether Institute/School/ITI is registered on NSP Portal or not, go to 
+https://scholarships.gov.in and click on “Search Institute/School/ITI”. 
+c) The Institute/School/ITI, with valid AISHE/DISE/NCVT/SCVT code and not 
+registered on NSP can request the District or State Nodal Officer, of any Scholarship 
+scheme onboarded on NSP, to add it on NSP. 
+d) The District or State Nodal Officer will search for the Institute based on 
+AISHE/DISE/NCVT/SCVT code. In case the institute is not reg istered, the Nodal 
+Officer can add it by providing the requisite details. The system generated User 
+credentials and password will be sent on the mobile number provided. 
+e) Colleges/Universities/Institutes/Schools and any other educational establishments 
+onboarded on NSP shall be referred to as Institutes. 
+2. Institute Nodal Officer: Registration process 
+a) From Academic Year 2019-20 onwards, Institute logging in the first time will have to 
+mandatorily fill the Institute Nodal Officer Registration Form. 
+b) The Institute Nodal officer will login on NSP using the user credentials, and complete 
+Institute Nodal Officer Registration Form by entering  his/her details and uploading 
+the identity document. The Institute Nodal officer after locking the form using the 
+OTP received, will take the print, paste his/her photograph on the Form, get it attested 
+by the Institute Head  (Signature and Institute seal/stamp), will submit the physical 
+form to the respective District/ State/ Ministry Nodal officer of any scheme onboarded 
+on NSP. 
+National Scholarship Portal (NSP)  Standard Operating Procedures 
+ 
+Ministry of Electronics and Information Technology   Page 10 of 17 
+ 
+ 
+c) The District/ State/ Ministry Nodal Officer will verify the physical form and the details 
+entered in system , and approve/reject the Institute Nodal Officer Registration Form 
+details on NSP using the option  “Verify Institute Registration F orm” under the 
+Administration section in his login. The User credentials and new password will be 
+sent to the registered mobile number of the Institute Nodal officer . The original 
+physical copy of the form should be kept with District/ State/ Ministry Nodal Officer 
+and a duplicate copy is to be shared with Institute Nodal officer, who shall keep the 
+same in Institute’s records. 
+d) The institute Nodal officer can login using the new User credentials, password and 
+OTP received on his/her mobile number. The concerned officer can reset the password 
+by clicking the “Forgot Password” on Institute Login page on NSP. 
+e) For the cases of registration, where previous Institute Nodal has been transferred and 
+has not provided the login credentials to the new Institute Nodal O fficer, the new 
+Institute Nodal Officer shall formally request District/ State/ Ministry Nodal Officer 
+to change the mobile number and send the login credentials to the new mobile number. 
+The new Nodal Officer is responsible for updating the profile with his/her credentials. 
+f) In case the new Institute Nodal Officer has access to the previous Nodal Officer, the 
+registered mobile number can be changed by existing Nodal Officer. The system asks 
+for the OTP on previous mobile number and the new mobile number to be registered. 
+The existing Nodal Officer is also primarily responsible for updating the profile with 
+credentials of the new Nodal Officer. 
+3. Institute Nodal Officer: Profile updation 
+a) The Institute Nodal Officer shall submit the Institute details in the prof ile, and select 
+the Course Levels offered by the Institute. 
+b) The Institute Nodal Officer shall ensure that the profile details of the Institute are 
+updated from time to time. 
+c) The Institute Nodal Officer shall submit the correct bank account details of the 
+Institute. 
+d) The Institute Nodal Officer shall update the offered courses and course fee charged 
+for each course Level. 
+e) The Institute Nodal Officer shall regularly change the password. 
+f) The Institute Nodal Officer shall ensure that the profile is updated profi le with the 
+details of the New Nodal officer before updating the mobile number and email ID, in 
+case of change of Nodal officer. 
+National Scholarship Portal (NSP)  Standard Operating Procedures 
+ 
+Ministry of Electronics and Information Technology   Page 11 of 17 
+ 
+ 
+4. 1st Level Verification Process & Steps 
+a) The Institute Nodal officer must verify the correctness of details in the application form 
+and uploaded documents submitted by the student/ applicant, and maintain physical 
+copies of supporting documents submitted by the student/ applicant . The 
+District/State/Ministry Nodal Officer can ask for copies of these documents from the 
+Institute Nodal Officers, as and when required. 
+b) The Institute Nodal officer has the option  to either Verify the application, Reject the 
+application or Defect the application . In case she/he chooses to Reject or Defect the 
+application, the reasons for rejection or def ect must be provided, so that the same can 
+be displayed to the student/applicant. 
+c) The Application defected by the Institute will be returned to student/applicant for 
+correcting the same, and once submitted by the student/applicant, the application will 
+be shown under Reverification section of NSP application. 
+d) The Institute Nodal Officer shall e nsure that appropriate due diligence is done before 
+verification of applications in accordance with the Scheme guidelines, and internal 
+procedure as prescribed by Institute authorities / Government are followed. 
+e) The Institute Nodal Officer shall ensure that the applications are scrutinized well-in-
+time by the Institute, thus avoiding the last-minute rush to verify the applications. 
+f) The Institute Nodal Officer shall ens ure that there are no pending applications , as on 
+last date of L1 verification for that particular scheme, and all applications submitted by 
+students/applicants to the Institute are scrutinized (verified/rejected/defected along with 
+appropriate reason, as the case may be). 
+g) The Institute Nodal Officer can mark any application as Fake at any stage before the 
+payment is made, using the option “Mark as Fake” under the Verification section in 
+his/her profile, in case a fraud is suspected in the application. 
+4.2.3. District/ State/ Ministry Nodal Officer 
+The primary role of District/  State/ Ministry Nodal officer is 2 nd/3rd Level verification (as per 
+the scheme guidelines) of the applications submitted at NSP  and verified by Institutes . The 
+District/ State/ Ministry Nodal officer using NSP must comply with the following- 
+1. District/ State level Nodal Officer User Creation Process 
+a) The login credentials for State Nodal Officers are created when the Ministry Nodal 
+officers create the user for State. The Ministry Nodal officer enters the following details 
+National Scholarship Portal (NSP)  Standard Operating Procedures 
+ 
+Ministry of Electronics and Information Technology   Page 12 of 17 
+ 
+ 
+to create the State user – State Name, State Nodal Officer Name, Designation, Mobile 
+No., Email ID and Address of the State Nodal Officer. Once these details are entered 
+in the system, a unique User name is generated by the  system, and username and 
+password is sent to the mobile no. of State Nodal Officer as registered by the Ministry 
+Nodal officer. 
+b) The login credentials for District Nodal Officers are created when the State Nodal 
+officers create the user for District. The State Nodal officer enters the following details 
+to create the District user – District Name, District Nodal Officer Name, Designation, 
+Mobile No., Email ID and Address of the District Nodal Officer. Once these details are 
+entered in the system, a unique Us er name is generated by the system, and username 
+and password is sent to the mobile no.  of District Nodal Officer  as registered by the 
+State Nodal officer. 
+c) In case of change in District Nodal officer, she/he shall approach the State Nodal 
+Officer with a request to reset the password and change mobile number. 
+d) Similarly, in case of State Nodal Officer, she/he shall approach Ministry level Nodal 
+officer with a request to reset the password and change mobile number. 
+2. District/ State/ Ministry Nodal Officer: Adding / Verification of Institute(s) 
+a) The District/ State/ Ministry Nodal Officer reset the password of a registered Institute 
+using the option “Reset Institute Login Password” under the Administration section in 
+his/her profile. He/She shall search for th e Institute using Institute Name or 
+AISHE/DISE/NCVT/SCVT Code. He/She can select the Institute from the list 
+displayed in search results, and click on reset the password. He/She also has the facility 
+to change the mobile number of Institute Nodal Officer through this option, so that the 
+OTP is received on the mobile number of current officer.  
+b) The District/ State/ Ministry Nodal Officer can add new Institute using the option “Add 
+Institute/School” under the Administration section in his/her profile. He/She shall 
+search for the Institute using Institute Name or AISHE/DISE/NCVT/SCVT Code. If the 
+Institute is already registered, the District/ State/ Ministry Nodal Officer can reset the 
+password. If Institute is not registered, he/she can register the Institute and create User 
+credentials of the Institute by providing details such as Institute Nodal Officer Name 
+and Mobile number. The User credentials will be generated by the system, and will be 
+sent as an SMS to the provided mobile number. The Institute Nodal Of ficer can then 
+proceed for the Institute Nodal Officer registration as per the process.  
+National Scholarship Portal (NSP)  Standard Operating Procedures 
+ 
+Ministry of Electronics and Information Technology   Page 13 of 17 
+ 
+ 
+c) The District/ State/ Ministry Nodal Officer shall ensure that the Institute Nodal Officer 
+registration is approved  on the NSP portal  after physically verifying the cer tified 
+Institute Registration form submitted by the Institute Nodal Officer, along with 
+photograph and identity proof. 
+3. 2nd Level Verification Process & Steps 
+a) The District/ State/ Ministry Nodal Officer shall verify the correctness of details in the 
+application form and uploaded documents submitted by the student/applicant as per 
+guidelines of the related scheme. 
+b) The District / State / Ministry Level Nodal officer can either Verify the application , 
+Defect the Application, Reject the applications or Mark the application as Fake. In case 
+she/he chooses to Defect the Application, Reject the application or Mark the application 
+as fake, the reasons must be provided, so that the same can be displayed to the 
+student/applicant. 
+c) The District / State / Ministry Level N odal officer shall monitor overall pendency of 
+the applications for the scheme at Institute Level. 
+d) The District / State / Ministry Level Nodal officer shall ensure that the applications are 
+scrutinized well-in-time by the Institute, thus avoiding the last-minute rush to verify the 
+applications. 
+4. 3rd Level Verification Process & Steps 
+a) For the schemes that require third level of verification, the State/ Ministry Nodal Officer 
+shall follow the same process as followed for 2nd Level Verification. 
+4.2.4. Scheme owner Ministries / Departments / Other Govt. bodies 
+The primary role of the Scheme Owner Ministries/ Departments/Other Govt. bodies  is to 
+onboard the scheme at NSP, and monitor the overall progress of the scheme. This includes all 
+three types of schemes, i.e. Central Schemes, Centrally Sponsored Schemes and State Schemes. 
+The Scheme Owner Ministries/ Departments/ Other Govt. bodies must: 
+a) The Scheme Owner Ministries/ Departments/  Other Govt. bodies  shall p rovide 
+confirmation for adherence to the NSP guidelines. 
+b) The Scheme Owner Ministries/ Departments/ Other Govt. bodies shall provide Scheme 
+guidelines, Configuration details, FAQs to NIC. 
+National Scholarship Portal (NSP)  Standard Operating Procedures 
+ 
+Ministry of Electronics and Information Technology   Page 14 of 17 
+ 
+ 
+c) The Scheme Owner Ministries/ Departments/ Other Govt. bodies shall provide PFMS 
+configuration details (agenc y ID, Agency name, PFMS scheme code, DBT mission 
+code, beneficiary type, payment purpose code) at the time of onboarding schemes only.  
+d) The Scheme Owner Ministries/ Departments/ Other Govt. bodies shall ensure that the 
+given PFMS details are properly configured at PFMS Portal. 
+e) The Scheme Owner Ministries/ Departments/ Other Govt. bodies  shall a ct as Data 
+fiduciary for all data at NSP, for their scheme(s). 
+f) The Scheme Owner Ministries/ Departments/ Other Govt. bodies  shall v erify the 
+correctness of Scheme configuration on NSP, including but not limited to the eligibility 
+criteria, important dates etc. 
+g) The Scheme Owner Ministries/ Departments/ Other Govt. bodies shall monitor overall 
+progress of the scheme, including L1 and L2/L3 verification progress. 
+h) The Scheme Owner Ministries/ Departments/ Other Govt. bodies  shall i ssue timely 
+instructions to District/State/Ministry Nodal Officers. 
+i) The Scheme Owner Ministries/ Departments/ Other Govt. bodies  shall p rovide 
+trainings to State/District Nodal officers from time to time. 
+j) The Scheme Owner Ministries/ Departments/ Other Govt. bodies shall provide name of 
+Central / State Nodal Officers along with contact details to be displayed on the portal, 
+and validate the same from time to time. 
+k) The Scheme Owner Ministries/ Departments/ Other Govt. bodies shall provide data and 
+reports concerning the scheme to Govt. organizations, as may be required, using 
+different pre-defined standard reports/ query generated by NSP.  
+l) The Scheme Owner Ministries/ Departments/ Other Govt. bodies shall abide by IT Act, 
+Aadhaar Act and all other Government rules and regulations, from time to time. 
+m) The Scheme Owner Ministries/ Departments/ Other Govt. bodies shall operate NSP 
+portal for all activities. 
+n) The Scheme Owner Ministries/ Departments/ O ther Govt. bodies  shall answer the 
+queries of any law enforcement agency / RTI related to Scheme(s), Applications 
+received at NSP, Timelines of the scheme(s), workflow, operations, servers, the content 
+data and transaction data, etc. 
+National Scholarship Portal (NSP)  Standard Operating Procedures 
+ 
+Ministry of Electronics and Information Technology   Page 15 of 17 
+ 
+ 
+4.2.5. Ministry of Electronics & Information Technology 
+The Ministry of Electronics & Information Technology (MeitY) is the overall owner of 
+National Scholarship Portal (NSP), and shall oversee the end -to-end processes of NSP. 
+Designated officers from MeitY shall: 
+a) Provide administrative approvals for NSP to NIC. 
+b) Provide inputs for value addition in NSP. 
+c) Monitor and review the NSP. 
+4.2.6. Direct Benefit Transfer (DBT) Mission, Cabinet Secretariat 
+The Direct Benefit Transfer(DBT) Mission, Cabinet Secretariat, Government of India plays 
+pivotal role in administration of National Scholarship portal, and is primarily responsible for 
+overall coordination with all the Scheme Owner Ministries/ Departments/ Other Govt. bodies, 
+streamline the processes, and provide guidance to MeitY and NIC from time to time. 
+Designated officers from DBT mission shall: 
+a) Provide approval for the Important dates and deadlines for all Schemes on-boarded on 
+NSP. 
+b) Review the Standard Operating Procedures / Guidelines / User Manuals and other key 
+documents, which are to be circulated to NSP users. 
+c) Provide guidance and coordinate for integration and data sharing with key bodies such 
+as AISHE, DISE, NCVT, PFMS, UIDAI, etc. 
+d) Provide time-to-time guidance and suggestions for improvisations in NSP. 
+e) Review the forms/report/workflows etc. for NSP. 
+4.2.7. National Informatics Center (NIC) 
+National Information Center (NIC) is the technical agency for developing and maintaining the 
+NSP, as per the guidance provide by Scheme Owner Ministries/Departments/ Other Govt. 
+bodies, DBT Mission and MeitY. NIC shall: 
+a) Develop and Maintain NSP  infrastructure, including software and hardware 
+components. 
+b) Receive the requests for onboarding of schemes at NSP. 
+National Scholarship Portal (NSP)  Standard Operating Procedures 
+ 
+Ministry of Electronics and Information Technology   Page 16 of 17 
+ 
+ 
+c) Share the NSP guidelines with the Scheme Owner Ministries/  Departments/ Other 
+Govt. bodies. 
+d) Configure the Scheme as per details provided by the Scheme Owner Ministries/  
+Departments/ Other Govt. bodies. 
+e) Make changes in NSP application as per the recommendations o f Scheme Owner 
+Ministries/Departments/Other Govt. bodies, DBT Mission and MeitY. 
+f) Draft important documents such as  Standard Operating Procedures, Guidelines, User 
+Manuals etc. in English language, and regularly update the same. 
+g) Undertake security audit of NSP from time to time. 
+h) Manage the integrations and data exchange with external applications. 
+i) Manage helpdesk for operations at NSP. 
+4.2.8. Help Desk 
+Help Desk for NSP is maintained by NIC, with support from external call center agency. The 
+primary role of the hel pdesk is to provide first level assistance to the users of NSP. The 
+helpdesk shall: 
+a) Assist the student(s)/applicant(s) for  filling the registration and application forms, and 
+provide technical support. 
+b) Escalate the critical issues to NSP team, as and when required. 
+c) Maintain a list of User category-wise FAQs for several users of the portal. 
+d) Keep the operators of call center agency updated about the processes at NSP. 
+5. General Terms and Conditions in respect  of 
+stakeholders: 
+1. The source code/ technical artifact s/ utilities of the application software developed by 
+NIC will be the property of NIC. NIC can reuse the common and standard code/ 
+artifacts/ utilities used in the software applications in other Govt. Projects wherever 
+these are needed.  
+2. All parties undertake to act in good faith in respect of/with respect to each other’s rights 
+under this understanding and to adopt all reasonable measures to ensure the realization 
+of the objectives of this project as per the roles and responsibilities. 
+National Scholarship Portal (NSP)  Standard Operating Procedures 
+ 
+Ministry of Electronics and Information Technology   Page 17 of 17 
+ 
+ 
+3. Government may take action against any illegal or unauthorized activity on the NSP 
+portal. 
+4. NIC will not be directly answering any RTI related queries/ clarifications/ law  
+enforcement agency/ court cases  and cannot be asked by respective Scheme Owner 
+Ministries/ Departments or Other Govt. bodies  whose Scholarship Schemes are 
+operational to be present before the Information Commission/  Courts either at State/  
+National levels or any other such body. 
+5. The outcome of validation(s) done by external agencies like PFMS, UIDAI will be 
+treated as final. Any grievance related with such outcome should be dealt with by nodal 
+verifying agency. 
+6. NIC shall be entitled for full disclaimer and immunity from all aspects of data and its 
+safety along with its handling by any func tionary of the  respective Scheme Owner 
+Ministries/ Departments or Other Govt. bodies.

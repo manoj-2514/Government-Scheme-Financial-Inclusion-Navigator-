@@ -1,0 +1,377 @@
+FAQ - Application Form 
+ 
+1. How do I login to National Scholarship Portal? 
+ 
+1. Access National Scholarship Portal (NSP) using the provided link: NSP: National 
+Scholarship Portal 
+2. Select the “Students” option. 
+3. Then click on “Login” provided under “Apply For Scholarship”. 
+4.  Students can log in using any of the following methods:  
+ Login with Aadhaar 
+ Login with APAAR 
+ Login with OTR 
+ 
+2. How do I apply for a Scholarship? 
+To apply for a Fresh Application, follow the steps below: 
+1. Browse the NSP Application Portal URL - NSP Portal and log in using your 
+credentials.  
+2. Navigate to the Basic Information section.  
+3. Provide the details required in :  
+o General Information 
+o Academic Details 
+o Application Specific Details 
+4. After submitting the Basic Information go to the Apply Fresh menu. Carefully 
+read the guidelines and accept the terms by clicking on the checkboxes and click 
+on continue. 
+5. Select the Scholarship category from the dropdown menu:  
+o Scholarship 
+o Incentive 
+6. Click on the Apply button to generate Application ID.  You’ll be redirected to My 
+Applications page having the details of the Application ID generated. 
+7. Click on Proceed button provided against the Application ID in My Applications 
+8. Click on Fill/Edit Application Form. 
+9. The list of available schemes will be displayed based on the information 
+provided.  
+10. Select the desired scheme from the list, upload required documents and click on 
+Final Submit. 
+ 
+3. Can I apply for multiple scholarships? 
+ 
+From Academic Year (AY) 2026–27 onwards, students may apply for more than one 
+scholarship scheme on NSP, subject to the following conditions: 
+• Only one Merit-based Scheme can be applied for in an Academic Year(Including 
+Fresh and Renewal). 
+• More than one Welfare-based Scheme may be applied for, if eligible. 
+The classification of schemes as Merit-based and Welfare-based is available under the 
+Schemes on NSP option on the Scholarship Portal homepage. 
+To apply for a new scholarship, generate a new Application ID using  Apply Fresh 
+menu and follow the steps mentioned in “How do I Apply for Fresh Application” 
+section from Step no. 4. 
+ 
+ 
+4. How can I withdraw my application? 
+Follow the below steps to withdraw the application: 
+1. Navigate to the My Applications section. 
+2. Select the application that you want to withdraw by clicking on Proceed button. 
+3. From the Menu, select the Withdraw Application option. 
+4. Select the appropriate Withdrawal Remark from dropdown list. 
+5. Click on the Withdraw button. 
+6. An OTP will be sent to the registered mobile number. 
+7. Enter the OTP and confirm the action. 
+Upon successful OTP verification, the application will be withdrawn successfully. 
+5. When can I withdraw my application? 
+ 
+You can withdraw your application at any time during the application process. Please 
+note that you will be able to withdraw your application untill – 
+a. If the application is not processed for Payment. 
+b. If Scheme’s L2 verification dates are not closed. 
+ 
+6. Can I revoke my application again after withdrawing? 
+ 
+Fresh Application cannot be revoked once withdrawn. 
+You can revoke your Renewal application again after withdrawing. To do so, go to My 
+Applications page and click on the Proceed button then select ‘Revoke Application’ form 
+the menu. 
+Please note that you cannot revoke your scholarship application if you fail the following 
+conditions: 
+a. You already have an active merit based scholarship application and want to 
+revoke another merit based scholarship application. 
+b. If the application submission date is closed. 
+c. If the domicile state of the withdrawn application is different from your current 
+active application (if any). 
+ 
+7. Why am I receiving an error while revoking my withdrawn 
+renewal application? 
+a. If any changes have been made to the Basic Information after the 
+application was withdrawn, the application cannot be revoked. 
+ 
+b. To successfully revoke the withdrawn application, please restore the 
+Basic Information to exactly how it was before the withdrawal request 
+was submitted, and then try revoking the application again. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+8. How can I update my application if it has been marked as defective? 
+ 
+Application may be marked defective by Institute Nodal officers or Scheme Nodal officer 
+ 
+1. Defect for Scheme related changes: If the application is marked defective for 
+scheme related changes then you can make the corrections through the following 
+steps 
+ 
+ Click on Proceed button provided against the Application ID in My 
+Applications. 
+ Click on Fill/Edit Application form menu. 
+ Make the corrections and submit the Application. 
+ 
+2. Defect for Basic Information : If the application is marked defective for Basic 
+information then it can only be corrected when 
+ 
+ There is only one active application. 
+ 
+ If there is more than 1 active application then you have to withdraw all the 
+other applications in order to make the corrections in Basic information. 
+ 
+ Defect correction is not allowed if changing the information makes you 
+ineligible from the already opted scheme. 
+ 
+ 
+ 
+9. How can I apply for multiple incentives? 
+ 
+You can apply for multiple incentives from the ‘Apply Fresh’ page. Click on ‘Apply Fresh’ 
+and select ‘Incentive’ from the Application Type dropdown menu. There is no limit to the 
+number of incentives you can apply for. 
+10. How do I change my Basic Information 
+ 
+If you have already applied for an Scholarship/Incentive, then you will not be able to 
+change your Basic Information unless you withdraw your application. Please note all 
+of your applications (Scholarship/ incentive) must be withdrawn.  
+To know how to withdraw an application, please refer to Section 5 of this document. 
+ 
+11. How do I refresh my contact information? 
+You can update your contact information (i.e., Mobile Number, Email ID) via the My 
+Profile section. Please note that contact details cannot be edited directly on the 
+Application Form. Instead, you must update your contact details on OTR (One-Time 
+Registration) and then refresh the updated information into the Application Form using 
+the following steps- 
+Step 1: Update Contact Information in OTR 
+Update E-mail ID 
+ Login using any of the methods as specified. 
+ Once logged in, go to My Profile. 
+ From the left menu, select Update Email. 
+ Enter your new Email ID in the designated field and click on Get OTP 
+ Enter the OTP sent to your new email. 
+ Click on Verify to update your email address. 
+Update Mobile No. 
+ To update your mobile number, you can click here and then go the ‘Change Mobile No.’ 
+from the from the Register Page. 
+ Once on the page, you can either authenticate your credentials using your OTR number 
+or Reference number. 
+  In case of OTR Number, enter your OTR number and get OTP on your current 
+registered mobile number. 
+  In case of Reference Number, enter your reference number and get OTP on your 
+current registered mobile number. 
+  Enter the OTP received. 
+ Click on Verify button. 
+ Once details are verified, you will be able to change your mobile number. 
+Step 2: Update Contact Information in Application Form 
+  Log in to the Application Form. 
+ Navigate to My Profile in the menu. 
+  Click on Refresh Mobile No., Email ID from OTR. 
+ Compare the details displayed from OTR with those on your application form. 
+  If the details are different, click the Update button to Sync the updated information from 
+OTR. 
+ 
+12. How do I refresh my eKYC details from OTR? 
+To update your eKYC information such as Name, Gender, Profile Photo and Date of 
+Birth on the Application Form, you'll need to first update these details on OTR and then 
+refresh them in the Application Form. You cannot directly edit these details in the 
+Application Form. Follow the steps below to refresh your details: 
+Step 1 – Update your eKYC information in OTR 
+ Login to OTR using your credentials. 
+ Click on Refresh eKYC option. 
+ You will be able to view your Aadhaar details already entered. 
+ Click on Get OTP button. 
+ Enter the OTP received. 
+ Click on Verify button. 
+ Your eKYC details will be refreshed on OTR. 
+Step 2 – Update eKYC information in Application Form 
+ Log in to the  Application Form. 
+ Go to My Profile on Navigation Menu. 
+ Select Refresh eKYC Details from OTR. 
+  Click on Refresh Applicant details from OTR. 
+  Compare your details as per OTR and as per your application form. 
+ Choose the fields you want to update, such as: 
+o Name 
+o Gender 
+o Date of Birth 
+o Profile Photo 
+ If the details are different then, click on the Update button to update your details 
+as per OTR. 
+Note – You can update your eKYC details from OTR only before submitting your 
+application. If the application is already submitted and you need to update your details, 
+you must withdraw the application and submit a fresh one provided scheme date is still 
+open. 
+ 
+ 
+13. How do I refresh my parent's details from OTR? 
+You can refresh your Parent's details from OTR i.e. Father’s Name and Mother’s Name 
+using My Profile option. The parent’s details cannot be edited directly from the 
+Application Form. You need to edit your parent’s details on OTR and then refresh those 
+details to Application Form using Refresh Applicant details from OTR option. To 
+refresh your parent’s details from OTR, follow the steps below: 
+Step 1 – Update your parent’s information in OTR using option provided there. 
+Step 2 – Update the parent’s information in Application Form by following below 
+mentioned steps: 
+  Login to the Application Form. 
+  Go to My Profile on Navigation Menu. 
+ Select Refresh eKYC Details from OTR. 
+ Click on Refresh Parent details from OTR. 
+ Choose the fields you want to update, such as: 
+o Father’s Name 
+o Mother’s Name 
+ Click on the Update button to refresh the details as per OTR. 
+Note – You can update your parent’s details from OTR only before submitting your 
+application. If the application is already submitted and you need to update your details, 
+you must withdraw the application and submit a fresh one provided scheme date is still 
+open. 
+ 
+ 
+ 
+14. How do I link my renewal application with my new OTR? 
+NOTE: Link your renewal application in the following situations: 
+ You have registered your previous academic year's application ID using OTR 
+registered with your parent/ guardian's. 
+ You have generated a new OTR using your own Aadhaar number, but the 
+previous year's application is not listed in the new OTR. 
+To link your renewal application with your profile, ensure the following conditions are 
+met: 
+ No active new merit based scholarship application exists: If you have 
+applied for a new merit based scholarship, please withdraw it before linking the 
+renewal application ID. 
+ The name, gender, and date of birth on the new OTR must match the details 
+on the previous academic year's application ID. 
+  OTP-based eKYC will be conducted on the mobile number linked to the 
+Aadhaar of your parent/guardian (as provided in the previous academic year's 
+application ID). 
+Once these conditions are met, follow these steps to link your renewal application: 
+ Login to the NSP. 
+ Click on Link Renewal Application from Navigation menu. 
+  Enter your Renewal Application ID which you want to link. 
+ Click on the Submit button. 
+ Enter the OTP received on the linked mobile number. 
+  Click Submit. 
+ 
+ 
+15. How do I know which scholarship schemes I am eligible 
+for? 
+You can find out about your scholarship eligibility before logging into the Application 
+Form and filling in the eligibility form using the following steps. It is encouraged to check 
+your scheme eligibility before applying. To find out which scholarship schemes you may 
+apply for – 
+ Go to the scholarship eligibility page by clicking on this link or follow the steps 
+mentioned below: 
+o Go to NSP Website. 
+o Click on the Public section 
+o Provide details and click on Check Eligibility. 
+ You will be requiring the following details in order to check for your scheme 
+eligibility – 
+o Domicile State/UT 
+o Name (optional) 
+o Gender 
+ Is single girl child (if opted female) 
+o Date of Birth (optional) 
+o Marital Status 
+o Parent Annual Income 
+o Parent Profession 
+o Religion 
+o Community 
+o Is Disabled 
+ Percentage of Disability (if disabled) 
+o Parents Not Alive (optional) 
+o Scholarship Category 
+o Application Type 
+o Institute Name 
+ Search by Institute name 
+ Search by AISHE/ UDISE/ ITI (NCVT) Code 
+ Search by UDISE Code 
+o Course Name 
+o Mode of Study 
+o Previous Class Percentage 
+o Previous Course Year (optional) 
+o Previous Board University (optional) 
+o Previous Class (optional) 
+o 12th Roll Number (optional) 
+o 12th Board (optional) 
+o 12th Percentage (optional) 
+o 10th Roll Number (optional) 
+o 10th Percentage (optional) 
+o Competitive Roll Number (optional) 
+o Competitive Exam (optional) 
+o Competitive Exam Year (optional) 
+o Exam Conducted By (optional) 
+ Enter the Captcha Code and click on the "Check Eligibility" button. 
+ You will see a list of scholarship schemes for which you may apply. 
+If you don’t see any schemes, you’re eligible for then you can also select that particular 
+scheme and from Why I'm not eligible for scheme? option after entering your data 
+and find out the exact reasons for your ineligibility. In order to find out why you are not 
+eligible for a scheme, you need to follow the steps below – 
+ Enter the required details and click the Check Eligibility button. 
+  If you are not eligible for any scheme, the "Why am I not eligible for this 
+scheme?" option will be displayed. 
+  Read the instructions and select one of the following scheme categories: 
+o Central Sector Scheme 
+o Centrally Sponsored Scheme 
+o State Scheme 
+  Select the scheme name. 
+  Click the Get Your Answer button. 
+ The list of reasons for ineligibility will be displayed. 
+* Central Sector Scheme will be by default selected 
+ 
+ 
+16. How do I find my School/ college/ institute details? 
+To search for your School/ college/ institute details, follow the steps below: 
+ Go to the Institute Details page by clicking on the provided link or follow the steps 
+below: 
+o Go to the NSP website. 
+o Click on the Public section. 
+o Click on Search Now under Find Institutes on NSP. 
+ You will require the following details to check your institute details: 
+o Institution State 
+o Institution District 
+o Institute/College/ITI 
+o School/College/ITI Name (Optional) 
+  After entering all the required details, click on the Get Institution List button. 
+ Or you can also search your institution name using Search By AISHE/ UDISE/ ITI 
+(NCVT) Code in AISHE/ UDISE/ ITI (NCVT) Code field. You will require the 
+following details in order to check for your institute details: 
+o Choose your option i.e. AISHE/ ITI (NCVT) OR UDISE Code 
+o Enter the selected code. 
+o Enter Captcha 
+o Click on Get institute based on entered AISHE/ UDISE/ ITI (NCVT) Code 
+button. 
+ You will receive the details of your desired institution. 
+ 
+ 
+17. How do I find the Nodal Officer for my scholarship scheme? 
+To find the Nodal Officer details for scholarship scheme, follow the steps below: 
+ Go to the Nodal Officer page by clicking on the provided link or follow the steps 
+below: 
+o Go to the NSP website. 
+o Click on the Public section. 
+o Click on View under Nodal Officers (Scheme-wise). 
+ You will require the following details to check your Nodal Officer details: 
+o Select one of the following options: 
+ Ministry 
+ State 
+ District 
+ Zone 
+o In case of Ministry: 
+ Select Ministry. 
+ Enter Captcha Code. 
+ Click on the Submit button. 
+o In case of State: 
+ Select Ministry. 
+ Select Scheme. 
+ Select State. 
+ Enter Captcha Code. 
+ Click on the Submit button. 
+o In case of District: 
+ Select Ministry. 
+ Select Scheme. 
+ Select State. 
+ Select District. 
+ Enter Captcha Code. 
+ Click on the Submit button. 
+o In case of Zone: 
+ Select Ministry/Zone. 
+ Enter Captcha Code. 
+ Click on the Submit button. 
+ After clicking the Submit button, you will be able to view the list of Nodal Officers 
+for your scholarship scheme. Copy the required details and click on 
+the OK button.
