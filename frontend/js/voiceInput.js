@@ -1,4 +1,4 @@
-let selectedLanguage = ''; // '' means auto-detect
+let selectedLanguage = '';
 
 export function initLanguageSelector() {
     const buttons = document.querySelectorAll('.lang-btn');
@@ -36,7 +36,7 @@ export function initMicButton(onRecordingComplete) {
                 mediaRecorder.addEventListener('stop', () => {
                     const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
                     onRecordingComplete(audioBlob);
-                    stream.getTracks().forEach(track => track.stop()); // releases the mic
+                    stream.getTracks().forEach(track => track.stop());
                 });
 
                 mediaRecorder.start();

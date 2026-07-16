@@ -16,10 +16,10 @@ export function updateProfile(profile) {
     profileFieldsEl.innerHTML = '';
 
     Object.entries(profile).forEach(([key, value]) => {
-        if (value === null || value === undefined || value === '') return; // hide unknown fields, per the doc
+        if (value === null || value === undefined || value === '') return;
         const label = FIELD_LABELS[key] || key;
         const row = document.createElement('div');
-        row.textContent = `${label}: ${value}`;
+        row.innerHTML = `<span>${label}</span><span>${value}</span>`;
         profileFieldsEl.appendChild(row);
     });
 
