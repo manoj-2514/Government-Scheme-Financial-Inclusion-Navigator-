@@ -10,7 +10,6 @@ from deep_translator import GoogleTranslator
 from gtts import gTTS
 from pydub import AudioSegment
 from pydub.silence import detect_leading_silence
-import whisper
 
 logger = logging.getLogger(__name__)
 
@@ -26,6 +25,7 @@ def get_whisper_model():
     """Retrieve or load the Whisper model from memory cache."""
     global _cached_whisper_model
     if _cached_whisper_model is None:
+        import whisper
         logger.info("Whisper model cache miss. Loading Whisper 'small' model...")
         t0 = time.time()
         _cached_whisper_model = whisper.load_model("small")

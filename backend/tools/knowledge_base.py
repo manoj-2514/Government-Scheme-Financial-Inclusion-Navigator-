@@ -13,7 +13,6 @@ from typing import Any, Dict, List
 
 import faiss
 import numpy as np
-from sentence_transformers import SentenceTransformer
 
 # Reconfigure stdout to use UTF-8 just in case we run this file directly on Windows
 if sys.platform.startswith("win") and hasattr(sys.stdout, "reconfigure"):
@@ -22,13 +21,14 @@ if sys.platform.startswith("win") and hasattr(sys.stdout, "reconfigure"):
 # ---------------------------------------------------------------------------
 # Module-level model singleton — loaded once at import, reused for all calls
 # ---------------------------------------------------------------------------
-_EMBED_MODEL: SentenceTransformer | None = None
+_EMBED_MODEL: Any = None
 
 
-def _get_embed_model() -> SentenceTransformer:
+def _get_embed_model() -> Any:
     """Return the shared SentenceTransformer instance, loading it on first call."""
     global _EMBED_MODEL
     if _EMBED_MODEL is None:
+        from sentence_transformers import SentenceTransformer
         _EMBED_MODEL = SentenceTransformer("all-MiniLM-L6-v2")
     return _EMBED_MODEL
 
