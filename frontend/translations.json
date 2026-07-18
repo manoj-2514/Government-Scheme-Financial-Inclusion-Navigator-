@@ -1,0 +1,485 @@
+{
+  "en": {
+    "ui": {
+      "send_button": "Send",
+      "input_placeholder": "Type your message...",
+      "new_conversation": "＋ New Chat",
+      "passbook_label": "Passbook",
+      "empty_state": "Ask me about government schemes you may qualify for — try typing something like \"I'm a farmer in Karnataka with 2 acres\", or use voice input below.",
+      "tab_chat": "💬 Chat",
+      "tab_dashboard": "📊 Dashboard",
+      "mic_button_title": "Record voice message",
+      "menu_toggle": "Toggle menu"
+    },
+    "profile": {
+      "occupation": "Occupation",
+      "state": "State",
+      "land_acres": "Land (acres)",
+      "income": "Income",
+      "age": "Age",
+      "category": "Category",
+      "gender": "Gender",
+      "still_learning": "Still learning about you..."
+    },
+    "dashboard": {
+      "loading": "Loading your session summary…",
+      "empty_title": "No session data yet",
+      "empty_subtitle": "Start a conversation in the Chat tab to see your eligibility summary here.",
+      "error_title": "Could not load dashboard",
+      "retry_button": "Retry",
+      "section_overview": "Session Overview",
+      "stat_checked": "Schemes Checked",
+      "stat_eligible": "Eligible",
+      "stat_need_info": "Need More Info",
+      "section_eligible": "Eligible Schemes",
+      "no_eligible": "No eligible schemes found yet — provide more details in the chat to unlock results.",
+      "section_category": "Breakdown by Category",
+      "section_missing": "Missing Information",
+      "missing_hint": "The following details are still unknown. Share them in the chat for a more accurate result.",
+      "complete_badge": "✔ Profile Complete — all fields collected!",
+      "apply_button": "Apply Now ↗",
+      "eligible_stamp": "ELIGIBLE"
+    },
+    "chat": {
+      "typing_indicator": "typing...",
+      "voice_processing": "🎙️ Processing voice message...",
+      "voice_understanding_failed": "🎙️ (voice message — understanding failed)",
+      "voice_retry_message": "Sorry, I couldn't understand that clearly — could you try recording again in a quiet place?",
+      "voice_processing_failed": "🎙️ (voice message — processing failed)",
+      "voice_error_message": "Sorry, I couldn't process that voice message.",
+      "how_i_found_this": "How I found this",
+      "tool_check_eligibility": "Checked your eligibility against scheme rules",
+      "tool_search_schemes": "Searched schemes matching your criteria",
+      "tool_scheme_details": "Looked up full scheme details",
+      "tool_knowledge_base": "Searched the knowledge base for relevant info",
+      "error_message": "Sorry, an error occurred:"
+    },
+    "onboarding": {
+      "step_1_of_2": "Step 1 of 2",
+      "step_2_of_2": "Step 2 of 2",
+      "language_title": "Choose your language",
+      "language_subtitle": "Select the language you are most comfortable with",
+      "occupation_title": "What best describes you?",
+      "occupation_subtitle": "Pick the category that matches your situation",
+      "back_button": "Back to language selection"
+    },
+    "errors": {
+      "server_unreachable": "Could not reach the server. Is the backend server running?",
+      "mic_access_denied": "Couldn't access your microphone. Check browser permissions."
+    }
+  },
+  "hi": {
+    "ui": {
+      "send_button": "भेजें",
+      "input_placeholder": "अपना संदेश टाइप करें...",
+      "new_conversation": "＋ नई बातचीत",
+      "passbook_label": "पासबुक",
+      "empty_state": "सरकारी योजनाओं के बारे में पूछें जिनके लिए आप योग्य हो सकते हैं — इसे आज़माएं \"मैं कर्नाटक में 2 एकड़ ज़मीन वाला किसान हूं\", या नीचे वॉइस इनपुट का उपयोग करें।",
+      "tab_chat": "💬 चैट",
+      "tab_dashboard": "📊 डैशबोर्ड",
+      "mic_button_title": "वॉइस संदेश रिकॉर्ड करें",
+      "menu_toggle": "मेनू टॉगल करें"
+    },
+    "profile": {
+      "occupation": "व्यवसाय",
+      "state": "राज्य",
+      "land_acres": "भूमि (एकड़)",
+      "income": "आय",
+      "age": "आयु",
+      "category": "श्रेणी",
+      "gender": "लिंग",
+      "still_learning": "अभी भी आपके बारे में जान रहा हूं..."
+    },
+    "dashboard": {
+      "loading": "आपका सत्र सारांश लोड हो रहा है…",
+      "empty_title": "अभी तक कोई सत्र डेटा नहीं",
+      "empty_subtitle": "अपनी पात्रता सारांश यहां देखने के लिए चैट टैब में बातचीत शुरू करें।",
+      "error_title": "डैशबोर्ड लोड नहीं किया जा सका",
+      "retry_button": "पुनः प्रयास करें",
+      "section_overview": "सत्र अवलोकन",
+      "stat_checked": "जांची गई योजनाएं",
+      "stat_eligible": "पात्र",
+      "stat_need_info": "अधिक जानकारी की आवश्यकता",
+      "section_eligible": "पात्र योजनाएं",
+      "no_eligible": "अभी तक कोई पात्र योजना नहीं मिली — चैट में अधिक विवरण प्रदान करें।",
+      "section_category": "श्रेणी के अनुसार विभाजन",
+      "section_missing": "गुम जानकारी",
+      "missing_hint": "निम्नलिखित विवरण अभी भी अज्ञात हैं। अधिक सटीक परिणाम के लिए उन्हें चैट में साझा करें।",
+      "complete_badge": "✔ प्रोफ़ाइल पूर्ण — सभी फ़ील्ड एकत्र किए गए!",
+      "apply_button": "अभी आवेदन करें ↗",
+      "eligible_stamp": "पात्र"
+    },
+    "chat": {
+      "typing_indicator": "टाइप कर रहा हूं...",
+      "voice_processing": "🎙️ वॉइस संदेश प्रोसेस हो रहा है...",
+      "voice_understanding_failed": "🎙️ (वॉइस संदेश — समझने में विफल)",
+      "voice_retry_message": "क्षमा करें, मैं इस्पष्ट रूप से नहीं समझ पाया — क्या आप शांत जगह में फिर से रिकॉर्ड करने का प्रयास कर सकते हैं?",
+      "voice_processing_failed": "🎙️ (वॉइस संदेश — प्रोसेसिंग विफल)",
+      "voice_error_message": "क्षमा करें, मैं उस वॉइस संदेश को प्रोसेस नहीं कर सका।",
+      "how_i_found_this": "मैंने यह कैसे पाया",
+      "tool_check_eligibility": "योजना नियमों के खिलाफ आपकी पात्रता की जांच की",
+      "tool_search_schemes": "आपके मानदंडों से मेल खाने वाली योजनाएं खोजीं",
+      "tool_scheme_details": "पूर्ण योजना विवरण देखा",
+      "tool_knowledge_base": "प्रासंगिक जानकारी के लिए ज्ञान आधार खोजा",
+      "error_message": "क्षमा करें, एक त्रुटि हुई:"
+    },
+    "onboarding": {
+      "step_1_of_2": "चरण 1 / 2",
+      "step_2_of_2": "चरण 2 / 2",
+      "language_title": "अपनी भाषा चुनें",
+      "language_subtitle": "वह भाषा चुनें जिसमें आप सबसे अधिक सहज हैं",
+      "occupation_title": "आपका व्यवसाय क्या है?",
+      "occupation_subtitle": "अपनी स्थिति से मेल खाने वाली श्रेणी चुनें",
+      "back_button": "भाषा चयन पर वापस जाएं"
+    },
+    "errors": {
+      "server_unreachable": "सर्वर तक नहीं पहुंच सका। क्या बैकएंड सर्वर चल रहा है?",
+      "mic_access_denied": "आपके माइक्रोफोन तक पहुंच नहीं मिल सकी। ब्राउज़र अनुमतियां जांचें।"
+    }
+  },
+  "te": {
+    "ui": {
+      "send_button": "పంపించు",
+      "input_placeholder": "మీ సందేశాన్ని టైప్ చేయండి...",
+      "new_conversation": "＋ కొత్త చాట్",
+      "passbook_label": "పాస్‌బుక్",
+      "empty_state": "మీరు అర్హులవగు ప్రభుత్వ పథకాల గురించి నన్ను అడగండి — ఇలా టైప్ చేయండి \"నేను కర్ణాటకలో 2 ఎకరాల భూమి ఉన్న రైతుని\", లేదా కింద వాయిస్ ఇన్‌పుట్ ఉపయోగించండి.",
+      "tab_chat": "💬 చాట్",
+      "tab_dashboard": "📊 డ్యాష్‌బోర్డ్",
+      "mic_button_title": "వాయిస్ సందేశాన్ని రికార్డ్ చేయండి",
+      "menu_toggle": "మెనూ టోగుల్"
+    },
+    "profile": {
+      "occupation": "వృత్తి",
+      "state": "రాష్ట్రం",
+      "land_acres": "భూమి (ఎకరాలు)",
+      "income": "ఆదాయం",
+      "age": "వయస్సు",
+      "category": "వర్గం",
+      "gender": "లింగం",
+      "still_learning": "ఇప్పటికీ మీ గురించి తెలుసుకుంటున్నాను..."
+    },
+    "dashboard": {
+      "loading": "మీ సెషన్ సారాంశం లోడ్ అవుతోంది…",
+      "empty_title": "ఇంకా సెషన్ డేటా లేదు",
+      "empty_subtitle": "మీ పాత్రత సారాంశం ఇక్కడ చూడటానికి చాట్ ట్యాబ్‌లో సంభాషణను ప్రారంభించండి.",
+      "error_title": "డ్యాష్‌బోర్డ్ లోడ్ చేయడం సాధ్యం కాలేదు",
+      "retry_button": "మళ్ళీ ప్రయత్నించండి",
+      "section_overview": "సెషన్ అవలోకనం",
+      "stat_checked": "తనిఖీ చేసిన పథకాలు",
+      "stat_eligible": "అర్హులు",
+      "stat_need_info": "మరిన్ని సమాచారం అవసరం",
+      "section_eligible": "అర్హత కలిగిన పథకాలు",
+      "no_eligible": "ఇంకా అర్హత కలిగిన పథకాలు కనుగొనబడలేదు — ఫలితాలను అన్‌లాక్ చేయడానికి చాట్‌లో మరిన్ని వివరాలను అందించండి.",
+      "section_category": "వర్గం ప్రకారం విభజన",
+      "section_missing": "తప్పిపోయిన సమాచారం",
+      "missing_hint": "కింది వివరాలు ఇంకా తెలియదు. మరింత ఖచ్చితమైన ఫలితం కోసం వాటిని చాట్‌లో పంచుకోండి.",
+      "complete_badge": "✔ ప్రొఫైల్ పూర్తి — అన్ని ఫీల్డ్‌లు సేకరించబడ్డాయి!",
+      "apply_button": "ఇప్పుడు దరఖాస్ చేయండి ↗",
+      "eligible_stamp": "అర్హులు"
+    },
+    "chat": {
+      "typing_indicator": "టైప్ చేస్తోంది...",
+      "voice_processing": "🎙️ వాయిస్ సందేశం ప్రాసెస్ అవుతోంది...",
+      "voice_understanding_failed": "🎙️ (వాయిస్ సందేశం — అర్థం చేసుకోవడం విఫలమైంది)",
+      "voice_retry_message": "క్షమించండి, నేను స్పష్టంగా అర్థం చేసుకోలేకపోయాను — మీరు నిశ్శబ్ద ప్రదేశంలో మళ్ళీ రికార్డ్ చేయడానికి ప్రయత్నించగలరా?",
+      "voice_processing_failed": "🎙️ (వాయిస్ సందేశం — ప్రాసెసింగ్ విఫలమైంది)",
+      "voice_error_message": "క్షమించండి, ఆ వాయిస్ సందేశాన్ని ప్రాసెస్ చేయడం సాధ్యం కాలేదు.",
+      "how_i_found_this": "నేను ఇది ఎలా కనుగొన్నాను",
+      "tool_check_eligibility": "పథకం నియమాలకు మీ అర్హతను తనిఖీ చేశాను",
+      "tool_search_schemes": "మీ ప్రమాణాలకు అనుగుణంగా పథకాలను శోధించాను",
+      "tool_scheme_details": "పూర్తి పథకం వివరాలను చూశాను",
+      "tool_knowledge_base": "సంబంధిత సమాచారం కోసం జ్ఞాన నిధిని శోధించాను",
+      "error_message": "క్షమించండి, ఒక లోపం సంభవించింది:"
+    },
+    "onboarding": {
+      "step_1_of_2": "దశ 1 / 2",
+      "step_2_of_2": "దశ 2 / 2",
+      "language_title": "మీ భాషను ఎంచుకోండి",
+      "language_subtitle": "మీరు ఎక్కువగా అనుకూలంగా ఉన్న భాషను ఎంచుకోండి",
+      "occupation_title": "మీ వృత్తి ఏమిటి?",
+      "occupation_subtitle": "మీ పరిస్థితికి సరిపోయే వర్గాన్ని ఎంచుకోండి",
+      "back_button": "భాష ఎంపికకు తిరిగి వెళ్లు"
+    },
+    "errors": {
+      "server_unreachable": "సర్వర్‌ను చేరుకోవడం సాధ్యం కాలేదు. బ్యాకెండ్ సర్వర్ నడుస్తోందా?",
+      "mic_access_denied": "మీ మైక్రోఫోన్‌ను యాక్సెస్ చేయడం సాధ్యం కాలేదు. బ్రౌజర్ అనుమతులను తనిఖీ చేయండి."
+    }
+  },
+  "ta": {
+    "ui": {
+      "send_button": "அனுப்பு",
+      "input_placeholder": "உங்கள் செய்தியை தட்டச்சு செய்க...",
+      "new_conversation": "＋ புதிய அரட்டை",
+      "passbook_label": "பாஸ்புக்",
+      "empty_state": "நீங்கள் தகுதியான அரசு திட்டங்களைப் பற்றி என்னிடம் கேளுங்கள் — இதை முயற்சிக்கவும் \"நான் கர்நாடகாவில் 2 ஏக்கர் நிலம் உள்ள விவசாயி\", அல்லது கீழே உள்ள குரல் உள்ளீட்டைப் பயன்படுத்தவும்.",
+      "tab_chat": "💬 அரட்டை",
+      "tab_dashboard": "📊 டாஷ்போர்டு",
+      "mic_button_title": "குரல் செய்தியை பதிவு செய்க",
+      "menu_toggle": "மெனுவை மாற்று"
+    },
+    "profile": {
+      "occupation": "தொழில்",
+      "state": "மாநிலம்",
+      "land_acres": "நிலம் (ஏக்கர்)",
+      "income": "வருமானம்",
+      "age": "வயது",
+      "category": "வகை",
+      "gender": "பாலினம்",
+      "still_learning": "இன்னும் உங்களைப் பற்றி அறிந்து கொண்டிருக்கிறேன்..."
+    },
+    "dashboard": {
+      "loading": "உங்கள் அமர்வு சுருக்கம் ஏற்றப்படுகிறது…",
+      "empty_title": "இன்னும் அமர்வு தரவு இல்லை",
+      "empty_subtitle": "உங்கள் தகுதி சுருக்கத்தை இங்கே காண அரட்டை தாவலில் உரையாடலைத் தொடங்கவும்.",
+      "error_title": "டாஷ்போர்டை ஏற்ற முடியவில்லை",
+      "retry_button": "மீண்டும் முயற்சிக்கவும்",
+      "section_overview": "அமர்வு கண்ணோட்டம்",
+      "stat_checked": "சோதிக்கப்பட்ட திட்டங்கள்",
+      "stat_eligible": "தகுதியானவை",
+      "stat_need_info": "மேலும் தகவல் தேவை",
+      "section_eligible": "தகுதியான திட்டங்கள்",
+      "no_eligible": "இன்னும் தகுதியான திட்டங்கள் எதுவும் கிடைக்கவில்லை — முடிவுகளைத் திறக்க அரட்டையில் மேலும் விவரங்களை வழங்கவும்.",
+      "section_category": "வகைப்படுத்தல் பிரிவின் படி",
+      "section_missing": "விடுபட்ட தகவல்",
+      "missing_hint": "பின்வரும் விவரங்கள் இன்னும் தெரியவில்லை. மிகவும் துல்லியமான முடிவுக்கு அவற்றை அரட்டையில் பகிரவும்.",
+      "complete_badge": "✔ சுயவிவரம் முடிந்தது — அனைத்து புலங்களும் சேகரிக்கப்பட்டன!",
+      "apply_button": "இப்போது விண்ணப்பிக்கவும் ↗",
+      "eligible_stamp": "தகுதியானது"
+    },
+    "chat": {
+      "typing_indicator": "தட்டச்சு செய்கிறது...",
+      "voice_processing": "🎙️ குரல் செய்தி செயலாக்கப்படுகிறது...",
+      "voice_understanding_failed": "🎙️ (குரல் செய்தி — புரிதல் தோல்வியடைந்தது)",
+      "voice_retry_message": "மன்னிக்கவும், நான் அதை தெளிவாக புரிந்துகொள்ளவில்லை — அமைதியான இடத்தில் மீண்டும் பதிவு செய்ய முயற்சிக்க முடியுமா?",
+      "voice_processing_failed": "🎙️ (குரல் செய்தி — செயலாக்கம் தோல்வியடைந்தது)",
+      "voice_error_message": "மன்னிக்கவும், அந்தக் குரல் செய்தியை செயலாக்க முடியவில்லை.",
+      "how_i_found_this": "நான் இதை எப்படி கண்டறிந்தேன்",
+      "tool_check_eligibility": "திட்ட விதிகளுக்கு உங்கள் தகுதியை சரிபார்த்தேன்",
+      "tool_search_schemes": "உங்கள் அளவீடுகளுக்கு பொருத்தமான திட்டங்களைத் தேடினேன்",
+      "tool_scheme_details": "முழு திட்ட விவரங்களைப் பார்த்தேன்",
+      "tool_knowledge_base": "தொடர்புடைய தகவலுக்கு அறிவுத் தளத்தைத் தேடினேன்",
+      "error_message": "மன்னிக்கவும், ஒரு பிழை ஏற்பட்டது:"
+    },
+    "onboarding": {
+      "step_1_of_2": "படி 1 / 2",
+      "step_2_of_2": "படி 2 / 2",
+      "language_title": "உங்கள் மொழியைத் தேர்ந்தெடுக்கவும்",
+      "language_subtitle": "நீங்கள் அதிகம் வசதியாக உணரும் மொழியைத் தேர்ந்தெடுக்கவும்",
+      "occupation_title": "உங்கள் தொழில் என்ன?",
+      "occupation_subtitle": "உங்கள் சூழ்நிலைக்கு பொருந்தும் வகையைத் தேர்ந்தெடுக்கவும்",
+      "back_button": "மொழி தேர்வுக்குத் திரும்பவும்"
+    },
+    "errors": {
+      "server_unreachable": "சர்வரை அடைய முடியவில்லை. பின்னணி சர்�ver் இயங்குகிறதா?",
+      "mic_access_denied": "உங்கள் மைக்ரோஃபோனை அணுக முடியவில்லை. உலாவி அனுமதிகளைச் சரிபார்க்கவும்."
+    }
+  },
+  "kn": {
+    "ui": {
+      "send_button": "ಕಳುಹಿಸು",
+      "input_placeholder": "ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಟೈಪ್ ಮಾಡಿ...",
+      "new_conversation": "＋ ಹೊಸ ಚಾಟ್",
+      "passbook_label": "ಪಾಸ್‌ಬುಕ್",
+      "empty_state": "ನೀವು ಅರ್ಹರಾಗಿರುವ ಸರ್ಕಾರ ಯೋಜನೆಗಳ ಬಗ್ಗೆ ನನ್ನನ್ನು ಕೇಳಿ — ಇದನ್ನು ಪ್ರಯತ್ನಿಸಿ \"ನಾನು ಕರ್ನಾಟಕದಲ್ಲಿ 2 ಎಕರೆ ಭೂಮಿ ಹೊಂದಿರುವ ರೈತ\", ಅಥವಾ ಕೆಳಗಿನ ಧ್ವನಿ ಇನ್‌ಪುಟ್ ಅನ್ನು ಬಳಸಿ.",
+      "tab_chat": "💬 ಚಾಟ್",
+      "tab_dashboard": "📊 ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
+      "mic_button_title": "ಧ್ವನಿ ಸಂದೇಶವನ್ನು ರೆಕಾರ್ಡ್ ಮಾಡಿ",
+      "menu_toggle": "ಮೆನು ಟಾಗಲ್"
+    },
+    "profile": {
+      "occupation": "ಉದ್ಯೋಗ",
+      "state": "ರಾಜ್ಯ",
+      "land_acres": "ಭೂಮಿ (ಎಕರೆ)",
+      "income": "ಆದಾಯ",
+      "age": "ವಯಸ್ಸು",
+      "category": "ವರ್ಗ",
+      "gender": "ಲಿಂಗ",
+      "still_learning": "ಇನ್ನೂ ನಿಮ್ಮ ಬಗ್ಗೆ ತಿಳಿಯುತ್ತಿದ್ದೇನೆ..."
+    },
+    "dashboard": {
+      "loading": "ನಿಮ್ಮ ಅಧಿವೇಶನ ಸಾರಾಂಶವನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ…",
+      "empty_title": "ಇನ್ನೂ ಅಧಿವೇಶನ ಡೇಟಾ ಇಲ್ಲ",
+      "empty_subtitle": "ನಿಮ್ಮ ಅರ್ಹತೆ ಸಾರಾಂಶವನ್ನು ಇಲ್ಲಿ ನೋಡಲು ಚಾಟ್ ಟ್ಯಾಬ್‌ನಲ್ಲಿ ಸಂಭಾಷಣೆಯನ್ನು ಪ್ರಾರಂಭಿಸಿ.",
+      "error_title": "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ",
+      "retry_button": "ಮರುಪ್ರಯತ್ನಿಸಿ",
+      "section_overview": "ಅಧಿವೇಶನ ಅವಲೋಕನ",
+      "stat_checked": "ಪರಿಶೀಲಿಸಿದ ಯೋಜನೆಗಳು",
+      "stat_eligible": "ಅರ್ಹ",
+      "stat_need_info": "ಇನ್ನಷ್ಟು ಮಾಹಿತಿ ಬೇಕು",
+      "section_eligible": "ಅರ್ಹತೆ ಹೊಂದಿದ ಯೋಜನೆಗಳು",
+      "no_eligible": "ಇನ್ನೂ ಯಾವುದೇ ಅರ್ಹ ಯೋಜನೆಗಳು ಕಂಡುಬಂದಿಲ್ಲ — ಫಲಿತಾಂಶಗಳನ್ನು ಅನ್‌ಲಾಕ್ ಮಾಡಲು ಚಾಟ್‌ನಲ್ಲಿ ಹೆಚ್ಚಿನ ವಿವರಗಳನ್ನು ಒದಗಿಸಿ.",
+      "section_category": "ವರ್ಗದ ಪ್ರಕಾರ ವಿಭಜನೆ",
+      "section_missing": "ಕಾಣೆಯಾದ ಮಾಹಿತಿ",
+      "missing_hint": "ಕೆಳಗಿನ ವಿವರಗಳು ಇನ್ನೂ ತಿಳಿದಿವೆ. ಹೆಚ್ಚು ನಿಖರವಾದ ಫಲಿತಾಂಶಕ್ಕಾಗಿ ಅವುಗಳನ್ನು ಚಾಟ್‌ನಲ್ಲಿ ಹಂಚಿಕೊಳ್ಳಿ.",
+      "complete_badge": "✔ ಪ್ರೊಫೈಲ್ ಸಂಪೂರ್ಣ — ಎಲ್ಲಾ ಫೀಲ್ಡ್‌ಗಳು ಸಂಗ್ರಹಿಸಲ್ಪಟ್ಟಿವೆ!",
+      "apply_button": "ಈಗ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ ↗",
+      "eligible_stamp": "ಅರ್ಹ"
+    },
+    "chat": {
+      "typing_indicator": "ಟೈಪ್ ಮಾಡುತ್ತಿದೆ...",
+      "voice_processing": "🎙️ ಧ್ವನಿ ಸಂದೇಶವನ್ನು ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಲಾಗುತ್ತಿದೆ...",
+      "voice_understanding_failed": "🎙️ (ಧ್ವನಿ ಸಂದೇಶ — ಅರ್ಥಮಾಡಿಕೊಳ್ಳುವಿಕೆ ವಿಫಲವಾಗಿದೆ)",
+      "voice_retry_message": "ಕ್ಷಮಿಸಿ, ನಾನು ಅದನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲಿಲ್ಲ — ನೀವು ಶಾಂತ ಸ್ಥಳದಲ್ಲಿ ಮರು ರೆಕಾರ್ಡ್ ಮಾಡಲು ಪ್ರಯತ್ನಿಸಬಹುದೇ?",
+      "voice_processing_failed": "🎙️ (ಧ್ವನಿ ಸಂದೇಶ — ಪ್ರಕ್ರಿಯೆ ವಿಫಲವಾಗಿದೆ)",
+      "voice_error_message": "ಕ್ಷಮಿಸಿ, ಆ ಧ್ವನಿ ಸಂದೇಶವನ್ನು ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.",
+      "how_i_found_this": "ನಾನು ಇದನ್ನು ಹೇಗೆ ಕಂಡುಹಿಡಿದೆ",
+      "tool_check_eligibility": "ಯೋಜನಾ ನಿಯಮಗಳಿಗೆ ನಿಮ್ಮ ಅರ್ಹತೆಯನ್ನು ಪರಿಶೀಲಿಸಿದೆ",
+      "tool_search_schemes": "ನಿಮ್ಮ ಮಾನದಂಡಗಳಿಗೆ ಹೊಂದಿಕೊಳ್ಳುವ ಯೋಜನೆಗಳನ್ನು ಹುಡುಕಿದೆ",
+      "tool_scheme_details": "ಸಂಪೂರ್ಣ ಯೋಜನಾ ವಿವರಗಳನ್ನು ನೋಡಿದೆ",
+      "tool_knowledge_base": "ಸಂಬಂಧಿತ ಮಾಹಿತಿಗಾಗಿ ಜ್ಞಾನ ನೆಲೆಯನ್ನು ಹುಡುಕಿದೆ",
+      "error_message": "ಕ್ಷಮಿಸಿ, ಒಂದು ದೋಷ ಸಂಭವಿಸಿದೆ:"
+    },
+    "onboarding": {
+      "step_1_of_2": "ಹಂತ 1 / 2",
+      "step_2_of_2": "ಹಂತ 2 / 2",
+      "language_title": "ನಿಮ್ಮ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+      "language_subtitle": "ನೀವು ಹೆಚ್ಚು ಸುಲಭವಾಗಿ ಬಳಸುವ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+      "occupation_title": "ನಿಮ್ಮ ಉದ್ಯೋಗ ಯಾವುದು?",
+      "occupation_subtitle": "ನಿಮ್ಮ ಪರಿಸ್ಥಿತಿಗೆ ಹೊಂದಾಣಿಕೆಯಾಗುವ ವರ್ಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+      "back_button": "ಭಾಷೆ ಆಯ್ಕೆಗೆ ಹಿಂತಿರುಗಿ"
+    },
+    "errors": {
+      "server_unreachable": "ಸರ್ವರ್ ಅನ್ನು ತಲುಪಲು ಸಾಧ್ಯವಾಗಲ್ಲ. ಬ್ಯಾಕೆಂಡ್ ಸರ್ವರ್ ಚಾಲನೆಯಲ್ಲಿದೆಯೇ?",
+      "mic_access_denied": "ನಿಮ್ಮ ಮೈಕ್ರೋಫೋನ್ ಅನ್ನು ಪ್ರವೇಶಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಬ್ರೌಸರ್ ಅನುಮತಿಗಳನ್ನು ಪರಿಶೀಲಿಸಿ."
+    }
+  },
+  "ml": {
+    "ui": {
+      "send_button": "അയയ്ക്കുക",
+      "input_placeholder": "നിങ്ങളുടെ സന്ദേശം ടൈപ്പ് ചെയ്യുക...",
+      "new_conversation": "＋ പുതിയ ചാറ്റ്",
+      "passbook_label": "പാസ്ബുക്ക്",
+      "empty_state": "നിങ്ങൾക്ക് അർഹതയുള്ള സർക്കാർ പദ്ധതികളെക്കുറിച്ച് എന്നോടോട് ചോദിക്കുക — ഇത് ശ്രമിക്കുക \"ഞാൻ കർണാടകയിൽ 2 ഏക്കർ ഭൂമിയുള്ള ഒരു കർഷകൻ\", അല്ലെങ്കിൽ താഴെയുള്ള ശബ്ദ ഇൻപുട്ട് ഉപയോഗിക്കുക.",
+      "tab_chat": "💬 ചാറ്റ്",
+      "tab_dashboard": "📊 ഡാഷ്‌ബോർഡ്",
+      "mic_button_title": "ശബ്ദ സന്ദേശം റെക്കോർഡ് ചെയ്യുക",
+      "menu_toggle": "മെനു ടോഗിൾ"
+    },
+    "profile": {
+      "occupation": "തൊഴിൽ",
+      "state": "സംസ്ഥാനം",
+      "land_acres": "ഭൂമി (ഏക്കർ)",
+      "income": "വരുമാനം",
+      "age": "പ്രായം",
+      "category": "വിഭാഗം",
+      "gender": "ലിംഗം",
+      "still_learning": "ഇപ്പോഴും നിങ്ങളെക്കുറിച്ച് മനസ്സിലാക്കുന്നു..."
+    },
+    "dashboard": {
+      "loading": "നിങ്ങളുടെ സെഷൻ സമ്മറി ലോഡ് ചെയ്യുന്നു…",
+      "empty_title": "ഇതുവരെ സെഷൻ ഡാറ്റ ഇല്ല",
+      "empty_subtitle": "നിങ്ങളുടെ അർഹതാ സമ്മറി ഇവിടെ കാണാൻ ചാറ്റ് ടാബിൽ സംഭാഷണം ആരംഭിക്കുക.",
+      "error_title": "ഡാഷ്‌ബോർഡ് ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല",
+      "retry_button": "വീണ്ടും ശ്രമിക്കുക",
+      "section_overview": "സെഷൻ അവലോകനം",
+      "stat_checked": "പരിശോധിച്ച പദ്ധതികൾ",
+      "stat_eligible": "അർഹരായവർ",
+      "stat_need_info": "കൂടുതൽ വിവരങ്ങൾ ആവശ്യം",
+      "section_eligible": "അർഹതയുള്ള പദ്ധതികൾ",
+      "no_eligible": "ഇതുവരെ അർഹതയുള്ള പദ്ധതികളൊന്നും കണ്ടെത്തിയില്ല — ഫലങ്ങൾ അൺലോക്ക് ചെയ്യാൻ ചാറ്റിൽ കൂടുതൽ വിവരങ്ങൾ നൽകുക.",
+      "section_category": "വിഭാഗം അനുസരിച്ചുള്ള വിഭജനം",
+      "section_missing": "കാണാത്ത വിവരങ്ങൾ",
+      "missing_hint": "താഴെ പറയുന്ന വിവരങ്ങൾ ഇപ്പോഴും അജ്ഞാതമാണ്. കൂടുതൽ കൃത്യമായ ഫലത്തിനായി അവ ചാറ്റിൽ പങ്കിടുക.",
+      "complete_badge": "✔ പ്രൊഫൈൽ പൂർത്തിയായി — എല്ലാ ഫീൽഡുകളും ശേഖരിച്ചു!",
+      "apply_button": "ഇപ്പോൾ അപേക്ഷിക്കുക ↗",
+      "eligible_stamp": "അർഹർ"
+    },
+    "chat": {
+      "typing_indicator": "ടൈപ്പ് ചെയ്യുന്നു...",
+      "voice_processing": "🎙️ ശബ്ദ സന്ദേശം പ്രോസസ്സ് ചെയ്യുന്നു...",
+      "voice_understanding_failed": "🎙️ (ശബ്ദ സന്ദേശം — മനസ്സിലാക്കൽ പരാജയപ്പെട്ടു)",
+      "voice_retry_message": "ക്ഷമിക്കണം, ഞാൻ അത് വ്യക്തമായി മനസ്സിലാക്കാൻ കഴിഞ്ഞില്ല — നിങ്ങൾക്ക് നിശബ്ദമായ സ്ഥലത്ത് വീണ്ടും റെക്കോർഡ് ചെയ്യാൻ കഴിയുമോ?",
+      "voice_processing_failed": "🎙️ (ശബ്ദ സന്ദേശം — പ്രോസസ്സിംഗ് പരാജയപ്പെട്ടു)",
+      "voice_error_message": "ക്ഷമിക്കണം, ആ ശബ്ദ സന്ദേശം പ്രോസസ്സ് ചെയ്യാൻ കഴിഞ്ഞില്ല.",
+      "how_i_found_this": "ഞാൻ ഇത് എങ്ങനെ കണ്ടെത്തി",
+      "tool_check_eligibility": "പദ്ധതി നിയമങ്ങൾക്ക് നിങ്ങളുടെ അർഹത പരിശോധിച്ചു",
+      "tool_search_schemes": "നിങ്ങളുടെ മാനദണ്ഡങ്ങൾക്ക് അനുയോജ്യമായ പദ്ധതികൾ തിരഞ്ഞെടുത്തു",
+      "tool_scheme_details": "പൂർണ്ണമായ പദ്ധതി വിശദാംശങ്ങൾ കണ്ടു",
+      "tool_knowledge_base": "ബന്ധപ്പെട്ട വിവരത്തിനായി അറിവ് ബേസ് തിരഞ്ഞെടുത്തു",
+      "error_message": "ക്ഷമിക്കണം, ഒരു പിശക് സംഭവിച്ചു:"
+    },
+    "onboarding": {
+      "step_1_of_2": "ഘട്ടം 1 / 2",
+      "step_2_of_2": "ഘട്ടം 2 / 2",
+      "language_title": "നിങ്ങളുടെ ഭാഷ തിരഞ്ഞെടുക്കുക",
+      "language_subtitle": "നിങ്ങൾക്ക് ഏറ്റവും സുഖപ്രദമായ ഭാഷ തിരഞ്ഞെടുക്കുക",
+      "occupation_title": "നിങ്ങളുടെ തൊഴിൽ എന്താണ്?",
+      "occupation_subtitle": "നിങ്ങളുടെ സാഹചര്യത്തിന് അനുയോജ്യമായ വിഭാഗം തിരഞ്ഞെടുക്കുക",
+      "back_button": "ഭാഷ തിരഞ്ഞെടുക്കലിലേക്ക് മടങ്ങുക"
+    },
+    "errors": {
+      "server_unreachable": "സെർവറിൽ എത്താൻ കഴിഞ്ഞില്ല. ബാക്കെൻഡ് സെർവർ പ്രവർത്തിക്കുന്നുണ്ടോ?",
+      "mic_access_denied": "നിങ്ങളുടെ മൈക്രോഫോണിൽ പ്രവേശിക്കാൻ കഴിഞ്ഞില്ല. ബ്രൗസർ അനുമതികൾ പരിശോധിക്കുക."
+    }
+  },
+  "mr": {
+    "ui": {
+      "send_button": "पाठवा",
+      "input_placeholder": "तुमचा संदेश टाइप करा...",
+      "new_conversation": "＋ नवीन चॅट",
+      "passbook_label": "पासबुक",
+      "empty_state": "तुम्ही पात्र असलेल्या सरकारी योजनांबद्दल मला विचारा — हे वापरून पहा \"मी कर्नाटकात 2 एकर जमीन असलेला शेतकरी आहे\", किंवा खालील व्हॉइस इनपुट वापरा.",
+      "tab_chat": "💬 चॅट",
+      "tab_dashboard": "📊 डॅशबोर्ड",
+      "mic_button_title": "व्हॉइस संदेश रेकॉर्ड करा",
+      "menu_toggle": "मेने टॉगल करा"
+    },
+    "profile": {
+      "occupation": "व्यवसाय",
+      "state": "राज्य",
+      "land_acres": "जमीन (एकर)",
+      "income": "उत्पन्न",
+      "age": "वय",
+      "category": "श्रेणी",
+      "gender": "लिंग",
+      "still_learning": "अजूनही तुमच्याबद्दल शिकत आहे..."
+    },
+    "dashboard": {
+      "loading": "तुमचा सत्र सारांश लोड होत आहे…",
+      "empty_title": "अजूनही सत्र डेटा नाही",
+      "empty_subtitle": "तुमचा पात्रता सारांश येथे पाहण्यासाठी चॅट टॅबमध्ये संभाषण सुरू करा.",
+      "error_title": "डॅशबोर्ड लोड करण्यात अयशस्वी",
+      "retry_button": "पुन्हा प्रयत्न करा",
+      "section_overview": "सत्र आढावा",
+      "stat_checked": "तपासलेल्या योजना",
+      "stat_eligible": "पात्र",
+      "stat_need_info": "अधिक माहिती आवश्यक",
+      "section_eligible": "पात्र योजना",
+      "no_eligible": "अजूनही कोणतीही पात्र योजना सापडली नाही — परिणाम अनलॉक करण्यासाठी चॅटमध्ये अधिक तपशील द्या.",
+      "section_category": "श्रेणीनुसार विभाजन",
+      "section_missing": "न आढळलेली माहिती",
+      "missing_hint": "खालील तपशील अजूनही अज्ञात आहेत. अधिक अचूक परिणामासाठी ते चॅटमध्ये शेअर करा.",
+      "complete_badge": "✔ प्रोफाइल पूर्ण — सर्व फील्ड्स गोळा केले!",
+      "apply_button": "आता अर्ज करा ↗",
+      "eligible_stamp": "पात्र"
+    },
+    "chat": {
+      "typing_indicator": "टाइप करत आहे...",
+      "voice_processing": "🎙️ व्हॉइस संदेश प्रक्रिया करत आहे...",
+      "voice_understanding_failed": "🎙️ (व्हॉइस संदेश — समजून घेणे अयशस्वी)",
+      "voice_retry_message": "क्षमा करा, मी ते स्पष्टपणे समजून घेऊ शकलो नाही — तुम्ही शांत ठिकाणी पुन्हा रेकॉर्ड करण्याचा प्रयत्न करू शकता का?",
+      "voice_processing_failed": "🎙️ (व्हॉइस संदेश — प्रक्रिया अयशस्वी)",
+      "voice_error_message": "क्षमा करा, मी तो व्हॉइस संदेश प्रक्रिया करू शकलो नाही.",
+      "how_i_found_this": "मी हे कसे शोधले",
+      "tool_check_eligibility": "योजना नियमांनुसार तुमची पात्रता तपासली",
+      "tool_search_schemes": "तुमच्या निकषांशी जुळणाऱ्या योजना शोधल्या",
+      "tool_scheme_details": "पूर्ण योजना तपशील पाहिले",
+      "tool_knowledge_base": "संबंधित माहितीसाठी ज्ञान आधार शोधला",
+      "error_message": "क्षमा करा, एक त्रुटी आली:"
+    },
+    "onboarding": {
+      "step_1_of_2": "पायरी 1 / 2",
+      "step_2_of_2": "पायरी 2 / 2",
+      "language_title": "तुमची भाषा निवडा",
+      "language_subtitle": "तुम्हाला सर्वात सोयीची असलेली भाषा निवडा",
+      "occupation_title": "तुमचा व्यवसाय काय आहे?",
+      "occupation_subtitle": "तुमच्या परिस्थितीशी जुळणारा प्रकार निवडा",
+      "back_button": "भाषा निवडीवर परत जा"
+    },
+    "errors": {
+      "server_unreachable": "सर्वरवर पोहोचण्यात अयशस्वी. बॅकएंड सर्वर चालू आहे का?",
+      "mic_access_denied": "तुमच्या मायक्रोफोनवर प्रवेश करण्यात अयशस्वी. ब्राउझर परवानग्या तपासा."
+    }
+  }
+}

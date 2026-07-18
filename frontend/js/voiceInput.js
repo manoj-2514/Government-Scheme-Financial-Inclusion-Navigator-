@@ -1,23 +1,53 @@
-let selectedLanguage = '';
+import { getSelectedLanguage, setSelectedLanguage } from './appState.js';
 
 export function initLanguageSelector() {
+    // Quick language buttons were removed from the UI; this remains a
+    // harmless no-op if none are present.
     const buttons = document.querySelectorAll('.lang-btn');
+    const currentLang = getSelectedLanguage();
+
     buttons.forEach(btn => {
+        const isActive = btn.dataset.lang === currentLang;
+        btn.classList.toggle('active', isActive);
+
         btn.addEventListener('click', () => {
             buttons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            selectedLanguage = btn.dataset.lang;
+            setSelectedLanguage(btn.dataset.lang);
         });
     });
 }
 
-export function getSelectedLanguage() {
-    return selectedLanguage;
-}
+export { getSelectedLanguage } from './appState.js';
 
 let mediaRecorder = null;
 let audioChunks = [];
 let isRecording = false;
+let timerInterval = null;
+let recordStartTime = 0;
+
+function formatDuration(ms) {
+    const totalSec = Math.floor(ms / 1000);
+    const min = Math.floor(totalSec / 60);
+    const sec = totalSec % 60;
+    return `${min}:${String(sec).padStart(2, '0')}`;
+}
+
+function startTimer(micBtn) {
+    recordStartTime = Date.now();
+    micBtn.textContent = '⏹ 0:00';
+    timerInterval = setInterval(() => {
+        micBtn.textContent = `⏹ ${formatDuration(Date.now() - recordStartTime)}`;
+    }, 250);
+}
+
+function stopTimer(micBtn) {
+    if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+    micBtn.textContent = '🎙️';
+}
 
 export function initMicButton(onRecordingComplete) {
     const micBtn = document.getElementById('mic-btn');
@@ -42,7 +72,7 @@ export function initMicButton(onRecordingComplete) {
                 mediaRecorder.start();
                 isRecording = true;
                 micBtn.classList.add('recording');
-                micBtn.textContent = '⏹️';
+                startTimer(micBtn);
             } catch (err) {
                 console.error('Mic access denied or unavailable:', err);
                 alert("Couldn't access your microphone. Check browser permissions.");
@@ -51,7 +81,7 @@ export function initMicButton(onRecordingComplete) {
             mediaRecorder.stop();
             isRecording = false;
             micBtn.classList.remove('recording');
-            micBtn.textContent = '🎙️';
+            stopTimer(micBtn);
         }
     });
 }

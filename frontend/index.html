@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Government Scheme Navigator</title>
+  <meta name="description"
+    content="Find government schemes you qualify for — based on your income, occupation, state, and more." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -14,46 +16,67 @@
 </head>
 
 <body>
-  <header class="site-header">
-    <button type="button" id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
-    <span class="seal">◎</span>
-    <h1>Government Scheme &amp; Financial Inclusion Navigator</h1>
-  </header>
+  <div id="onboarding" class="onboarding" aria-live="polite"></div>
 
-  <div class="app">
-    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+  <div id="main-app" class="main-app main-app--hidden">
+    <header class="site-header">
+      <button type="button" id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <span class="seal">◎</span>
+      <h1>Government Scheme & Financial Inclusion Navigator</h1>
+      <button type="button" id="settings-btn" class="settings-btn" title="Change Language / Profile">
+        ⚙️ Settings
+      </button>
+      <button type="button" id="new-conversation-btn" class="new-conversation-btn" title="Start a new conversation">
+        ＋ New Chat
+      </button>
+    </header>
 
-    <aside id="profile-panel" class="profile-panel">
-      <div class="passbook-label">Passbook</div>
-      <div id="profile-fields" class="passbook-entries"></div>
-    </aside>
+    <div class="app">
+      <div id="sidebar-overlay" class="sidebar-overlay"></div>
 
-    <main class="chat-panel">
-      <div id="chat-window" class="chat-window">
-        <div id="empty-state" class="empty-state">
-          Ask me about government schemes you may qualify for —
-          try typing something like "I'm a farmer in Karnataka with 2 acres",
-          or use voice input below.
+      <aside id="profile-panel" class="profile-panel">
+        <div class="passbook-label">Passbook</div>
+        <div id="profile-fields" class="passbook-entries"></div>
+      </aside>
+
+      <main class="chat-panel">
+
+        <!-- ── Tab navigation ──────────────────────────────── -->
+        <nav class="tab-nav" role="tablist">
+          <button type="button" id="tab-chat" class="tab-btn tab-btn--active" role="tab" aria-selected="true"
+            aria-controls="chat-view">💬 Chat</button>
+          <button type="button" id="tab-dashboard" class="tab-btn" role="tab" aria-selected="false"
+            aria-controls="dashboard-view">📊 Dashboard</button>
+        </nav>
+
+        <!-- ── Chat view ────────────────────────────────────── -->
+        <div id="chat-view" class="tab-view tab-view--active">
+          <div id="chat-window" class="chat-window">
+            <div id="empty-state" class="empty-state">
+              Ask me about government schemes you may qualify for —
+              try typing something like "I'm a farmer in Karnataka with 2 acres",
+              or use voice input below.
+            </div>
+          </div>
+
+          <form id="chat-form" class="chat-form">
+            <textarea id="chat-input" placeholder="Type your message..." autocomplete="off" rows="1"></textarea>
+            <button type="button" id="mic-btn" title="Record voice message">🎙️</button>
+            <button type="submit">Send</button>
+          </form>
         </div>
-      </div>
 
-      <div id="language-selector" class="language-selector">
-        <button type="button" class="lang-btn" data-lang="hi">हिन्दी</button>
-        <button type="button" class="lang-btn" data-lang="te">తెలుగు</button>
-        <button type="button" class="lang-btn" data-lang="ta">தமிழ்</button>
-        <button type="button" class="lang-btn" data-lang="kn">ಕನ್ನಡ</button>
-        <button type="button" class="lang-btn" data-lang="ml">മലയാളം</button>
-        <button type="button" class="lang-btn" data-lang="mr">मराठी</button>
-        <button type="button" class="lang-btn" data-lang="en">English</button>
-        <button type="button" class="lang-btn active" data-lang="">🌐 Auto</button>
-      </div>
+        <!-- ── Dashboard view ──────────────────────────────── -->
+        <div id="dashboard-view" class="tab-view dashboard-view">
+          <div class="dash-empty">
+            <div class="dash-empty-icon">📋</div>
+            <h2>No session data yet</h2>
+            <p>Start a conversation in the Chat tab to see your eligibility summary here.</p>
+          </div>
+        </div>
 
-      <form id="chat-form" class="chat-form">
-        <input id="chat-input" type="text" placeholder="Type your message..." autocomplete="off" />
-        <button type="button" id="mic-btn" title="Record voice message">🎙️</button>
-        <button type="submit">Send</button>
-      </form>
-    </main>
+      </main>
+    </div>
   </div>
 
   <script type="module" src="js/app.js"></script>

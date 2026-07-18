@@ -20,6 +20,19 @@ if sys.platform.startswith("win") and hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
 # ---------------------------------------------------------------------------
+# Module-level model singleton — loaded once at import, reused for all calls
+# ---------------------------------------------------------------------------
+_EMBED_MODEL: SentenceTransformer | None = None
+
+
+def _get_embed_model() -> SentenceTransformer:
+    """Return the shared SentenceTransformer instance, loading it on first call."""
+    global _EMBED_MODEL
+    if _EMBED_MODEL is None:
+        _EMBED_MODEL = SentenceTransformer("all-MiniLM-L6-v2")
+    return _EMBED_MODEL
+
+# ---------------------------------------------------------------------------
 # Directories and Paths
 # ---------------------------------------------------------------------------
 
@@ -92,9 +105,9 @@ def ingest_documents() -> int:
         print("No .txt documents found to index.")
         return 0
 
-    # Load sentence transformer model
+    # Use the shared sentence transformer model
     print("Loading SentenceTransformer model 'all-MiniLM-L6-v2'...")
-    model = SentenceTransformer("all-MiniLM-L6-v2")
+    model = _get_embed_model()
 
     all_chunks = []
     all_metadata = []
@@ -161,8 +174,20 @@ def query_knowledge_base(question: str) -> str:
     with open(_METADATA_PATH, "rb") as f:
         metadata = pickle.load(f)
 
-    # Load model and embed question
-    model = SentenceTransformer("all-MiniLM-L6-v2")
+    # Safety check: index file exists but is actually empty (0 vectors) or
+    # metadata is empty — this happens if ingestion ran against the WRONG
+    # folder, or against an empty scheme_docs directory.
+    if index.ntotal == 0 or not metadata:
+        return (
+            f"Knowledge base index exists at {_INDEX_PATH.resolve()} but "
+            f"contains 0 indexed chunks. This usually means ingestion ran "
+            f"against an empty or wrong scheme_docs folder. Please re-run "
+            f"'python knowledge_base.py' from inside the correct backend/ "
+            f"directory to rebuild it."
+        )
+
+    # Reuse the shared model singleton
+    model = _get_embed_model()
     query_vector = model.encode([question]).astype("float32")
 
     # Search top 3 results

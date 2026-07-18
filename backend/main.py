@@ -7,9 +7,12 @@ Includes voice + multilingual support via /voice-query.
 import os
 import uuid
 import tempfile
+import time
+from collections import defaultdict
 from typing import Dict, List, Optional
 
-from fastapi import FastAPI, HTTPException, UploadFile, File, Form
+from dotenv import load_dotenv
+from fastapi import FastAPI, HTTPException, UploadFile, File, Form, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -18,6 +21,33 @@ from pydantic import BaseModel
 from models import ChatSession, UserProfile, EligibleScheme
 from agent import run_agent
 from tools.voice_assistant import speech_to_text, translate_text, text_to_speech
+
+# Load environment variables
+load_dotenv()
+
+# ---------------------------------------------------------------------------
+# In-Memory Rate Limiter
+# ---------------------------------------------------------------------------
+class InMemoryRateLimiter:
+    def __init__(self, limit: int = 20, window_seconds: int = 60):
+        self.limit = limit
+        self.window_seconds = window_seconds
+        # Key: identifier, Value: list of request timestamps
+        self.requests = defaultdict(list)
+
+    def is_rate_limited(self, identifier: str) -> bool:
+        current_time = time.time()
+        # Clean up timestamps older than the rate limiting window
+        self.requests[identifier] = [
+            t for t in self.requests[identifier]
+            if current_time - t < self.window_seconds
+        ]
+        if len(self.requests[identifier]) >= self.limit:
+            return True
+        self.requests[identifier].append(current_time)
+        return False
+
+_rate_limiter = InMemoryRateLimiter(limit=20, window_seconds=60)
 
 app = FastAPI(
     title="Government Scheme Eligibility Assistant API",
@@ -35,10 +65,13 @@ app.mount("/static", StaticFiles(directory=os.path.join(os.path.dirname(__file__
 # ---------------------------------------------------------------------------
 # CORS Configuration
 # ---------------------------------------------------------------------------
-# Enable CORS for the local React/Next.js frontend development environment.
+# Load allowed origins from the environment variable (comma-separated), fallback to localhost:3000
+cors_origins_str = os.getenv("CORS_ORIGINS", "http://localhost:3000")
+allow_origins = [origin.strip() for origin in cors_origins_str.split(",") if origin.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=allow_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -50,6 +83,10 @@ app.add_middleware(
 # Key: session_id, Value: ChatSession
 _sessions: Dict[str, ChatSession] = {}
 
+# Tracks eligible schemes found across the entire session lifetime
+# Key: session_id, Value: list of EligibleScheme (deduplicated by name)
+_session_eligible: Dict[str, List[EligibleScheme]] = {}
+
 
 # ---------------------------------------------------------------------------
 # Request and Response Models
@@ -58,6 +95,7 @@ class ChatRequest(BaseModel):
     """Payload format for sending a new message to the chat endpoint."""
     session_id: Optional[str] = None
     message: str
+    language: Optional[str] = None  # ISO 639-1 code, e.g. "hi", "te"
 
 
 class ChatResponse(BaseModel):
@@ -67,6 +105,16 @@ class ChatResponse(BaseModel):
     profile: UserProfile
     tools_used: List[dict]
     eligible_schemes: List[EligibleScheme] = []
+
+
+class SessionSummaryResponse(BaseModel):
+    """Aggregated dashboard data for a session."""
+    total_checked: int
+    eligible_count: int
+    needs_more_info_count: int
+    eligible_schemes: List[EligibleScheme]
+    missing_fields: List[str]
+    category_breakdown: dict  # {category_name: count}
 
 
 class VoiceQueryResponse(BaseModel):
@@ -96,12 +144,21 @@ async def root():
 
 
 @app.post("/chat", response_model=ChatResponse)
-async def chat_endpoint(payload: ChatRequest):
+async def chat_endpoint(payload: ChatRequest, request: Request):
     """Processes a chat message within a session.
 
     Retrieves the existing session or creates a new one, updates state,
     runs the LLM reasoning agent loop, and returns the response details.
     """
+    # Rate Limiting: 20 requests per minute
+    client_ip = request.client.host if request.client else "unknown"
+    rate_limit_key = client_ip  # IP-based: session_id is client-forgeable
+    if _rate_limiter.is_rate_limited(rate_limit_key):
+        raise HTTPException(
+            status_code=429,
+            detail="Too many requests. Please wait a moment before sending another message."
+        )
+
     session_id = payload.session_id
     user_message = payload.message.strip()
 
@@ -118,6 +175,11 @@ async def chat_endpoint(payload: ChatRequest):
             session.session_id = session_id
         _sessions[session.session_id] = session
 
+    # Keep the session language in sync with the frontend's selection so the
+    # agent can translate its responses (agent skips translation for "en"/None).
+    if payload.language:
+        session.language = payload.language.strip().lower()
+
     # 2. Run the agentic reasoning loop
     try:
         response_text, tools_used, eligible_schemes = run_agent(session, user_message)
@@ -127,13 +189,16 @@ async def chat_endpoint(payload: ChatRequest):
             detail=f"Agent execution encountered an error: {str(e)}"
         )
 
-    # 3. Return the response, updated profile, and tool logs
+    # 3. Merge new eligible schemes into session-level history (deduplicate by name)
+    _merge_eligible(session.session_id, eligible_schemes)
+
+    # 4. Return the response, updated profile, and tool logs
     return ChatResponse(
         session_id=session.session_id,
         response=response_text,
         profile=session.profile,
         tools_used=tools_used,
-        eligible_schemes=eligible_schemes,
+        eligible_schemes=_coerce_schemes(eligible_schemes),
     )
 
 
@@ -146,10 +211,154 @@ async def get_session_endpoint(session_id: str):
 
 
 # ---------------------------------------------------------------------------
+# Category mapping for dashboard breakdown chart
+# ---------------------------------------------------------------------------
+_SCHEME_CATEGORIES: Dict[str, str] = {
+    # Income / Financial Support
+    "PM-KISAN": "Income Support",
+    "PMAY-G": "Housing",
+    "PMAY-U": "Housing",
+    "PM Ujjwala Yojana": "Energy & Fuel",
+    "PM Jan Dhan Yojana": "Financial Inclusion",
+    "Sukanya Samriddhi Yojana": "Savings & Investment",
+    "Atal Pension Yojana": "Pension",
+    "PM Vaya Vandana Yojana": "Pension",
+    "Old Age Pension Scheme": "Pension",
+    "Widow Pension Scheme": "Pension",
+    "PMJJBY": "Insurance",
+    "PMSBY": "Insurance",
+    "Fasal Bima Yojana": "Insurance",
+    "Rashtriya Swasthya Bima Yojana": "Insurance",
+    "PM Ayushman Bharat": "Healthcare",
+    "Janani Suraksha Yojana": "Healthcare",
+    "Mid Day Meal Scheme": "Education",
+    "PM Scholarship Scheme": "Education",
+    "MGNREGA": "Employment",
+    "PM Rozgar Protsahan Yojana": "Employment",
+    "Kisan Credit Card": "Credit & Loans",
+    "Mudra Loan": "Credit & Loans",
+    "Stand-Up India": "Credit & Loans",
+}
+
+
+def _get_category(scheme_name: str) -> str:
+    """Return the display category for a scheme name, defaulting to 'Other'."""
+    for key, cat in _SCHEME_CATEGORIES.items():
+        if key.lower() in scheme_name.lower():
+            return cat
+    return "Other"
+
+
+def _coerce_schemes(schemes) -> List[EligibleScheme]:
+    """Convert a mixed list of dicts / EligibleScheme objects into EligibleScheme objects.
+
+    run_agent returns plain dicts; other code paths may already hold model
+    objects. Malformed entries are skipped rather than crashing the request.
+    """
+    coerced: List[EligibleScheme] = []
+    for scheme in schemes or []:
+        if isinstance(scheme, EligibleScheme):
+            coerced.append(scheme)
+        elif isinstance(scheme, dict):
+            try:
+                coerced.append(EligibleScheme(**scheme))
+            except Exception:
+                continue
+    return coerced
+
+
+def _merge_eligible(session_id: str, new_schemes) -> None:
+    """Merge newly found eligible schemes into the session-level store (dedup by name).
+
+    Accepts both plain dicts (as returned by run_agent) and EligibleScheme objects.
+    """
+    existing = _session_eligible.setdefault(session_id, [])
+    existing_names = {s.name.lower() for s in existing}
+    for scheme in _coerce_schemes(new_schemes):
+        if scheme.name.lower() not in existing_names:
+            existing.append(scheme)
+            existing_names.add(scheme.name.lower())
+
+
+@app.get("/session/{session_id}/summary", response_model=SessionSummaryResponse)
+async def get_session_summary(session_id: str):
+    """Returns aggregated dashboard data for a session.
+
+    Computes dynamically on each call:
+    - Total schemes checked (all schemes in schemes.json)
+    - How many are eligible vs. needing more info (based on the current profile)
+    - Which profile fields are still missing
+    - A category breakdown of eligible schemes
+
+    Schemes found eligible by the live re-check are merged into the
+    session's eligible list, so the stat card count and the scheme cards
+    below it always agree.
+    """
+    if session_id not in _sessions:
+        raise HTTPException(status_code=404, detail="Session not found.")
+
+    session = _sessions[session_id]
+    profile_dict = {
+        k: v for k, v in session.profile.model_dump().items() if v is not None
+    }
+
+    # Run check_eligibility against all schemes to get aggregate counts
+    from tools.eligibility import check_eligibility, _load_schemes, get_missing_fields_for_profile
+    all_schemes = _load_schemes()
+    total_checked = len(all_schemes)
+    needs_more_info_count = 0
+
+    live_eligible: List[EligibleScheme] = []
+    for scheme in all_schemes:
+        result = check_eligibility(profile_dict, scheme["scheme_id"])
+        verdict = result.get("eligible")
+        if verdict is True:
+            live_eligible.append(EligibleScheme(
+                name=scheme.get("name", scheme["scheme_id"]),
+                benefit_amount=scheme.get("benefits", ""),
+                reason=result.get("reason", "Your profile meets the eligibility criteria."),
+                documents_needed=scheme.get("documents_needed", []),
+                apply_link=scheme.get("apply_link", ""),
+            ))
+        elif verdict == "needs_more_info" or verdict is None:
+            # Only count genuine "more info needed" — NOT outright ineligible schemes.
+            needs_more_info_count += 1
+
+    # Merge live-detected eligible schemes into the session store so the
+    # count and the cards stay consistent.
+    _merge_eligible(session_id, live_eligible)
+
+    accumulated = _session_eligible.get(session_id, [])
+    eligible_count = len(accumulated)
+
+    # Build category breakdown
+    breakdown: Dict[str, int] = {}
+    for s in accumulated:
+        cat = _get_category(s.name)
+        breakdown[cat] = breakdown.get(cat, 0) + 1
+
+    # Missing profile fields — use dynamic computation based on intent
+    intent_tags = getattr(session, 'last_detected_intent', None) or None
+    missing_fields = get_missing_fields_for_profile(
+        session.profile.model_dump(), intent_tags=intent_tags
+    )
+
+    return SessionSummaryResponse(
+        total_checked=total_checked,
+        eligible_count=eligible_count,
+        needs_more_info_count=needs_more_info_count,
+        eligible_schemes=accumulated,
+        missing_fields=missing_fields,
+        category_breakdown=breakdown,
+    )
+
+
+# ---------------------------------------------------------------------------
 # Voice + Multilingual Endpoint
 # ---------------------------------------------------------------------------
 @app.post("/voice-query", response_model=VoiceQueryResponse)
 async def voice_query_endpoint(
+    request: Request,
     audio: UploadFile = File(...),
     session_id: Optional[str] = Form(None),
     language: Optional[str] = Form(None),
@@ -160,12 +369,22 @@ async def voice_query_endpoint(
     Accepts an optional 'language' code (e.g. 'te' for Telugu, 'hi' for Hindi).
     If not provided, falls back to automatic language detection."""
 
+    # Rate Limiting: 20 requests per minute
+    client_ip = request.client.host if request.client else "unknown"
+    rate_limit_key = client_ip  # IP-based: session_id is client-forgeable
+    if _rate_limiter.is_rate_limited(rate_limit_key):
+        raise HTTPException(
+            status_code=429,
+            detail="Too many requests. Please wait a moment before sending another voice query."
+        )
+
     # ------------------------------------------------------------------
     # 1. Save the uploaded audio to a temporary file
     # ------------------------------------------------------------------
     suffix = os.path.splitext(audio.filename or "upload.wav")[1] or ".wav"
     try:
-        tmp = tempfile.NamedTemporaryFile(delete=False, suffix=suffix, dir=_AUDIO_DIR)
+        # Use the system temp dir — NOT the publicly served static/audio folder
+        tmp = tempfile.NamedTemporaryFile(delete=False, suffix=suffix)
         contents = await audio.read()
         tmp.write(contents)
         tmp.close()
@@ -195,6 +414,30 @@ async def voice_query_endpoint(
 
     transcribed_text = stt_result["text"]
     detected_lang = stt_result["detected_language"]  # e.g. "hi", "en", "ta"
+    confidence = stt_result.get("confidence_score", 0)
+
+    # Diagnostic log — shows exactly what Whisper heard and how confident it
+    # was, so real accuracy problems can be told apart from threshold issues.
+    print(f"[STT] lang={detected_lang} confidence={confidence} text={transcribed_text[:160]!r}")
+
+    # ── Low-confidence gate (language-aware, two-tier) ────────────────
+    # Whisper's confidence runs systematically lower for Indic languages even
+    # on correct transcriptions, so English keeps the strict threshold while
+    # other languages get a more forgiving one. Below the hard floor the
+    # transcription is near-certain garbage regardless of language.
+    _HARD_FLOOR = 0.22
+    _STRICT_THRESHOLD = 0.45   # English
+    _RELAXED_THRESHOLD = 0.30  # Indic languages
+    threshold = _STRICT_THRESHOLD if detected_lang == "en" else _RELAXED_THRESHOLD
+
+    if confidence < _HARD_FLOOR or (stt_result.get("low_confidence") and confidence < threshold):
+        raise HTTPException(
+            status_code=422,
+            detail=(
+                f"I couldn't hear that clearly (confidence {confidence}). "
+                "Please try again in a quiet place, speaking slowly and close to the microphone."
+            ),
+        )
 
     # ------------------------------------------------------------------
     # 3. Translate to English if needed
@@ -219,7 +462,12 @@ async def voice_query_endpoint(
         _sessions[session.session_id] = session
 
     try:
-        agent_response, tools_used, eligible_schemes = run_agent(session, english_query)
+        # The voice pipeline does its own translation below, so ask the agent
+        # for the plain English response here.
+        agent_response, tools_used, eligible_schemes = run_agent(
+            session, english_query, apply_language_translation=False
+        )
+        _merge_eligible(session.session_id, eligible_schemes)
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Agent error: {e}")
 
@@ -261,13 +509,16 @@ async def voice_query_endpoint(
         audio_url=audio_url,
         profile=session.profile,
         tools_used=tools_used,
-        eligible_schemes=eligible_schemes,
+        eligible_schemes=_coerce_schemes(eligible_schemes),
     )
 
 
 @app.get("/audio/{filename}")
 async def serve_audio(filename: str):
     """Directly serve a generated audio file by name."""
+    # Reject anything that isn't a bare filename (path traversal hardening)
+    if os.path.basename(filename) != filename or ".." in filename:
+        raise HTTPException(status_code=404, detail="Audio file not found.")
     filepath = os.path.join(_AUDIO_DIR, filename)
     if not os.path.isfile(filepath):
         raise HTTPException(status_code=404, detail="Audio file not found.")

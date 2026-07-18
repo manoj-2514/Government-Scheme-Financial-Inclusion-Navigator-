@@ -10,3 +10,4 @@ openai-whisper
 deep-translator
 gTTS
 python-multipart
+pydub

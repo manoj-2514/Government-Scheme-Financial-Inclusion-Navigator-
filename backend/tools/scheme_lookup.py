@@ -29,27 +29,60 @@ def _load_schemes():
         return json.load(fh)
 
 
+import copy
+
+_scheme_details_cache = {}
+
+
 def get_scheme_details(scheme_id: str) -> Dict[str, Any]:
-    """Return the full scheme record for *scheme_id*.
+    """Return the full scheme record for *scheme_id*."""
+    if scheme_id in _scheme_details_cache:
+        print(f"[CACHE HIT] get_scheme_details for: {scheme_id}")
+        return copy.deepcopy(_scheme_details_cache[scheme_id])
+    print(f"[CACHE MISS] get_scheme_details for: {scheme_id}")
 
-    Parameters
-    ----------
-    scheme_id : str
-        The unique identifier of the scheme (e.g. ``"pm-kisan"``).
+    res = _get_scheme_details_uncached(scheme_id)
+    _scheme_details_cache[scheme_id] = copy.deepcopy(res)
+    return res
 
-    Returns
-    -------
-    dict
-        The complete scheme object including:
-        ``scheme_id``, ``name``, ``description``, ``benefits``,
-        ``documents_needed``, ``apply_link``, ``eligibility``, and any
-        other fields present in the JSON record.
 
-        If the scheme is not found, returns a dict with
-        ``{"error": "..."}`` instead.
+def _get_scheme_details_uncached(scheme_id: str) -> Dict[str, Any]:
+    """Return the full scheme record for *scheme_id* (actual logic).
+
+    Tries an exact match first. If that fails (e.g. the LLM guessed a
+    slightly different ID format like "pm_kisan" instead of "pm-kisan"),
+    falls back to a normalized ID match, then a fuzzy match against the
+    scheme's display name — so small guessing errors don't cause a real
+    scheme to be incorrectly reported as "not in the database".
     """
     schemes = _load_schemes()
+
+    # 1. Exact match
     scheme = next((s for s in schemes if s["scheme_id"] == scheme_id), None)
+
+    # 2. Normalized ID match (case / underscore / space insensitive)
+    if scheme is None:
+        normalized_target = (
+            scheme_id.strip().lower().replace("_", "-").replace(" ", "-")
+        )
+        scheme = next(
+            (
+                s
+                for s in schemes
+                if s["scheme_id"].strip().lower() == normalized_target
+            ),
+            None,
+        )
+
+    # 3. Fuzzy match against the scheme's display name
+    if scheme is None:
+        needle = scheme_id.strip().lower().replace("-", " ").replace("_", " ")
+        if needle:
+            for s in schemes:
+                name = s.get("name", "").lower()
+                if needle in name or name in needle:
+                    scheme = s
+                    break
 
     if scheme is None:
         return {"error": f"Scheme '{scheme_id}' not found in the database."}
@@ -67,6 +100,9 @@ if __name__ == "__main__":
             print(f"=== Details for '{first_id}' ===")
             import pprint
             pprint.pprint(get_scheme_details(first_id))
+
+            print("\n=== Fuzzy match test: 'pm_kisan' ===")
+            pprint.pprint(get_scheme_details("pm_kisan"))
         else:
             print("  schemes.json is empty.")
     except FileNotFoundError as exc:

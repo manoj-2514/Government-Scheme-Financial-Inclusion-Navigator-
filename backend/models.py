@@ -21,7 +21,7 @@ class SchemeResult(BaseModel):
     """Eligibility verdict for a single government scheme."""
 
     scheme_id: str
-    eligible: Union[bool, Literal["needs_more_info"]] = "needs_more_info"
+    eligible: Optional[Union[bool, Literal["needs_more_info"]]] = "needs_more_info"
     reason: str = ""
     missing_fields: List[str] = Field(default_factory=list)
 
@@ -39,6 +39,8 @@ class ChatSession(BaseModel):
     session_id: str = Field(default_factory=lambda: uuid.uuid4().hex)
     messages: List[ChatMessage] = Field(default_factory=list)
     profile: UserProfile = Field(default_factory=UserProfile)
+    language: Optional[str] = None  # ISO 639-1 code, e.g. "hi", "te", "ta"
+    last_detected_intent: List[str] = Field(default_factory=list)
 
 
 class EligibleScheme(BaseModel):
@@ -49,4 +51,3 @@ class EligibleScheme(BaseModel):
     reason: str
     documents_needed: List[str]
     apply_link: str
-
