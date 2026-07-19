@@ -785,9 +785,19 @@ def run_agent(
             else:
                 # Deterministically correct the "Need more information" list,
                 # regardless of what the model wrote — this is the fix for
-                # the model asking about irrelevant fields.
+                # the model asking about irrelevant fields or echoing known
+                # profile values as "missing".
+                # When check_eligibility ran, use its missing_fields output;
+                # otherwise re-compute from the (possibly updated) profile.
+                if eligibility_checked_this_turn:
+                    effective_missing = allowed_missing_fields
+                else:
+                    effective_missing = set(get_missing_fields_for_profile(
+                        session.profile.model_dump(),
+                        intent_tags=session.last_detected_intent or None,
+                    ))
                 final_text = _rebuild_missing_info_section(
-                    final_text, allowed_missing_fields, eligibility_checked_this_turn
+                    final_text, effective_missing, True
                 )
 
             session.messages.append(
