@@ -467,6 +467,24 @@ def _search_schemes_by_criteria_uncached(
             if "income" in rules and not _value_matches(income, rules["income"]):
                 continue
 
+        # ── Occupation–tag relevance filter ─────────────────────────
+        # Schemes without an occupation restriction (like APY) technically
+        # match every occupation search.  However a pension scheme is
+        # irrelevant for a Student, and a scholarship is irrelevant for a
+        # Farmer.  Exclude clearly mismatched tag–occupation combos.
+        _OCCUPATION_TAG_EXCLUSIONS = {
+            "student": {"pension", "insurance"},
+        }
+        if occupation:
+            excluded_tags = _OCCUPATION_TAG_EXCLUSIONS.get(occupation.lower(), set())
+            if excluded_tags:
+                scheme_tags = set(scheme.get("tags", []))
+                if scheme_tags & excluded_tags:
+                    # Only exclude if the scheme does NOT explicitly list
+                    # this occupation — if it does, respect the rule.
+                    if "occupation" not in rules or not _value_matches(occupation, rules["occupation"]):
+                        continue
+
         matched_ids.append(scheme["scheme_id"])
 
     return matched_ids

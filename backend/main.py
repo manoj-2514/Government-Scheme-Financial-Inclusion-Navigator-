@@ -308,8 +308,22 @@ async def get_session_summary(session_id: str):
     total_checked = len(all_schemes)
     needs_more_info_count = 0
 
+    # Occupation–tag relevance filter (mirrors eligibility.py logic)
+    _OCCUPATION_TAG_EXCLUSIONS = {
+        "student": {"pension", "insurance"},
+    }
+    user_occ = profile_dict.get("occupation", "")
+    excluded_tags = _OCCUPATION_TAG_EXCLUSIONS.get((user_occ or "").lower(), set())
+
     live_eligible: List[EligibleScheme] = []
     for scheme in all_schemes:
+        # Skip schemes whose tags are irrelevant for this occupation
+        if excluded_tags:
+            scheme_tags = set(scheme.get("tags", []))
+            if scheme_tags & excluded_tags:
+                elig_rules = scheme.get("eligibility", {})
+                if "occupation" not in elig_rules:
+                    continue
         result = check_eligibility(profile_dict, scheme["scheme_id"])
         verdict = result.get("eligible")
         if verdict is True:
