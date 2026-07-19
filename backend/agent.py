@@ -95,8 +95,12 @@ _FIELD_DISPLAY_NAMES = {
     "gender": "Gender",
 }
 
+# Matches the "Need more information" block whether the model wrote it
+# bold (**Need more information**:) or plain (Need more information:),
+# any capitalisation — so the deterministic rebuild never duplicates it.
 _NEED_MORE_INFO_BLOCK_PATTERN = re.compile(
-    r"\*\*Need more information\*\*:.*?(?=\n\n\S|\Z)", re.DOTALL
+    r"\*{0,2}Need more information\*{0,2}\s*:.*?(?=\n\n\S|\Z)",
+    re.DOTALL | re.IGNORECASE,
 )
 
 
