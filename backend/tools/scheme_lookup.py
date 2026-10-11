@@ -18,6 +18,10 @@ _PROJECT_ROOT = _BACKEND_DIR.parent                    # project root
 _SCHEMES_PATH = _PROJECT_ROOT / "data" / "schemes.json"
 
 
+from functools import lru_cache
+
+
+@lru_cache(maxsize=1)
 def _load_schemes():
     """Read and return the list of schemes from the JSON file."""
     if not _SCHEMES_PATH.exists():

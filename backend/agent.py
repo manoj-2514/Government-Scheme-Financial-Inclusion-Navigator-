@@ -10,6 +10,8 @@ import json
 import os
 import re
 import copy
+import time
+from concurrent.futures import ThreadPoolExecutor
 from typing import Any, Dict, List, Optional, Tuple
 
 from dotenv import load_dotenv
@@ -48,6 +50,9 @@ if not _API_KEYS:
 _clients = [Groq(api_key=key) for key in _API_KEYS]
 _client = _clients[0]  # kept so existing tests that patch _client still work
 
+import time
+from concurrent.futures import ThreadPoolExecutor
+
 GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
 GROQ_FALLBACK_MODEL = os.getenv("GROQ_FALLBACK_MODEL", "openai/gpt-oss-20b")
 _MODEL = GROQ_MODEL
@@ -60,17 +65,41 @@ def _chat_completion_with_fallback(**kwargs):
 
     Order: all keys on the main model first, then all keys on the
     fallback model. Non-rate-limit errors are raised immediately.
+    Logs timing for each LLM call and sets reasoning_effort='low' for gpt-oss models.
     """
     last_exc = None
     models = [GROQ_MODEL]
     if GROQ_FALLBACK_MODEL and GROQ_FALLBACK_MODEL != GROQ_MODEL:
         models.append(GROQ_FALLBACK_MODEL)
 
+    kwargs.setdefault("max_tokens", 1800)
+
     for model in models:
+        call_kwargs = dict(kwargs)
+        call_kwargs["model"] = model
+        # Set reasoning_effort to "low" for gpt-oss models if supported
+        if "gpt-oss" in model.lower() or "openai" in model.lower():
+            call_kwargs.setdefault("reasoning_effort", "low")
+
         for client in _clients:
             try:
-                kwargs["model"] = model
-                return client.chat.completions.create(**kwargs)
+                t0 = time.perf_counter()
+                try:
+                    res = client.chat.completions.create(**call_kwargs)
+                except Exception as api_err:
+                    if "reasoning_effort" in call_kwargs and "reasoning_effort" in str(api_err).lower():
+                        call_kwargs.pop("reasoning_effort", None)
+                        res = client.chat.completions.create(**call_kwargs)
+                    else:
+                        raise
+                elapsed = time.perf_counter() - t0
+                print(f"[TIMING] LLM call (model={model}) took {elapsed:.3f}s")
+                if res and getattr(res, "choices", None):
+                    for ch in res.choices:
+                        if getattr(ch, "finish_reason", None) == "length":
+                            resp_model = getattr(res, "model", None) or model
+                            print(f"[WARNING] Model '{resp_model}' finish_reason is 'length' (token limit reached).")
+                return res
             except Exception as exc:
                 msg = str(exc).lower()
                 retryable = (
@@ -85,7 +114,7 @@ def _chat_completion_with_fallback(**kwargs):
     raise last_exc if last_exc else RuntimeError("All Groq keys exhausted")
 
 
-_MAX_TOOL_ITERATIONS = 5
+_MAX_TOOL_ITERATIONS = 3
 
 # ---------------------------------------------------------------------------
 # Field display names — used to deterministically render the "Need more
@@ -672,6 +701,66 @@ def _finalize_agent_response(
     return response_text, tool_log, eligible_schemes
 
 
+def trim_conversation_history(messages: List[Any], max_recent: int = 12) -> List[Any]:
+    """Trim conversation history preserving context, profile details, and valid turns.
+
+    Rules:
+    - Keep up to the last `max_recent` (default 12) messages.
+    - The trimmed slice must never start with a 'tool' message or an assistant message
+      containing tool_calls without its following tool results. It must start at a 'user' message.
+    - If trimming would remove earlier user messages, keep the first user message too
+      so the user's initial profile details are not dropped.
+    """
+    if not messages:
+        return []
+
+    def _get_role(m: Any) -> str:
+        if isinstance(m, dict):
+            return m.get("role", "")
+        return getattr(m, "role", "")
+
+    # Identify the first user message in the entire history (to preserve initial profile details)
+    first_user_idx = None
+    for idx, m in enumerate(messages):
+        if _get_role(m) == "user":
+            first_user_idx = idx
+            break
+
+    # Determine candidate start for the last max_recent messages
+    candidate_start = max(0, len(messages) - max_recent)
+
+    # Trimmed list must start at a 'user' message (never starting with 'tool' or 'assistant')
+    start_idx = candidate_start
+    while start_idx < len(messages) and _get_role(messages[start_idx]) != "user":
+        start_idx += 1
+
+    # If no 'user' message found scanning forward, scan backward from candidate_start
+    if start_idx >= len(messages):
+        start_idx = candidate_start
+        while start_idx >= 0 and _get_role(messages[start_idx]) != "user":
+            start_idx -= 1
+        if start_idx < 0:
+            start_idx = 0
+
+    trimmed = list(messages[start_idx:])
+
+    # If trimming would remove earlier user messages, keep the first user message too
+    if first_user_idx is not None and first_user_idx < start_idx:
+        first_user_msg = messages[first_user_idx]
+        trimmed = [first_user_msg] + trimmed
+
+    # Safety check: ensure trimmed list never starts with a tool message or system message
+    while trimmed and _get_role(trimmed[0]) in ("tool", "system"):
+        trimmed.pop(0)
+
+    # If it still starts with an assistant message, advance to the first user message
+    if first_user_idx is not None:
+        while trimmed and _get_role(trimmed[0]) != "user":
+            trimmed.pop(0)
+
+    return trimmed
+
+
 def run_agent(
     session: ChatSession,
     user_message: str,
@@ -747,16 +836,17 @@ def run_agent(
     )
 
     # Keep requests small enough for the fallback model's tight TPM limit:
-    # last 8 messages only, each truncated to 1500 chars.
+    # trimmed history (up to last 12 messages + initial user profile message), each truncated to 1500 chars.
     _MAX_MSG_CHARS = 1500
     api_messages: List[Dict[str, Any]] = [
         {"role": "system", "content": system_content},
     ]
-    for msg in session.messages[-8:]:
-        content = msg.content or ""
+    for msg in trim_conversation_history(session.messages, max_recent=12):
+        role = getattr(msg, "role", None) or (msg.get("role", "user") if isinstance(msg, dict) else "user")
+        content = (getattr(msg, "content", None) or (msg.get("content", "") if isinstance(msg, dict) else "")) or ""
         if len(content) > _MAX_MSG_CHARS:
             content = content[:_MAX_MSG_CHARS] + " …[truncated]"
-        api_messages.append({"role": msg.role, "content": content})
+        api_messages.append({"role": role, "content": content})
 
     tool_log: List[Dict[str, Any]] = []
     eligible_schemes: List[Dict[str, Any]] = []
@@ -777,7 +867,7 @@ def run_agent(
                 tools=_TOOL_SCHEMAS,
                 tool_choice="auto",
                 temperature=0.3,
-                max_tokens=1024,
+                max_tokens=1800,
             )
         except Exception as exc:
             err_text = str(exc)
@@ -808,6 +898,9 @@ def run_agent(
             raise
 
         choice = response.choices[0]
+        if getattr(choice, "finish_reason", None) == "length":
+            resp_model = getattr(response, "model", None) or GROQ_MODEL
+            print(f"[WARNING] Model '{resp_model}' finish_reason is 'length' (token limit reached).")
         message = choice.message
 
         # ── No tool calls → final text response ──────────────────────
@@ -877,6 +970,8 @@ def run_agent(
             }
         )
 
+        # ── Parse all tool calls first ──────────────────────────────
+        parsed_calls = []
         for tc in message.tool_calls:
             fn_name = tc.function.name
             raw_args = tc.function.arguments
@@ -889,10 +984,24 @@ def run_agent(
                     args = json.loads(fn_args_json)
                 except (json.JSONDecodeError, TypeError):
                     args = {}
+            parsed_calls.append((tc, fn_name, args, fn_args_json))
 
-            # Execute the real function
-            result_json = _execute_tool(fn_name, fn_args_json)
+        # ── Execute tool calls in parallel when multiple ──────────────
+        def _run_one_tool(item):
+            _tc, _fn_name, _args, _fn_args_json = item
+            return (_tc, _fn_name, _args, _fn_args_json, _execute_tool(_fn_name, _fn_args_json))
 
+        t_tools = time.perf_counter()
+        if len(parsed_calls) > 1:
+            with ThreadPoolExecutor(max_workers=min(len(parsed_calls), 4)) as pool:
+                tool_results_ordered = list(pool.map(_run_one_tool, parsed_calls))
+        else:
+            tool_results_ordered = [_run_one_tool(parsed_calls[0])] if parsed_calls else []
+        elapsed_tools = time.perf_counter() - t_tools
+        print(f"[TIMING] Executed {len(parsed_calls)} tool call(s) {'in parallel ' if len(parsed_calls) > 1 else ''}in {elapsed_tools:.3f}s")
+
+        # ── Process results sequentially (order matters for state) ────
+        for tc, fn_name, args, fn_args_json, result_json in tool_results_ordered:
             try:
                 result = json.loads(result_json)
             except (json.JSONDecodeError, TypeError):
@@ -958,11 +1067,26 @@ def run_agent(
                 }
             )
 
-    # 4. If we exhausted iterations, return whatever we have
-    fallback = (
-        "I've gathered quite a bit of information.  Let me summarise what "
-        "I know so far — could you help me fill in any gaps?"
-    )
+    # 4. If we exhausted iterations, force the LLM to produce a final summary
+    #    by calling it one more time with tool_choice="none".
+    try:
+        print("[AGENT] Tool-calling rounds exhausted — forcing final summary via tool_choice='none'")
+        forced_response = _chat_completion_with_fallback(
+            messages=api_messages,
+            tools=_TOOL_SCHEMAS,
+            tool_choice="none",
+            temperature=0.3,
+            max_tokens=1800,
+        )
+        if getattr(forced_response.choices[0], "finish_reason", None) == "length":
+            resp_model = getattr(forced_response, "model", None) or GROQ_MODEL
+            print(f"[WARNING] Model '{resp_model}' finish_reason is 'length' (token limit reached).")
+        fallback = forced_response.choices[0].message.content or ""
+    except Exception:
+        fallback = (
+            "I've gathered quite a bit of information.  Let me summarise what "
+            "I know so far — could you help me fill in any gaps?"
+        )
     fallback = _rebuild_missing_info_section(
         fallback, allowed_missing_fields, eligibility_checked_this_turn
     )
@@ -972,3 +1096,260 @@ def run_agent(
         session, fallback, tool_log, eligible_schemes,
         apply_language_translation=apply_language_translation,
     )
+
+
+# ---------------------------------------------------------------------------
+# Streaming generator for SSE (Server-Sent Events)
+# ---------------------------------------------------------------------------
+
+def run_agent_stream(
+    session: ChatSession,
+    user_message: str,
+    *,
+    apply_language_translation: bool = True,
+):
+    """Generator that yields SSE-formatted events for streaming responses.
+
+    Runs the full agent tool-calling loop synchronously (those rounds are fast),
+    then streams the final LLM answer token-by-token.
+
+    Yields ``data: {json}\n\n`` strings suitable for ``text/event-stream``.
+
+    Event types:
+    - ``{"type": "token", "content": "..."}`` — a content delta
+    - ``{"type": "final", ...}`` — the complete response payload
+    - ``data: [DONE]`` — signals the stream is finished
+    """
+    import time as _time
+    turn_t0 = _time.perf_counter()
+
+    cleaned_msg = user_message.strip().lower()
+    cache_key = (session.session_id, cleaned_msg, session.language or "en")
+    current_profile = session.profile.model_dump()
+
+    # ── Cache hit — stream the cached answer in one shot ──────────────
+    if cache_key in _agent_response_cache:
+        final_text, cached_tool_log, cached_eligible_schemes, cached_profile = _agent_response_cache[cache_key]
+        if current_profile == cached_profile:
+            session.messages.append(ChatMessage(role="user", content=user_message))
+            session.messages.append(ChatMessage(role="assistant", content=final_text))
+            resp_text, tl, es = _finalize_agent_response(
+                session, final_text,
+                copy.deepcopy(cached_tool_log),
+                copy.deepcopy(cached_eligible_schemes),
+                apply_language_translation=apply_language_translation,
+            )
+            yield f"data: {json.dumps({'type': 'token', 'content': resp_text})}\n\n"
+            yield f"data: {json.dumps({'type': 'final', 'session_id': session.session_id, 'response': resp_text, 'profile': session.profile.model_dump(), 'tools_used': tl, 'eligible_schemes': es})}\n\n"
+            yield "data: [DONE]\n\n"
+            return
+
+    # ── Normal path — run tool-calling rounds (non-streaming) ─────────
+    session.messages.append(ChatMessage(role="user", content=user_message))
+
+    profile_dict = {k: v for k, v in session.profile.model_dump().items() if v is not None}
+    intent_tags = detect_intent(user_message)
+    if not hasattr(session, 'last_detected_intent'):
+        session.last_detected_intent = []
+    if intent_tags:
+        session.last_detected_intent = intent_tags
+
+    dynamic_missing = get_missing_fields_for_profile(
+        session.profile.model_dump(), intent_tags=session.last_detected_intent or None
+    )
+    profile_state = {
+        "known_fields": profile_dict,
+        "missing_fields": dynamic_missing,
+    }
+    system_content = (
+        f"{_SYSTEM_PROMPT}\n\n"
+        f"CURRENT USER PROFILE STATE:\n{json.dumps(profile_state, indent=2)}\n\n"
+        f"ALLOWED_MISSING_FIELDS: {json.dumps(dynamic_missing)}"
+    )
+
+    _MAX_MSG_CHARS = 1500
+    api_messages: List[Dict[str, Any]] = [
+        {"role": "system", "content": system_content},
+    ]
+    for msg in trim_conversation_history(session.messages, max_recent=12):
+        role = getattr(msg, "role", None) or (msg.get("role", "user") if isinstance(msg, dict) else "user")
+        content = (getattr(msg, "content", None) or (msg.get("content", "") if isinstance(msg, dict) else "")) or ""
+        if len(content) > _MAX_MSG_CHARS:
+            content = content[:_MAX_MSG_CHARS] + " …[truncated]"
+        api_messages.append({"role": role, "content": content})
+
+    tool_log: List[Dict[str, Any]] = []
+    eligible_schemes: List[Dict[str, Any]] = []
+    eligible_scheme_ids = set()
+    allowed_missing_fields: set = set()
+    eligibility_checked_this_turn = False
+
+    for _iteration in range(_MAX_TOOL_ITERATIONS):
+        try:
+            response = _chat_completion_with_fallback(
+                messages=api_messages,
+                tools=_TOOL_SCHEMAS,
+                tool_choice="auto",
+                temperature=0.3,
+                max_tokens=1800,
+            )
+        except Exception as exc:
+            err_text = str(exc)
+            if "tool_use_failed" in err_text or "failed_generation" in err_text:
+                pseudo_calls = _extract_pseudo_tool_calls(err_text)
+                if pseudo_calls:
+                    final_text, tool_log, eligible_schemes = _recover_from_pseudo_tool_calls(
+                        session, pseudo_calls, tool_log, eligible_schemes, eligible_scheme_ids
+                    )
+                    session.messages.append(ChatMessage(role="assistant", content=final_text))
+                    resp_text, tl, es = _finalize_agent_response(
+                        session, final_text, tool_log, eligible_schemes,
+                        apply_language_translation=apply_language_translation,
+                    )
+                    yield f"data: {json.dumps({'type': 'token', 'content': resp_text})}\n\n"
+                    yield f"data: {json.dumps({'type': 'final', 'session_id': session.session_id, 'response': resp_text, 'profile': session.profile.model_dump(), 'tools_used': tl, 'eligible_schemes': es})}\n\n"
+                    yield "data: [DONE]\n\n"
+                    return
+            raise
+
+        choice = response.choices[0]
+        if getattr(choice, "finish_reason", None) == "length":
+            resp_model = getattr(response, "model", None) or GROQ_MODEL
+            print(f"[WARNING] Model '{resp_model}' finish_reason is 'length' (token limit reached).")
+        message = choice.message
+
+        if not message.tool_calls:
+            # ── Final text — no streaming needed for short text ───────
+            final_text = message.content or ""
+            pseudo_calls = _extract_pseudo_tool_calls(final_text)
+            if pseudo_calls:
+                final_text, tool_log, eligible_schemes = _recover_from_pseudo_tool_calls(
+                    session, pseudo_calls, tool_log, eligible_schemes, eligible_scheme_ids
+                )
+            else:
+                if eligibility_checked_this_turn:
+                    effective_missing = allowed_missing_fields
+                else:
+                    effective_missing = set(get_missing_fields_for_profile(
+                        session.profile.model_dump(),
+                        intent_tags=session.last_detected_intent or None,
+                    ))
+                final_text = _rebuild_missing_info_section(
+                    final_text, effective_missing, True
+                )
+
+            session.messages.append(ChatMessage(role="assistant", content=final_text))
+            _agent_response_cache[cache_key] = (final_text, copy.deepcopy(tool_log), copy.deepcopy(eligible_schemes), current_profile)
+            resp_text, tl, es = _finalize_agent_response(
+                session, final_text, tool_log, eligible_schemes,
+                apply_language_translation=apply_language_translation,
+            )
+            # Stream token-by-token (split into word-sized chunks for smooth UX)
+            for i in range(0, len(resp_text), 12):
+                yield f"data: {json.dumps({'type': 'token', 'content': resp_text[i:i+12]})}\n\n"
+            yield f"data: {json.dumps({'type': 'final', 'session_id': session.session_id, 'response': resp_text, 'profile': session.profile.model_dump(), 'tools_used': tl, 'eligible_schemes': es})}\n\n"
+            yield "data: [DONE]\n\n"
+            elapsed_total = _time.perf_counter() - turn_t0
+            print(f"[TIMING] Total streaming turn took {elapsed_total:.3f}s")
+            return
+
+        # ── Tool calls — same parallel logic as run_agent ─────────────
+        normalized_tool_calls = []
+        for tc in message.tool_calls:
+            tc_args = tc.function.arguments
+            args_str = json.dumps(tc_args) if isinstance(tc_args, dict) else _clean_tool_args_str(str(tc_args or "{}"))
+            normalized_tool_calls.append(
+                {"id": tc.id, "type": "function", "function": {"name": tc.function.name, "arguments": args_str}}
+            )
+        api_messages.append({"role": "assistant", "content": message.content or "", "tool_calls": normalized_tool_calls})
+
+        parsed_calls = []
+        for tc in message.tool_calls:
+            fn_name = tc.function.name
+            raw_args = tc.function.arguments
+            if isinstance(raw_args, dict):
+                args = raw_args
+                fn_args_json = json.dumps(raw_args)
+            else:
+                fn_args_json = _clean_tool_args_str(str(raw_args or "{}"))
+                try:
+                    args = json.loads(fn_args_json)
+                except (json.JSONDecodeError, TypeError):
+                    args = {}
+            parsed_calls.append((tc, fn_name, args, fn_args_json))
+
+        def _run_one(item):
+            _tc, _fn, _a, _fj = item
+            return (_tc, _fn, _a, _fj, _execute_tool(_fn, _fj))
+
+        if len(parsed_calls) > 1:
+            with ThreadPoolExecutor(max_workers=min(len(parsed_calls), 4)) as pool:
+                results_ordered = list(pool.map(_run_one, parsed_calls))
+        else:
+            results_ordered = [_run_one(parsed_calls[0])] if parsed_calls else []
+
+        for tc, fn_name, args, fn_args_json, result_json in results_ordered:
+            try:
+                result = json.loads(result_json)
+            except (json.JSONDecodeError, TypeError):
+                result = {}
+            tool_log.append({"tool": fn_name, "args": args, "result": result})
+            if args:
+                try:
+                    _update_profile_from_tool_call(session, args)
+                except Exception:
+                    pass
+            if result and "error" not in result:
+                if fn_name == "check_eligibility":
+                    eligibility_checked_this_turn = True
+                    for mf in result.get("missing_fields", []) or []:
+                        allowed_missing_fields.add(mf)
+                    if result.get("eligible") is True:
+                        scheme_id = args.get("scheme_id")
+                        reason = result.get("reason", "")
+                        if scheme_id and scheme_id not in eligible_scheme_ids:
+                            compiled = _compile_eligible_scheme(scheme_id, reason)
+                            if compiled:
+                                eligible_schemes.append(compiled)
+                                eligible_scheme_ids.add(scheme_id)
+                elif fn_name == "get_scheme_details":
+                    scheme_id = args.get("scheme_id")
+                    if scheme_id and scheme_id not in eligible_scheme_ids:
+                        profile_dict = {k: v for k, v in session.profile.model_dump().items() if v is not None}
+                        check_res = check_eligibility(profile_dict, scheme_id)
+                        eligibility_checked_this_turn = True
+                        for mf in check_res.get("missing_fields", []) or []:
+                            allowed_missing_fields.add(mf)
+                        if check_res.get("eligible") is True:
+                            reason = check_res.get("reason", "Eligible for this scheme.")
+                            compiled = _compile_eligible_scheme(scheme_id, reason)
+                            if compiled:
+                                eligible_schemes.append(compiled)
+                                eligible_scheme_ids.add(scheme_id)
+            model_result = result_json
+            if len(model_result) > 1500:
+                model_result = model_result[:1500] + " …[truncated]"
+            api_messages.append({"role": "tool", "tool_call_id": tc.id, "content": model_result})
+
+    # ── Exhausted rounds — force a final summary ──────────────────────
+    try:
+        forced_response = _chat_completion_with_fallback(
+            messages=api_messages, tools=_TOOL_SCHEMAS,
+            tool_choice="none", temperature=0.3, max_tokens=1800,
+        )
+        if getattr(forced_response.choices[0], "finish_reason", None) == "length":
+            resp_model = getattr(forced_response, "model", None) or GROQ_MODEL
+            print(f"[WARNING] Model '{resp_model}' finish_reason is 'length' (token limit reached).")
+        fallback = forced_response.choices[0].message.content or ""
+    except Exception:
+        fallback = "I've gathered quite a bit of information. Let me summarise what I know so far — could you help me fill in any gaps?"
+    fallback = _rebuild_missing_info_section(fallback, allowed_missing_fields, eligibility_checked_this_turn)
+    session.messages.append(ChatMessage(role="assistant", content=fallback))
+    _agent_response_cache[cache_key] = (fallback, copy.deepcopy(tool_log), copy.deepcopy(eligible_schemes), current_profile)
+    resp_text, tl, es = _finalize_agent_response(
+        session, fallback, tool_log, eligible_schemes,
+        apply_language_translation=apply_language_translation,
+    )
+    yield f"data: {json.dumps({'type': 'token', 'content': resp_text})}\n\n"
+    yield f"data: {json.dumps({'type': 'final', 'session_id': session.session_id, 'response': resp_text, 'profile': session.profile.model_dump(), 'tools_used': tl, 'eligible_schemes': es})}\n\n"
+    yield "data: [DONE]\n\n"

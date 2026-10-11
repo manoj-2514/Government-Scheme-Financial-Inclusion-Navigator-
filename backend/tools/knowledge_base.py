@@ -19,18 +19,44 @@ if sys.platform.startswith("win") and hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
 # ---------------------------------------------------------------------------
-# Module-level model singleton — loaded once at import, reused for all calls
+# Module-level model & FAISS singletons — loaded once at startup, reused for all calls
 # ---------------------------------------------------------------------------
+import time
+
 _EMBED_MODEL: Any = None
+_FAISS_INDEX: Any = None
+_FAISS_METADATA: Any = None
 
 
 def _get_embed_model() -> Any:
-    """Return the shared SentenceTransformer instance, loading it on first call."""
+    """Return the shared SentenceTransformer instance, loading it once."""
     global _EMBED_MODEL
     if _EMBED_MODEL is None:
+        t0 = time.perf_counter()
         from sentence_transformers import SentenceTransformer
         _EMBED_MODEL = SentenceTransformer("all-MiniLM-L6-v2")
+        print(f"[STARTUP] SentenceTransformer model loaded in {time.perf_counter() - t0:.2f}s")
     return _EMBED_MODEL
+
+
+def init_knowledge_base() -> bool:
+    """Pre-load embedding model and FAISS index once at app startup."""
+    global _FAISS_INDEX, _FAISS_METADATA
+    t0 = time.perf_counter()
+    _get_embed_model()
+    if _INDEX_PATH.exists() and _METADATA_PATH.exists():
+        try:
+            if _FAISS_INDEX is None:
+                _FAISS_INDEX = faiss.read_index(str(_INDEX_PATH))
+            if _FAISS_METADATA is None:
+                with open(_METADATA_PATH, "rb") as f:
+                    _FAISS_METADATA = pickle.load(f)
+            elapsed = time.perf_counter() - t0
+            print(f"[STARTUP] Knowledge base FAISS index ({getattr(_FAISS_INDEX, 'ntotal', 0)} chunks) pre-loaded in {elapsed:.2f}s")
+            return True
+        except Exception as exc:
+            print(f"[STARTUP WARNING] Failed to pre-load FAISS index: {exc}")
+    return False
 
 # ---------------------------------------------------------------------------
 # Directories and Paths
@@ -163,27 +189,32 @@ def ingest_documents() -> int:
 
 def query_knowledge_base(question: str) -> str:
     """Retrieve top 3 most relevant chunks from the FAISS database."""
-    if not _INDEX_PATH.exists() or not _METADATA_PATH.exists():
-        return (
-            "Knowledge base index is empty. "
-            "Please run 'python knowledge_base.py' to ingest guidelines."
-        )
+    global _FAISS_INDEX, _FAISS_METADATA
+    t0 = time.perf_counter()
 
-    # Load vector index and metadata mapping
-    index = faiss.read_index(str(_INDEX_PATH))
-    with open(_METADATA_PATH, "rb") as f:
-        metadata = pickle.load(f)
+    if _FAISS_INDEX is None or _FAISS_METADATA is None:
+        if not _INDEX_PATH.exists() or not _METADATA_PATH.exists():
+            return (
+                "Knowledge base index is empty. "
+                "Please run 'python knowledge_base.py' to ingest guidelines."
+            )
+        try:
+            if _FAISS_INDEX is None:
+                _FAISS_INDEX = faiss.read_index(str(_INDEX_PATH))
+            if _FAISS_METADATA is None:
+                with open(_METADATA_PATH, "rb") as f:
+                    _FAISS_METADATA = pickle.load(f)
+        except Exception as e:
+            return f"Error loading knowledge base: {e}"
 
-    # Safety check: index file exists but is actually empty (0 vectors) or
-    # metadata is empty — this happens if ingestion ran against the WRONG
-    # folder, or against an empty scheme_docs directory.
-    if index.ntotal == 0 or not metadata:
+    index = _FAISS_INDEX
+    metadata = _FAISS_METADATA
+
+    if not index or getattr(index, "ntotal", 0) == 0 or not metadata:
         return (
             f"Knowledge base index exists at {_INDEX_PATH.resolve()} but "
-            f"contains 0 indexed chunks. This usually means ingestion ran "
-            f"against an empty or wrong scheme_docs folder. Please re-run "
-            f"'python knowledge_base.py' from inside the correct backend/ "
-            f"directory to rebuild it."
+            f"contains 0 indexed chunks. Please run 'python knowledge_base.py' "
+            f"to rebuild it."
         )
 
     # Reuse the shared model singleton
@@ -206,6 +237,9 @@ def query_knowledge_base(question: str) -> str:
 
         chunk_str = f"[Source: {source} (Chunk {chunk_idx})]\n{text}"
         results.append(chunk_str)
+
+    elapsed = time.perf_counter() - t0
+    print(f"[TIMING] Knowledge base retrieval took {elapsed:.3f}s for query: '{question[:40]}...'")
 
     if not results:
         return "No relevant guidelines found in the knowledge base."

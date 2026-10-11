@@ -9,18 +9,20 @@ import uuid
 import tempfile
 import time
 from collections import defaultdict
+from contextlib import asynccontextmanager
 from typing import Dict, List, Optional
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, UploadFile, File, Form, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from models import ChatSession, UserProfile, EligibleScheme
-from agent import run_agent, GROQ_MODEL
+from agent import run_agent, run_agent_stream, GROQ_MODEL
 from tools.voice_assistant import speech_to_text, translate_text, text_to_speech
+from tools.knowledge_base import init_knowledge_base
 
 import logging
 logger = logging.getLogger("uvicorn")
@@ -52,18 +54,31 @@ class InMemoryRateLimiter:
 
 _rate_limiter = InMemoryRateLimiter(limit=20, window_seconds=60)
 
+# ---------------------------------------------------------------------------
+# Lifespan — initialise singletons at startup, log config
+# ---------------------------------------------------------------------------
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Startup/shutdown lifecycle manager.
+
+    Loads the FAISS index + SentenceTransformer embedding model once at
+    startup so that the first request doesn't pay the ~2-4 s loading cost.
+    """
+    logger.info(f"Using Groq model: {GROQ_MODEL}")
+    print(f"[STARTUP] Scheme Eligibility Bot initialized. Active Groq model: {GROQ_MODEL}")
+    try:
+        init_knowledge_base()
+        print("[STARTUP] Knowledge-base FAISS index + embedding model loaded.")
+    except Exception as e:
+        print(f"[STARTUP] Warning: knowledge-base pre-load failed: {e}")
+    yield
+
 app = FastAPI(
     title="Government Scheme Eligibility Assistant API",
     description="Backend API for interacting with the scheme eligibility bot.",
-    version="1.1.0",
+    version="1.2.0",
+    lifespan=lifespan,
 )
-
-
-@app.on_event("startup")
-async def startup_check():
-    """Startup check that logs which Groq model is being used."""
-    logger.info(f"Using Groq model: {GROQ_MODEL}")
-    print(f"[STARTUP] Scheme Eligibility Bot initialized. Active Groq model: {GROQ_MODEL}")
 
 # ---------------------------------------------------------------------------
 # Static Files – serve generated audio responses
@@ -151,6 +166,56 @@ async def root():
         "status": "online",
         "message": "Government Scheme Eligibility Assistant API is up and running. Visit /docs for the interactive UI."
     }
+
+
+@app.get("/health")
+async def health_check():
+    """Lightweight health-check for uptime pingers — returns instantly."""
+    return {"status": "ok"}
+
+
+@app.post("/chat/stream")
+async def chat_stream_endpoint(payload: ChatRequest, request: Request):
+    """SSE streaming variant of /chat.
+
+    Yields `data: {json}` events as the agent processes the request,
+    finishing with `data: [DONE]`.
+    """
+    client_ip = request.client.host if request.client else "unknown"
+    rate_limit_key = client_ip
+    if _rate_limiter.is_rate_limited(rate_limit_key):
+        raise HTTPException(
+            status_code=429,
+            detail="Too many requests. Please wait a moment before sending another message."
+        )
+
+    session_id = payload.session_id
+    user_message = payload.message.strip()
+    if not user_message:
+        raise HTTPException(status_code=400, detail="Message content cannot be empty.")
+
+    if session_id and session_id in _sessions:
+        session = _sessions[session_id]
+    else:
+        session = ChatSession()
+        if session_id:
+            session.session_id = session_id
+        _sessions[session.session_id] = session
+
+    if payload.language:
+        session.language = payload.language.strip().lower()
+
+    def _generate():
+        try:
+            for chunk in run_agent_stream(session, user_message):
+                yield chunk
+        except Exception as e:
+            import json as _json
+            yield f"data: {_json.dumps({'type': 'error', 'message': str(e)})}\n\n"
+            yield "data: [DONE]\n\n"
+
+    return StreamingResponse(_generate(), media_type="text/event-stream")
+
 
 
 @app.post("/chat", response_model=ChatResponse)

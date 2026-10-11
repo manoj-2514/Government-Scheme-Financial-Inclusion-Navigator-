@@ -11,7 +11,9 @@
  */
 import { t } from './translations.js';
 
-const API_BASE_URL = window.API_BASE_URL || 'http://localhost:8000';
+const API_BASE = window.API_BASE || ((location.hostname === "localhost" || location.hostname === "127.0.0.1")
+  ? "http://127.0.0.1:8000"
+  : "https://government-scheme-financial-inclusion.onrender.com");
 
 function getFieldLabel(field) {
     // Try localized translation first, fall back to English defaults
@@ -86,7 +88,7 @@ export async function refreshDashboard(sessionId) {
 
     let data;
     try {
-        const res = await fetch(`${API_BASE_URL}/session/${sessionId}/summary`);
+        const res = await fetch(`${API_BASE}/session/${sessionId}/summary`);
         if (res.status === 404) {
             container.innerHTML = renderEmpty();
             return;

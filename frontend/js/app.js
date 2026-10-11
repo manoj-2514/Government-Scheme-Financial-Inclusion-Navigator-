@@ -7,7 +7,9 @@ import { initOnboarding, showSettings } from './onboarding.js';
 import { initTranslations, updateUITranslations } from './translations.js';
 
 const USE_MOCK = false;
-const API_BASE_URL = window.API_BASE_URL || 'http://localhost:8000';
+const API_BASE = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+  ? "http://127.0.0.1:8000"
+  : "https://government-scheme-financial-inclusion.onrender.com";
 
 let sessionId = sessionStorage.getItem('session_id');
 if (!sessionId) {
@@ -142,7 +144,7 @@ async function sendMessage(message) {
 
     let res;
     try {
-        res = await fetch(`${API_BASE_URL}/chat`, {
+        res = await fetch(`${API_BASE}/chat`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
@@ -220,7 +222,7 @@ async function sendVoiceMessage(audioBlob) {
     formData.append('session_id', sessionId);
     if (language) formData.append('language', language);
 
-    const res = await fetch(`${API_BASE_URL}/voice-query`, { method: 'POST', body: formData });
+    const res = await fetch(`${API_BASE}/voice-query`, { method: 'POST', body: formData });
     if (!res.ok) {
         let errMsg = `Server responded with ${res.status}`;
         try {
@@ -296,7 +298,7 @@ async function handleVoiceRecording(audioBlob) {
         addMessage(data.translated_response || data.agent_response_english, 'agent', { toolsUsed: data.tools_used });
 
         if (data.audio_url) {
-            const audio = new Audio(`${API_BASE_URL}${data.audio_url}`);
+            const audio = new Audio(`${API_BASE}${data.audio_url}`);
             audio.play();
         }
 
@@ -338,20 +340,88 @@ async function handleChatSubmit(e) {
     chatInput.style.height = 'auto'; // Reset textarea height
     showTyping();
 
+    // --- Try SSE streaming first, fall back to regular /chat ---
+    const language = getSelectedLanguage();
+    const payload = { session_id: sessionId, message };
+    if (language) payload.language = language;
+
     try {
-        const data = await sendMessageWithRetry(message);
+        const res = await fetch(`${API_BASE}/chat/stream`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+        });
+
+        if (!res.ok) {
+            // Stream endpoint might not exist (older backend) — fall back
+            throw new Error(`Stream returned ${res.status}`);
+        }
+
         hideTyping();
-        addMessage(data.response, 'agent', { toolsUsed: data.tools_used });
-        updateProfile(data.profile);
-        if (data.eligible_schemes) renderSchemeCards(data.eligible_schemes);
-    } catch (err) {
-        hideTyping();
-        addMessage(`Sorry, an error occurred: ${err.message}`, 'agent');
-        console.error(err);
+        const agentMsgEl = addMessage('', 'agent');
+        let accumulated = '';
+        let finalData = null;
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = '';
+
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            buffer += decoder.decode(value, { stream: true });
+
+            // Process complete SSE lines
+            const lines = buffer.split('\n');
+            buffer = lines.pop(); // keep incomplete last line
+
+            for (const line of lines) {
+                const trimmed = line.trim();
+                if (!trimmed || !trimmed.startsWith('data: ')) continue;
+                const dataStr = trimmed.slice(6);
+                if (dataStr === '[DONE]') continue;
+                try {
+                    const evt = JSON.parse(dataStr);
+                    if (evt.type === 'token') {
+                        accumulated += evt.content;
+                        updateMessage(agentMsgEl, accumulated);
+                    } else if (evt.type === 'final') {
+                        finalData = evt;
+                    } else if (evt.type === 'error') {
+                        throw new Error(evt.message || 'Agent error');
+                    }
+                } catch (parseErr) {
+                    // Skip malformed events
+                    if (parseErr.message && !parseErr.message.includes('JSON')) throw parseErr;
+                }
+            }
+        }
+
+        // Apply final data
+        if (finalData) {
+            updateMessage(agentMsgEl, finalData.response);
+            if (finalData.profile) updateProfile(finalData.profile);
+            if (finalData.eligible_schemes) renderSchemeCards(finalData.eligible_schemes);
+        }
+    } catch (streamErr) {
+        // Fallback to non-streaming /chat endpoint
+        console.warn('Streaming failed, falling back to /chat:', streamErr.message);
+        try {
+            const data = await sendMessageWithRetry(message);
+            hideTyping();
+            addMessage(data.response, 'agent', { toolsUsed: data.tools_used });
+            updateProfile(data.profile);
+            if (data.eligible_schemes) renderSchemeCards(data.eligible_schemes);
+        } catch (err) {
+            hideTyping();
+            addMessage(`Sorry, an error occurred: ${err.message}`, 'agent');
+            console.error(err);
+        }
     } finally {
         setProcessingState(false);
     }
 }
+
 
 // ── Startup ───────────────────────────────────────────────
 // Load UI translations first so labels never render as raw keys,
