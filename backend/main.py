@@ -19,8 +19,11 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from models import ChatSession, UserProfile, EligibleScheme
-from agent import run_agent
+from agent import run_agent, GROQ_MODEL
 from tools.voice_assistant import speech_to_text, translate_text, text_to_speech
+
+import logging
+logger = logging.getLogger("uvicorn")
 
 # Load environment variables
 load_dotenv()
@@ -54,6 +57,13 @@ app = FastAPI(
     description="Backend API for interacting with the scheme eligibility bot.",
     version="1.1.0",
 )
+
+
+@app.on_event("startup")
+async def startup_check():
+    """Startup check that logs which Groq model is being used."""
+    logger.info(f"Using Groq model: {GROQ_MODEL}")
+    print(f"[STARTUP] Scheme Eligibility Bot initialized. Active Groq model: {GROQ_MODEL}")
 
 # ---------------------------------------------------------------------------
 # Static Files – serve generated audio responses

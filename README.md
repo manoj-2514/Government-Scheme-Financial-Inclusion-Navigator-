@@ -8,7 +8,7 @@ An intelligent, conversational AI assistant that helps Indian citizens discover 
 
 ### Backend
 *   **FastAPI**: Modern, high-performance web framework for APIs.
-*   **Groq SDK**: Orchestrates the multi-turn agentic loop using the lightning-fast `llama-3.3-70b-versatile` model.
+*   **Groq SDK**: Orchestrates the multi-turn agentic loop using the configured `GROQ_MODEL` (defaults to `openai/gpt-oss-120b`, fallback: `openai/gpt-oss-20b`).
 *   **FAISS & SentenceTransformers**: Vector index (`all-MiniLM-L6-v2`) for retrieval-augmented generation (RAG) over official scheme manuals.
 *   **OpenAI Whisper**: Local Speech-to-Text transcription.
 *   **gTTS (Google Text-to-Speech)**: Conversational audio generation in regional languages.
@@ -73,6 +73,8 @@ This project requires **FFmpeg** for audio decoding and transcription.
 Create a file named `.env` in the `backend/` directory:
 ```env
 GROQ_API_KEY=your_groq_api_key_here
+GROQ_MODEL=openai/gpt-oss-120b
+GROQ_FALLBACK_MODEL=openai/gpt-oss-20b
 ```
 
 ### 3. Backend Setup

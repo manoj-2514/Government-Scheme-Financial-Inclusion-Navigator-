@@ -48,8 +48,11 @@ if not _API_KEYS:
 _clients = [Groq(api_key=key) for key in _API_KEYS]
 _client = _clients[0]  # kept so existing tests that patch _client still work
 
-_MODEL = "llama-3.3-70b-versatile"
-_FALLBACK_MODEL = "llama-3.1-8b-instant"
+GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
+GROQ_FALLBACK_MODEL = os.getenv("GROQ_FALLBACK_MODEL", "openai/gpt-oss-20b")
+_MODEL = GROQ_MODEL
+_FALLBACK_MODEL = GROQ_FALLBACK_MODEL
+print(f"[CONFIG] Initialized Groq agent with GROQ_MODEL={GROQ_MODEL}, GROQ_FALLBACK_MODEL={GROQ_FALLBACK_MODEL}")
 
 
 def _chat_completion_with_fallback(**kwargs):
@@ -59,7 +62,11 @@ def _chat_completion_with_fallback(**kwargs):
     fallback model. Non-rate-limit errors are raised immediately.
     """
     last_exc = None
-    for model in (_MODEL, _FALLBACK_MODEL):
+    models = [GROQ_MODEL]
+    if GROQ_FALLBACK_MODEL and GROQ_FALLBACK_MODEL != GROQ_MODEL:
+        models.append(GROQ_FALLBACK_MODEL)
+
+    for model in models:
         for client in _clients:
             try:
                 kwargs["model"] = model
@@ -360,12 +367,30 @@ _TOOL_DISPATCH = {
 }
 
 
-def _execute_tool(name: str, arguments_json: str) -> str:
-    """Parse the JSON arguments, call the real function, return JSON result."""
-    try:
-        args = json.loads(arguments_json)
-    except json.JSONDecodeError:
-        return json.dumps({"error": f"Invalid JSON arguments: {arguments_json}"})
+def _clean_tool_args_str(s: str) -> str:
+    """Strip markdown code block fences and extra whitespace around JSON args."""
+    s = s.strip()
+    if s.startswith("```json"):
+        s = s[7:]
+    elif s.startswith("```"):
+        s = s[3:]
+    if s.endswith("```"):
+        s = s[:-3]
+    return s.strip()
+
+
+def _execute_tool(name: str, arguments: Any) -> str:
+    """Parse JSON arguments or accept a dict, call the real function, return JSON result."""
+    if isinstance(arguments, dict):
+        args = arguments
+    elif isinstance(arguments, str):
+        cleaned = _clean_tool_args_str(arguments)
+        try:
+            args = json.loads(cleaned)
+        except json.JSONDecodeError:
+            return json.dumps({"error": f"Invalid JSON arguments: {arguments}"})
+    else:
+        return json.dumps({"error": f"Unsupported arguments type: {type(arguments)}"})
 
     func = _TOOL_DISPATCH.get(name)
     if func is None:
@@ -383,32 +408,51 @@ def _execute_tool(name: str, arguments_json: str) -> str:
 # Recovery net — handles models that leak tool calls as plain text
 # ---------------------------------------------------------------------------
 
-# Matches "<function=NAME>{...json...}" blocks, greedily up to the next
-# "<function=" occurrence or the end of the string. Some models omit the
-# closing tag entirely, so we don't require one.
+# Matches "<function=NAME>{...json...}" blocks
 _PSEUDO_FUNCTION_CALL_PATTERN = re.compile(
     r"<function=([a-zA-Z_][a-zA-Z0-9_]*)>\s*(\{.*?\})\s*(?=</function|<function=|$)",
+    re.DOTALL,
+)
+
+# Matches "<tool_call>{...}</tool_call>" blocks
+_PSEUDO_TOOL_CALL_PATTERN = re.compile(
+    r"<tool_call>\s*(\{.*?\})\s*</tool_call>",
     re.DOTALL,
 )
 
 
 def _extract_pseudo_tool_calls(text: str) -> List[Tuple[str, dict]]:
     """Detect tool calls a model mistakenly wrote as plain text instead of
-    using Groq's structured tool_calls mechanism (e.g. weaker fallback
-    models sometimes do this). Returns a list of (tool_name, args_dict)."""
+    using Groq's structured tool_calls mechanism (e.g. models that output
+    <function=...> or <tool_call> in content). Returns a list of (tool_name, args_dict)."""
     calls: List[Tuple[str, dict]] = []
-    if "<function=" not in text:
+    if not text:
         return calls
-    for match in _PSEUDO_FUNCTION_CALL_PATTERN.finditer(text):
-        name = match.group(1)
-        raw_json = match.group(2)
-        if name not in _TOOL_DISPATCH:
-            continue
-        try:
-            args = json.loads(raw_json)
-        except json.JSONDecodeError:
-            continue
-        calls.append((name, args))
+
+    if "<function=" in text:
+        for match in _PSEUDO_FUNCTION_CALL_PATTERN.finditer(text):
+            name = match.group(1)
+            raw_json = match.group(2)
+            if name not in _TOOL_DISPATCH:
+                continue
+            try:
+                args = json.loads(_clean_tool_args_str(raw_json))
+            except json.JSONDecodeError:
+                continue
+            calls.append((name, args))
+
+    if "<tool_call>" in text:
+        for match in _PSEUDO_TOOL_CALL_PATTERN.finditer(text):
+            raw_json = match.group(1)
+            try:
+                payload = json.loads(_clean_tool_args_str(raw_json))
+                name = payload.get("name") or payload.get("tool")
+                args = payload.get("arguments", payload.get("args", {}))
+                if name in _TOOL_DISPATCH and isinstance(args, dict):
+                    calls.append((name, args))
+            except json.JSONDecodeError:
+                continue
+
     return calls
 
 
@@ -811,46 +855,57 @@ def run_agent(
 
         # ── Model wants to call one or more tools ─────────────────────
         # Append the assistant message (with tool_calls) to the thread
+        normalized_tool_calls = []
+        for tc in message.tool_calls:
+            tc_args = tc.function.arguments
+            args_str = json.dumps(tc_args) if isinstance(tc_args, dict) else _clean_tool_args_str(str(tc_args or "{}"))
+            normalized_tool_calls.append(
+                {
+                    "id": tc.id,
+                    "type": "function",
+                    "function": {
+                        "name": tc.function.name,
+                        "arguments": args_str,
+                    },
+                }
+            )
         api_messages.append(
             {
                 "role": "assistant",
                 "content": message.content or "",
-                "tool_calls": [
-                    {
-                        "id": tc.id,
-                        "type": "function",
-                        "function": {
-                            "name": tc.function.name,
-                            "arguments": tc.function.arguments,
-                        },
-                    }
-                    for tc in message.tool_calls
-                ],
+                "tool_calls": normalized_tool_calls,
             }
         )
 
         for tc in message.tool_calls:
             fn_name = tc.function.name
-            fn_args_json = tc.function.arguments
+            raw_args = tc.function.arguments
+            if isinstance(raw_args, dict):
+                args = raw_args
+                fn_args_json = json.dumps(raw_args)
+            else:
+                fn_args_json = _clean_tool_args_str(str(raw_args or "{}"))
+                try:
+                    args = json.loads(fn_args_json)
+                except (json.JSONDecodeError, TypeError):
+                    args = {}
 
             # Execute the real function
             result_json = _execute_tool(fn_name, fn_args_json)
 
+            try:
+                result = json.loads(result_json)
+            except (json.JSONDecodeError, TypeError):
+                result = {}
+
             # Log it
             tool_log.append({
                 "tool": fn_name,
-                "args": json.loads(fn_args_json),
-                "result": json.loads(result_json),
+                "args": args,
+                "result": result,
             })
 
             # Update the session profile if this call carried profile data
-            try:
-                args = json.loads(fn_args_json)
-                result = json.loads(result_json)
-            except (json.JSONDecodeError, TypeError):
-                args = {}
-                result = {}
-
             if args:
                 try:
                     _update_profile_from_tool_call(session, args)
