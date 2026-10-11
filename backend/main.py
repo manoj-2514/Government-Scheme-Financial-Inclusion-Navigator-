@@ -8,6 +8,9 @@ import os
 import uuid
 import tempfile
 import time
+import datetime
+import threading
+import asyncio
 from collections import defaultdict
 from contextlib import asynccontextmanager
 from typing import Dict, List, Optional
@@ -21,7 +24,6 @@ from pydantic import BaseModel
 
 from models import ChatSession, UserProfile, EligibleScheme
 from agent import run_agent, run_agent_stream, GROQ_MODEL
-from tools.voice_assistant import speech_to_text, translate_text, text_to_speech
 from tools.knowledge_base import init_knowledge_base
 
 import logging
@@ -54,23 +56,58 @@ class InMemoryRateLimiter:
 
 _rate_limiter = InMemoryRateLimiter(limit=20, window_seconds=60)
 
+MODELS_READY: bool = False
+_MODELS_LOADING_STARTED: bool = False
+
+
+def _log_startup(msg: str):
+    ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(f"[{ts}] {msg}", flush=True)
+
+
+def _load_models_worker():
+    global MODELS_READY
+    t0 = time.time()
+    _log_startup("[STARTUP] models loading in background")
+    try:
+        init_knowledge_base()
+        elapsed = time.time() - t0
+        _log_startup(f"[STARTUP] models ready in {elapsed:.1f}s")
+    except Exception as e:
+        _log_startup(f"[STARTUP] Warning: models background load failed: {e}")
+    finally:
+        MODELS_READY = True
+
+
+async def _wait_for_models(timeout: float = 60.0):
+    """Wait up to `timeout` seconds for models to finish loading in background."""
+    if MODELS_READY:
+        return
+    start = time.time()
+    while not MODELS_READY and (time.time() - start) < timeout:
+        await asyncio.sleep(0.5)
+
+
 # ---------------------------------------------------------------------------
-# Lifespan — initialise singletons at startup, log config
+# Lifespan — non-blocking startup (port binds immediately)
 # ---------------------------------------------------------------------------
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Startup/shutdown lifecycle manager.
 
-    Loads the FAISS index + SentenceTransformer embedding model once at
-    startup so that the first request doesn't pay the ~2-4 s loading cost.
+    Non-blocking: Starts background model loading in a daemon thread so that
+    uvicorn binds the port immediately without timing out on free instances.
     """
+    global _MODELS_LOADING_STARTED
+    _log_startup("[STARTUP] port bound")
     logger.info(f"Using Groq model: {GROQ_MODEL}")
-    print(f"[STARTUP] Scheme Eligibility Bot initialized. Active Groq model: {GROQ_MODEL}")
-    try:
-        init_knowledge_base()
-        print("[STARTUP] Knowledge-base FAISS index + embedding model loaded.")
-    except Exception as e:
-        print(f"[STARTUP] Warning: knowledge-base pre-load failed: {e}")
+    _log_startup(f"[STARTUP] Scheme Eligibility Bot initialized. Active Groq model: {GROQ_MODEL}")
+
+    if not _MODELS_LOADING_STARTED:
+        _MODELS_LOADING_STARTED = True
+        thread = threading.Thread(target=_load_models_worker, daemon=True)
+        thread.start()
+
     yield
 
 app = FastAPI(
@@ -171,7 +208,7 @@ async def root():
 @app.get("/health")
 async def health_check():
     """Lightweight health-check for uptime pingers — returns instantly."""
-    return {"status": "ok"}
+    return {"status": "ok", "models_ready": MODELS_READY}
 
 
 @app.post("/chat/stream")
@@ -181,6 +218,7 @@ async def chat_stream_endpoint(payload: ChatRequest, request: Request):
     Yields `data: {json}` events as the agent processes the request,
     finishing with `data: [DONE]`.
     """
+    await _wait_for_models(timeout=60.0)
     client_ip = request.client.host if request.client else "unknown"
     rate_limit_key = client_ip
     if _rate_limiter.is_rate_limited(rate_limit_key):
@@ -225,6 +263,7 @@ async def chat_endpoint(payload: ChatRequest, request: Request):
     Retrieves the existing session or creates a new one, updates state,
     runs the LLM reasoning agent loop, and returns the response details.
     """
+    await _wait_for_models(timeout=60.0)
     # Rate Limiting: 20 requests per minute
     client_ip = request.client.host if request.client else "unknown"
     rate_limit_key = client_ip  # IP-based: session_id is client-forgeable
@@ -482,8 +521,10 @@ async def voice_query_endpoint(
         raise HTTPException(status_code=400, detail=f"Failed to read uploaded audio: {e}")
 
     # ------------------------------------------------------------------
-    # 2. Speech-to-Text via Whisper
+    # 2. Speech-to-Text via Whisper (lazy-imported)
     # ------------------------------------------------------------------
+    await _wait_for_models(timeout=60.0)
+    from tools.voice_assistant import speech_to_text, translate_text, text_to_speech
     try:
         stt_result = speech_to_text(tmp_audio_path, language=language)
     except RuntimeError as e:

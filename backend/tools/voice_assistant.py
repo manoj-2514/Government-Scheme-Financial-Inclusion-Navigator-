@@ -22,10 +22,16 @@ _cached_whisper_model = None
 
 
 def get_whisper_model():
-    """Retrieve or load the Whisper model from memory cache."""
+    """Retrieve or load the Whisper model from memory cache if installed."""
     global _cached_whisper_model
     if _cached_whisper_model is None:
-        import whisper
+        try:
+            import whisper
+        except ImportError:
+            raise RuntimeError(
+                "Local Whisper package ('openai-whisper') is not installed. "
+                "Voice transcription uses Groq API hosted Whisper."
+            )
         logger.info("Whisper model cache miss. Loading Whisper 'small' model...")
         t0 = time.time()
         _cached_whisper_model = whisper.load_model("small")
@@ -37,13 +43,9 @@ def get_whisper_model():
 # ---------------------------------------------------------------------------
 # Groq-hosted Whisper (primary STT)
 # ---------------------------------------------------------------------------
-# whisper-large-v3 on Groq hardware: far more accurate for Indic languages
-# than the local 'small' model, and transcribes in seconds instead of minutes.
-# Uses the same GROQ_API_KEY(_2, _3...) env vars as the chat agent; audio
-# quota is separate from chat-token quota. Local Whisper remains the
-# offline fallback if Groq is unreachable.
-
-_GROQ_STT_MODEL = "whisper-large-v3"
+# whisper-large-v3-turbo on Groq hardware: fast, accurate Indic language transcription.
+# Uses the same GROQ_API_KEY(_2, _3...) env vars as the chat agent.
+_GROQ_STT_MODEL = os.getenv("GROQ_STT_MODEL", "whisper-large-v3-turbo")
 _groq_stt_clients = None
 
 _LANG_NAME_TO_CODE = {
